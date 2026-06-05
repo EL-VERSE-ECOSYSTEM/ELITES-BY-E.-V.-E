@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent } from "@/components/ui/Card";
@@ -7,6 +5,11 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
 import {
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+"use client";
+
   ChevronRight,
   ChevronLeft,
   Plus,
@@ -21,9 +24,6 @@ import {
   Eye,
   Rocket
 } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export default function CourseCreator() {
   const [step, setStep] = useState(1);

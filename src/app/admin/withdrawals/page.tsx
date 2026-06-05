@@ -1,11 +1,13 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import {
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+"use client";
+
   DollarSign,
   Clock,
   CheckCircle2,
@@ -20,8 +22,6 @@ import {
   ChevronRight,
   MoreVertical
 } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 export default function WithdrawalApprovals() {
   const withdrawals = Array.from({ length: 6 }).map((_, i) => ({

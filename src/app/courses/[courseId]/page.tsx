@@ -1,5 +1,3 @@
-"use client";
-
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
@@ -7,6 +5,11 @@ import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import {
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+"use client";
+
   Star,
   Clock,
   Globe,
@@ -22,9 +25,6 @@ import {
   Calendar,
   MessageCircle
 } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export default function CourseDetail() {
   const [activeTab, setActiveTab] = useState<"overview" | "curriculum" | "reviews" | "faq">("overview");

@@ -1,5 +1,3 @@
-"use client";
-
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Input } from "@/components/ui/Input";
@@ -8,6 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Badge } from "@/components/ui/Badge";
 import { Search, Star, MessageSquare, BookOpen, Users, MapPin, ChevronRight, Globe, Shield } from "lucide-react";
 import Link from "next/link";
+"use client";
+
 
 export default function TutorDirectory() {
   const tutors = Array.from({ length: 8 }).map((_, i) => ({

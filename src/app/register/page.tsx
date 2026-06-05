@@ -1,5 +1,3 @@
-"use client";
-
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Card, CardContent } from "@/components/ui/Card";
@@ -8,6 +6,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { Check, ArrowRight, User, School, Globe, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
+"use client";
+
 
 export default function RegisterPage() {
   const [step, setStep] = useState(1);

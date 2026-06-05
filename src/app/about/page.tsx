@@ -1,5 +1,3 @@
-"use client";
-
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
@@ -7,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Target, Users, Award, Globe, Rocket, ShieldCheck, ChevronRight } from "lucide-react";
 import Link from "next/link";
+"use client";
+
 
 export default function AboutPage() {
   const stats = [

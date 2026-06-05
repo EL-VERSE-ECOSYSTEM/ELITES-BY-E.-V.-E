@@ -1,5 +1,3 @@
-"use client";
-
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
@@ -8,6 +6,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Check, Info, ArrowRight, Users } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+"use client";
+
 
 export default function PricingPage() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");

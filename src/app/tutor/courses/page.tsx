@@ -1,11 +1,14 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import {
+import { useState } from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+"use client";
+
   Plus,
   Search,
   Filter,
@@ -20,9 +23,6 @@ import {
   ChevronRight,
   BookOpen
 } from "lucide-react";
-import { useState } from "react";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 export default function TutorMyCourses() {
   const [activeTab, setActiveTab] = useState<"published" | "draft" | "review">("published");

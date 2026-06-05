@@ -1,5 +1,3 @@
-"use client";
-
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/Card";
@@ -8,6 +6,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Input } from "@/components/ui/Input";
 import { Search, Clock, User, ArrowRight, ChevronRight, TrendingUp } from "lucide-react";
 import Link from "next/link";
+"use client";
+
 
 export default function BlogIndex() {
   const posts = Array.from({ length: 6 }).map((_, i) => ({

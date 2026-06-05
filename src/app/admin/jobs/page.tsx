@@ -1,11 +1,13 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import {
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+"use client";
+
   Plus,
   Search,
   Filter,
@@ -22,8 +24,6 @@ import {
   TrendingUp,
   FileText
 } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 export default function AdminJobManagement() {
   const [activeTab, setActiveTab] = useState<"all" | "active" | "applications">("all");
