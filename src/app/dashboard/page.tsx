@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { Navbar } from "@/components/layout/Navbar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
@@ -8,6 +6,11 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import {
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import {
+"use client";
+
   BookOpen,
   Clock,
   Flame,
@@ -21,9 +24,6 @@ import {
   Target,
   Bell
 } from "lucide-react";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-import {
   LineChart,
   Line,
   XAxis,

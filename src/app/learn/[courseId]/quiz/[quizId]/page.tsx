@@ -1,7 +1,12 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import {
+import { Button } from "@/components/ui/Button";
+import { ProgressBar } from "@/components/ui/ProgressBar";
+import { Card, CardContent } from "@/components/ui/Card";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+"use client";
+
   ChevronLeft,
   ChevronRight,
   Timer,
@@ -15,11 +20,6 @@ import {
   ArrowRight,
   X
 } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import { ProgressBar } from "@/components/ui/ProgressBar";
-import { Card, CardContent } from "@/components/ui/Card";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);

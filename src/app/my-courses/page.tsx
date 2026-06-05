@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent } from "@/components/ui/Card";
@@ -10,6 +8,8 @@ import { Search, Filter, Play, Award, Heart, Clock, ChevronRight, BookOpen } fro
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+"use client";
+
 
 export default function MyCoursesPage() {
   const [activeTab, setActiveTab] = useState<"all" | "in-progress" | "completed" | "wishlist">("all");

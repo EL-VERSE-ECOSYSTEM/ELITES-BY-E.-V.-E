@@ -1,11 +1,15 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import {
+import { useState } from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { ArrowDownLeft } from "lucide-react";
+"use client";
+
   ArrowLeft,
   Landmark,
   Smartphone,
@@ -17,9 +21,6 @@ import {
   ChevronRight,
   Wallet
 } from "lucide-react";
-import { useState } from "react";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 export default function WithdrawPage() {
   const [step, setStep] = useState(1);
@@ -160,5 +161,3 @@ export default function WithdrawPage() {
     </div>
   );
 }
-
-import { ArrowDownLeft } from "lucide-react";

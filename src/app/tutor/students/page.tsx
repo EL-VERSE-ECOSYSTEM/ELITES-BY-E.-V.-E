@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent } from "@/components/ui/Card";
@@ -8,6 +6,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Search, Filter, Mail, MessageCircle, MoreVertical, ChevronLeft, ChevronRight, User } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+"use client";
+
 
 export default function MyStudentsPage() {
   const students = Array.from({ length: 8 }).map((_, i) => ({

@@ -1,11 +1,13 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import {
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+"use client";
+
   MessageSquare,
   Search,
   Filter,
@@ -20,8 +22,6 @@ import {
   Zap,
   ArrowRight
 } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 export default function AdminSupportTickets() {
   const [activeTab, setActiveTab] = useState<"open" | "assigned" | "closed">("open");

@@ -1,11 +1,14 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import {
+import {
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+"use client";
+
   Users,
   BookOpen,
   DollarSign,
@@ -19,7 +22,6 @@ import {
   Bell,
   Search
 } from "lucide-react";
-import {
   BarChart,
   Bar,
   XAxis,
@@ -33,8 +35,6 @@ import {
   Pie,
   Cell
 } from 'recharts';
-import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export default function AdminDashboard() {
   const revenueData = [

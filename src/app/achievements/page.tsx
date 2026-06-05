@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
@@ -8,6 +6,8 @@ import { Badge } from "@/components/ui/Badge";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { Zap, Coins, Flame, Star, Award, Target, Rocket, ShieldCheck, Code, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
+"use client";
+
 
 export default function AchievementsPage() {
   const categories = ["All", "Learning", "Coding", "Community", "Social"];

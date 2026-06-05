@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
@@ -8,6 +6,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Wallet, ArrowUpRight, ArrowDownLeft, RefreshCcw, Coins, Clock, ChevronRight, Landmark, CreditCard, Smartphone } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+"use client";
+
 
 export default function WalletPage() {
   const transactions = [

@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
@@ -7,6 +5,10 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
 import {
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+"use client";
+
   FileText,
   Download,
   Share2,
@@ -22,8 +24,6 @@ import {
   CheckCircle2,
   Trash2
 } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 export default function CVBuilderPage() {
   const [activeTab, setActiveTab] = useState<"edit" | "preview">("edit");

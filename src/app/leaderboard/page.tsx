@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent } from "@/components/ui/Card";
@@ -8,6 +6,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Trophy, Medal, Star, Target, Users, Globe, Zap, Flame, Crown, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+"use client";
+
 
 export default function LeaderboardPage() {
   const [activeTab, setActiveTab] = useState<"global" | "country" | "weekly">("global");

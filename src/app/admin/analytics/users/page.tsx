@@ -1,11 +1,14 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import {
+import {
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+"use client";
+
   BarChart,
   Bar,
   XAxis,
@@ -19,7 +22,6 @@ import {
   PieChart,
   Pie
 } from 'recharts';
-import {
   Users,
   UserPlus,
   UserMinus,
@@ -31,8 +33,6 @@ import {
   Filter,
   ArrowUpRight
 } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
 
 export default function UserAnalytics() {
   const growthData = [

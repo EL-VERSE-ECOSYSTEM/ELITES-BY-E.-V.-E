@@ -1,7 +1,11 @@
-"use client";
-
 import { useState } from "react";
 import {
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+"use client";
+
   Mic,
   Video,
   Monitor,
@@ -19,10 +23,6 @@ import {
   Maximize2,
   Clock
 } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export default function SessionRoom() {
   const [sidebarOpen, setSidebarOpen] = useState(true);

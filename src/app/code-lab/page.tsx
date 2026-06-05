@@ -1,7 +1,11 @@
-"use client";
-
 import { useState } from "react";
 import {
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Card, CardContent } from "@/components/ui/Card";
+import { cn } from "@/lib/utils";
+"use client";
+
   Terminal,
   Play,
   Save,
@@ -16,10 +20,6 @@ import {
   X,
   Zap
 } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { Card, CardContent } from "@/components/ui/Card";
-import { cn } from "@/lib/utils";
 
 export default function CodingLab() {
   const [activeFile, setActiveFile] = useState("index.js");

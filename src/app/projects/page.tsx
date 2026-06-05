@@ -1,5 +1,3 @@
-"use client";
-
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
@@ -7,6 +5,11 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import {
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+"use client";
+
   Plus,
   Search,
   Filter,
@@ -21,9 +24,6 @@ import {
   ChevronRight,
   FileText
 } from "lucide-react";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState<"active" | "completed">("active");
