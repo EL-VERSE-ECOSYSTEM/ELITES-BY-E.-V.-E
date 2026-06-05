@@ -1,13 +1,14 @@
+"use client";
+
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { ProgressBar } from "@/components/ui/ProgressBar";
-import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-"use client";
+
 
   ChevronRight,
   Play,

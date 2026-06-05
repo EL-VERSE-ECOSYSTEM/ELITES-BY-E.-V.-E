@@ -1,13 +1,17 @@
+"use client";
+
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
-import {
-import { useState } from "react";
+
+
+import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
-"use client";
+import { motion, AnimatePresence } from "framer-motion";
+
 
   FileText,
   Download,
@@ -22,16 +26,42 @@ import { cn } from "@/lib/utils";
   Eye,
   Save,
   CheckCircle2,
-  Trash2
+  Trash2,
+  Loader2
 } from "lucide-react";
 
 export default function CVBuilderPage() {
   const [activeTab, setActiveTab] = useState<"edit" | "preview">("edit");
+  const [isExporting, setIsExporting] = useState(false);
+  const [cvData, setCvData] = useState({
+    name: "John Doe",
+    title: "Full Stack Software Engineer",
+    location: "Lagos, Nigeria",
+    email: "john@example.com",
+    phone: "+234 800 123 456",
+    github: "github.com/johndoe",
+    summary: "Experienced Full Stack Engineer with a passion for building scalable web applications.",
+    experience: [
+      { id: 1, title: "Senior Software Engineer", company: "ELCODERS", start: "2022-01", end: "Present", desc: "Built and scaled mission-critical applications using Next.js, TypeScript, and AWS. Improved system performance by 40%." },
+      { id: 2, title: "Junior Developer", company: "Tech StartUp", start: "2020-05", end: "2021-12", desc: "Contributed to front-end development using React and CSS modules." }
+    ],
+    skills: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
+    certs: ["Next.js Mastery", "UI/UX Advanced", "Python for DS"]
+  });
+
+  const handleExport = () => {
+    setIsExporting(true);
+    // Simulate PDF Generation
+    setTimeout(() => {
+      setIsExporting(false);
+      alert("CV Exported Successfully! Your PDF is being downloaded.");
+    }, 2500);
+  };
 
   const sections = [
     { id: "personal", title: "Personal Information", icon: User, completed: true },
     { id: "experience", title: "Work Experience", icon: Briefcase, completed: true },
-    { id: "skills", title: "Technical Skills", icon: Code, completed: false },
+    { id: "skills", title: "Technical Skills", icon: Code, completed: true },
     { id: "education", title: "Education", icon: GraduationCap, completed: true },
     { id: "certificates", title: "Certifications (ELITE)", icon: Award, completed: true },
   ];
@@ -60,7 +90,23 @@ export default function CVBuilderPage() {
            </div>
            <div className="flex items-center gap-3">
               <Button variant="ghost" size="sm"><Save size={18} className="mr-2" /> Save</Button>
-              <Button variant="accent" size="sm"><Download size={18} className="mr-2" /> Export PDF</Button>
+              <Button
+                variant="accent"
+                size="sm"
+                onClick={handleExport}
+                disabled={isExporting}
+              >
+                {isExporting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Generating...
+                  </>
+                ) : (
+                  <>
+                    <Download size={18} className="mr-2" /> Export PDF
+                  </>
+                )}
+              </Button>
            </div>
         </header>
 
@@ -100,31 +146,82 @@ export default function CVBuilderPage() {
            {/* Editor Area (Middle) */}
            <div className="lg:col-span-5 space-y-8">
               <div className="space-y-6">
-                 <div className="flex justify-between items-center">
+                 <h2 className="text-xl font-bold font-space-grotesk">Personal Information</h2>
+                 <Card>
+                    <CardContent className="p-6 space-y-4">
+                        <div className="grid grid-cols-2 gap-4">
+                            <Input
+                              label="Full Name"
+                              value={cvData.name}
+                              onChange={(e) => setCvData({...cvData, name: e.target.value})}
+                            />
+                            <Input
+                              label="Professional Title"
+                              value={cvData.title}
+                              onChange={(e) => setCvData({...cvData, title: e.target.value})}
+                            />
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                            <Input
+                              label="Email"
+                              value={cvData.email}
+                              onChange={(e) => setCvData({...cvData, email: e.target.value})}
+                            />
+                            <Input
+                              label="Phone"
+                              value={cvData.phone}
+                              onChange={(e) => setCvData({...cvData, phone: e.target.value})}
+                            />
+                        </div>
+                    </CardContent>
+                 </Card>
+
+                 <div className="flex justify-between items-center pt-8">
                     <h2 className="text-xl font-bold font-space-grotesk">Work Experience</h2>
                     <Button variant="outline" size="sm"><Plus size={16} className="mr-2" /> Add Experience</Button>
                  </div>
 
-                 {[1, 2].map((i) => (
-                   <Card key={i} className="relative group">
+                 {cvData.experience.map((exp, idx) => (
+                   <Card key={exp.id} className="relative group">
                       <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity flex gap-2">
                          <button className="p-2 text-elite-primary-400 hover:text-elite-primary-600"><GripVertical size={16} /></button>
                          <button className="p-2 text-elite-error hover:bg-elite-error/10 rounded-lg"><Trash2 size={16} /></button>
                       </div>
                       <CardContent className="p-6 space-y-4">
                          <div className="grid grid-cols-2 gap-4">
-                            <Input label="Job Title" placeholder="e.g. Senior Frontend Engineer" />
-                            <Input label="Company" placeholder="e.g. ELCODERS" />
+                            <Input
+                              label="Job Title"
+                              value={exp.title}
+                              onChange={(e) => {
+                                const newExp = [...cvData.experience];
+                                newExp[idx].title = e.target.value;
+                                setCvData({...cvData, experience: newExp});
+                              }}
+                            />
+                            <Input
+                              label="Company"
+                              value={exp.company}
+                              onChange={(e) => {
+                                const newExp = [...cvData.experience];
+                                newExp[idx].company = e.target.value;
+                                setCvData({...cvData, experience: newExp});
+                              }}
+                            />
                          </div>
                          <div className="grid grid-cols-2 gap-4">
-                            <Input label="Start Date" type="month" />
-                            <Input label="End Date" type="month" placeholder="Present" />
+                            <Input label="Start Date" type="month" value={exp.start} />
+                            <Input label="End Date" type="month" value={exp.end} />
                          </div>
                          <div className="space-y-1.5">
                             <label className="text-sm font-medium">Description</label>
                             <textarea
-                              className="w-full p-4 rounded-lg border border-elite-primary-100 bg-white text-sm min-h-[120px] outline-none focus:ring-2 focus:ring-elite-primary-500"
-                              placeholder="Key responsibilities and achievements..."
+                              className="w-full p-4 rounded-lg border border-elite-primary-100 dark:border-elite-primary-800 bg-white dark:bg-elite-primary-900 text-sm min-h-[120px] outline-none focus:ring-2 focus:ring-elite-primary-500"
+                              value={exp.desc}
+                              onChange={(e) => {
+                                const newExp = [...cvData.experience];
+                                newExp[idx].desc = e.target.value;
+                                setCvData({...cvData, experience: newExp});
+                              }}
                             />
                          </div>
                       </CardContent>
@@ -137,46 +234,55 @@ export default function CVBuilderPage() {
            <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit">
               <h3 className="text-xs font-bold text-elite-primary-400 uppercase tracking-widest mb-4 px-2">Template Preview</h3>
               <Card className="aspect-[1/1.41] shadow-2xl border-none overflow-hidden origin-top scale-[0.9] lg:scale-100">
-                 <CardContent className="p-8 h-full bg-white text-black space-y-6 text-[10px]">
-                    {/* Tiny Resume Preview Content */}
-                    <div className="text-center space-y-2 border-b pb-4 border-slate-100">
-                       <div className="text-lg font-bold uppercase tracking-tight">John Doe</div>
-                       <div className="text-slate-500 font-medium">Full Stack Software Engineer | Lagos, Nigeria</div>
-                       <div className="text-slate-400 flex justify-center gap-4 uppercase font-bold text-[6px]">
-                          <span>john@example.com</span>
-                          <span>+234 800 123 456</span>
-                          <span>github.com/johndoe</span>
-                       </div>
-                    </div>
+                 <CardContent className="p-8 h-full bg-white text-black space-y-6 text-[10px] overflow-hidden">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={JSON.stringify(cvData)}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className="h-full space-y-6"
+                      >
+                        {/* Tiny Resume Preview Content */}
+                        <div className="text-center space-y-2 border-b pb-4 border-slate-100">
+                          <div className="text-lg font-bold uppercase tracking-tight">{cvData.name}</div>
+                          <div className="text-slate-500 font-medium">{cvData.title} | {cvData.location}</div>
+                          <div className="text-slate-400 flex justify-center gap-4 uppercase font-bold text-[6px]">
+                              <span>{cvData.email}</span>
+                              <span>{cvData.phone}</span>
+                              <span>{cvData.github}</span>
+                          </div>
+                        </div>
 
-                    <div className="space-y-4">
-                       <div className="space-y-2">
-                          <div className="font-bold border-b border-slate-100 pb-1 text-slate-800 uppercase tracking-widest text-[8px]">Work Experience</div>
-                          <div className="space-y-3">
-                             {[1, 2].map((i) => (
-                               <div key={i} className="space-y-1">
-                                  <div className="flex justify-between font-bold">
-                                     <span className="text-slate-700">Senior Software Engineer @ ELCODERS</span>
-                                     <span className="text-slate-400 uppercase">2022 — Present</span>
+                        <div className="space-y-4">
+                          <div className="space-y-2">
+                              <div className="font-bold border-b border-slate-100 pb-1 text-slate-800 uppercase tracking-widest text-[8px]">Work Experience</div>
+                              <div className="space-y-3">
+                                {cvData.experience.map((exp) => (
+                                  <div key={exp.id} className="space-y-1">
+                                      <div className="flex justify-between font-bold">
+                                        <span className="text-slate-700">{exp.title} @ {exp.company}</span>
+                                        <span className="text-slate-400 uppercase">{exp.start} — {exp.end}</span>
+                                      </div>
+                                      <p className="text-slate-500 text-[8px] leading-relaxed">{exp.desc}</p>
                                   </div>
-                                  <p className="text-slate-500 text-[8px] leading-relaxed">Built and scaled mission-critical applications using Next.js, TypeScript, and AWS. Improved system performance by 40%.</p>
-                               </div>
-                             ))}
+                                ))}
+                              </div>
                           </div>
-                       </div>
 
-                       <div className="space-y-2">
-                          <div className="font-bold border-b border-slate-100 pb-1 text-slate-800 uppercase tracking-widest text-[8px]">ELITE Certifications</div>
-                          <div className="grid grid-cols-2 gap-2">
-                             {["Next.js Mastery", "UI/UX Advanced", "Python for DS"].map((c, i) => (
-                               <div key={i} className="flex items-center gap-2 p-1.5 border border-slate-50 rounded">
-                                  <Award size={10} className="text-elite-primary-600" />
-                                  <span className="font-bold text-slate-700 uppercase tracking-tighter">{c}</span>
-                               </div>
-                             ))}
+                          <div className="space-y-2">
+                              <div className="font-bold border-b border-slate-100 pb-1 text-slate-800 uppercase tracking-widest text-[8px]">ELITE Certifications</div>
+                              <div className="grid grid-cols-2 gap-2">
+                                {cvData.certs.map((c, i) => (
+                                  <div key={i} className="flex items-center gap-2 p-1.5 border border-slate-50 rounded">
+                                      <Award size={10} className="text-elite-primary-600" />
+                                      <span className="font-bold text-slate-700 uppercase tracking-tighter">{c}</span>
+                                  </div>
+                                ))}
+                              </div>
                           </div>
-                       </div>
-                    </div>
+                        </div>
+                      </motion.div>
+                    </AnimatePresence>
                  </CardContent>
               </Card>
               <div className="mt-6 flex gap-4">

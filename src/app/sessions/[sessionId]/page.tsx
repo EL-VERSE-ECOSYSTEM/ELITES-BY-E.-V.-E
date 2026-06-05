@@ -1,10 +1,11 @@
+"use client";
+
 import { useState } from "react";
-import {
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-"use client";
+
 
   Mic,
   Video,

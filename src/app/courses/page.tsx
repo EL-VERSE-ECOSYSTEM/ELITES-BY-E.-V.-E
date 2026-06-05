@@ -1,3 +1,5 @@
+"use client";
+
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Input } from "@/components/ui/Input";
@@ -8,7 +10,7 @@ import { Search, Filter, Star, Clock, User, Grid, List, ChevronRight } from "luc
 import Link from "next/link";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-"use client";
+
 
 
 export default function CourseCatalog() {

@@ -1,3 +1,5 @@
+"use client";
+
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
@@ -5,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Save, ChevronLeft, Play, Plus, Trash2, GripVertical } from "lucide-react";
 import Link from "next/link";
-"use client";
+
 
 export default function CourseEditor() {
   return (

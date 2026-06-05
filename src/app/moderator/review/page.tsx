@@ -1,9 +1,11 @@
+"use client";
+
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Flag, Trash2, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-"use client";
+
 
 export default function ContentReview() {
   return (
