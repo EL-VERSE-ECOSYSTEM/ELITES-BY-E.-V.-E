@@ -1,29 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Badge } from "@/components/ui/Badge";
-import { useState } from "react";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-
-
-  ArrowLeft,
-  Search,
-  Send,
-  User,
-  ShieldCheck,
-  Clock,
-  AlertCircle,
-  Coins,
-  Wallet,
-  Info,
-  CheckCircle2,
-  ChevronRight
-} from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Input from "@/components/ui/Input";, Badge from "@/components/ui/Badge";, useState from "react";, Link from "next/link";, cn from "@/lib/utils";, ArrowLeft, Search, Send, User, ShieldCheck, Clock, AlertCircle, Coins, Wallet, Info, CheckCircle2, ChevronRight } from "lucide-react";
 
 export default function InternalTransferPage() {
   const [recipient, setRecipient] = useState("");

@@ -1,25 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-
-  Users,
-  BookOpen,
-  TrendingUp,
-  DollarSign,
-  Plus,
-  Calendar,
-  Star,
-  ChevronRight,
-  BarChart3,
-  MessageCircle,
-  Bell
-} from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Link from "next/link";, cn from "@/lib/utils";, Users, BookOpen, TrendingUp, DollarSign, Plus, Calendar, Star, ChevronRight, BarChart3, MessageCircle, Bell } from "lucide-react";
   LineChart,
   Line,
   XAxis,

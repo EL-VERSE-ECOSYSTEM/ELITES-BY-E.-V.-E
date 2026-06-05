@@ -1,29 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { Input } from "@/components/ui/Input";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-
-
-  User,
-  Lock,
-  Bell,
-  Shield,
-  CreditCard,
-  Globe,
-  Trash2,
-  ChevronRight,
-  Camera,
-  Mail,
-  Smartphone,
-  Eye,
-  Monitor
-} from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Input from "@/components/ui/Input";, useState from "react";, cn from "@/lib/utils";, User, Lock, Bell, Shield, CreditCard, Globe, Trash2, ChevronRight, Camera, Mail, Smartphone, Eye, Monitor } from "lucide-react";
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<"profile" | "account" | "notifications" | "privacy" | "payments" | "danger">("profile");

@@ -1,27 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-
-
-  Users,
-  BookOpen,
-  Star,
-  TrendingUp,
-  TrendingDown,
-  Clock,
-  MapPin,
-  Globe,
-  BarChart3,
-  PieChart as PieChartIcon,
-  MousePointer2,
-  Share2
-} from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Users, BookOpen, Star, TrendingUp, TrendingDown, Clock, MapPin, Globe, BarChart3, PieChart as PieChartIcon, MousePointer2, Share2 } from "lucide-react";
   BarChart,
   Bar,
   XAxis,

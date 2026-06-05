@@ -1,22 +1,6 @@
 "use client";
 
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import Link from "next/link";
-
-
-  Clock,
-  User,
-  Share2,
-  Bookmark,
-  MessageSquare,
-  ChevronLeft,
-  ArrowRight,
-  TrendingUp
-} from "lucide-react";
+import { Footer from "@/components/layout/Footer";, Card, CardContent from "@/components/ui/Card";, Badge from "@/components/ui/Badge";, Button from "@/components/ui/Button";, Link from "next/link";, Clock, User, Share2, Bookmark, MessageSquare, ChevronLeft, ArrowRight, TrendingUp } from "lucide-react";
 
 export default function BlogPostDetail() {
   return (

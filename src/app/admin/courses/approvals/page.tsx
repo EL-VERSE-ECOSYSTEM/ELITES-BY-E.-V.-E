@@ -1,12 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { CheckCircle2, XCircle, Eye } from "lucide-react";
-
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge"; } from "lucide-react";
 
 export default function CourseApprovals() {
   return (

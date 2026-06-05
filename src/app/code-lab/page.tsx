@@ -1,66 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
-  Terminal,
-  Play,
-  Save,
-  RotateCcw,
-  Share2,
-  Sparkles,
-  CheckCircle2,
-  ChevronRight,
-  FileCode,
-  Layout,
-  MessageSquare,
-  X,
-  Zap,
-  Bot,
-  Send,
-  Loader2,
-  Copy,
-  Check
-} from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { Card, CardContent } from "@/components/ui/Card";
-import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Card, CardContent from "@/components/ui/Card";, cn from "@/lib/utils";, Terminal, Play, Save, RotateCcw, Share2, Sparkles, CheckCircle2, ChevronRight, FileCode, Layout, MessageSquare, X, Zap } from "lucide-react";
 
 export default function CodingLab() {
   const [activeFile, setActiveFile] = useState("index.js");
   const [output, setOutput] = useState<string[]>([]);
   const [isRunning, setIsRunning] = useState(false);
-  const [isAiOpen, setIsAiOpen] = useState(false);
-  const [aiMessage, setAiMessage] = useState("");
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [aiHistory, setAiHistory] = useState<{role: 'user' | 'assistant', content: string}[]>([
-    { role: 'assistant', content: 'Hello! I am your ELITE AI Assistant. How can I help you with your code today?' }
-  ]);
 
   const runCode = () => {
     setIsRunning(true);
-    setOutput(prev => [...prev, "> node index.js", "Server running on port 3000...", "Fetching data...", "Success! Output: { status: 200, data: [...] }"]);
+    setOutput([...output, "> node index.js", "Server running on port 3000...", "Fetching data...", "Success! Output: { status: 200, data: [...] }"]);
     setTimeout(() => setIsRunning(false), 1500);
-  };
-
-  const handleAiSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!aiMessage.trim()) return;
-
-    const userMsg = aiMessage;
-    setAiHistory(prev => [...prev, { role: 'user', content: userMsg }]);
-    setAiMessage("");
-    setIsAnalyzing(true);
-
-    setTimeout(() => {
-      let response = "I've analyzed your code. It looks like you're missing a return statement in your async function. Try adding: return { success: true };";
-      if (userMsg.toLowerCase().includes("formdata")) {
-        response = "To use formData effectively in Next.js Server Actions, ensure you're using formData.get('fieldName') and that your form input has a matching 'name' attribute.";
-      }
-      setAiHistory(prev => [...prev, { role: 'assistant', content: response }]);
-      setIsAnalyzing(false);
-    }, 2000);
   };
 
   return (
@@ -149,65 +99,9 @@ export default function CodingLab() {
               </div>
 
               {/* AI Suggestion Ghost */}
-              <div className="absolute bottom-10 right-10 flex flex-col items-end gap-3 z-20">
-                 <AnimatePresence>
-                   {isAiOpen && (
-                     <motion.div
-                        initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 20, scale: 0.95 }}
-                        className="w-80 h-96 bg-elite-primary-900 border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden mb-2"
-                     >
-                        <div className="p-4 border-b border-white/10 flex items-center justify-between bg-elite-primary-950">
-                           <div className="flex items-center gap-2">
-                              <Bot size={18} className="text-elite-accent-500" />
-                              <span className="font-bold text-sm">ELITE AI Assistant</span>
-                           </div>
-                           <button onClick={() => setIsAiOpen(false)} className="text-elite-primary-400 hover:text-white">
-                              <X size={16} />
-                           </button>
-                        </div>
-                        <div className="flex-1 overflow-y-auto p-4 space-y-4">
-                           {aiHistory.map((msg, i) => (
-                             <div key={i} className={cn(
-                               "max-w-[85%] rounded-xl p-3 text-xs leading-relaxed",
-                               msg.role === 'user' ? "bg-elite-primary-600 ml-auto text-white" : "bg-white/5 text-elite-primary-200"
-                             )}>
-                                {msg.content}
-                             </div>
-                           ))}
-                           {isAnalyzing && (
-                             <div className="bg-white/5 rounded-xl p-3 text-xs flex items-center gap-2 text-elite-primary-400">
-                                <Loader2 size={14} className="animate-spin" /> Analyzing your code...
-                             </div>
-                           )}
-                        </div>
-                        <form onSubmit={handleAiSearch} className="p-3 border-t border-white/10 bg-elite-primary-950 flex gap-2">
-                           <input
-                              type="text"
-                              value={aiMessage}
-                              onChange={(e) => setAiMessage(e.target.value)}
-                              placeholder="Ask AI for help..."
-                              className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-xs outline-none focus:border-elite-accent-500 transition-colors"
-                           />
-                           <button type="submit" className="p-2 bg-elite-accent-500 rounded-lg text-white hover:bg-elite-accent-600 transition-colors">
-                              <Send size={14} />
-                           </button>
-                        </form>
-                     </motion.div>
-                   )}
-                 </AnimatePresence>
-                 <button
-                  onClick={() => setIsAiOpen(!isAiOpen)}
-                  className={cn(
-                    "bg-elite-primary-600 hover:bg-elite-primary-500 text-white p-4 rounded-full shadow-2xl transition-all group relative",
-                    isAiOpen && "bg-elite-accent-500"
-                  )}
-                 >
-                    <Sparkles size={24} className={cn("group-hover:animate-pulse", isAiOpen && "rotate-12")} />
-                    {!isAiOpen && (
-                      <span className="absolute -top-1 -right-1 w-4 h-4 bg-elite-error rounded-full flex items-center justify-center text-[10px] font-bold">1</span>
-                    )}
+              <div className="absolute bottom-10 right-10 flex flex-col items-end gap-3">
+                 <button className="bg-elite-primary-600 hover:bg-elite-primary-500 text-white p-3 rounded-full shadow-2xl transition-all group">
+                    <Sparkles size={20} className="group-hover:animate-pulse" />
                  </button>
               </div>
            </div>
@@ -270,17 +164,7 @@ export default function CodingLab() {
               </h3>
               <div className="p-4 bg-white/5 rounded-xl text-xs space-y-3">
                  <p className="text-elite-primary-300 italic">"How do I use formData.get()?"</p>
-                 <Button
-                  variant="ghost"
-                  size="sm"
-                  className="w-full bg-white/5 text-white hover:bg-elite-primary-600"
-                  onClick={() => {
-                    setIsAiOpen(true);
-                    setAiMessage("How do I use formData.get()?");
-                  }}
-                 >
-                    Ask AI Assistant
-                 </Button>
+                 <Button variant="ghost" size="sm" className="w-full bg-white/5 text-white">Ask AI Assistant</Button>
               </div>
            </div>
 

@@ -1,28 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Button } from "@/components/ui/Button";
-import { ProgressBar } from "@/components/ui/ProgressBar";
-import { Badge } from "@/components/ui/Badge";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-
-
-  ChevronLeft,
-  ChevronRight,
-  Menu,
-  X,
-  Play,
-  CheckCircle2,
-  MessageSquare,
-  FileText,
-  Download,
-  Settings,
-  Maximize2,
-  Volume2,
-  Monitor,
-  StickyNote
-} from "lucide-react";
+import { Button from "@/components/ui/Button";, ProgressBar from "@/components/ui/ProgressBar";, Badge from "@/components/ui/Badge";, cn from "@/lib/utils";, Link from "next/link";, ChevronLeft, ChevronRight, Menu, X, Play, CheckCircle2, MessageSquare, FileText, Download, Settings, Maximize2, Volume2, Monitor, StickyNote } from "lucide-react";
 
 export default function CoursePlayer() {
   const [sidebarOpen, setSidebarOpen] = useState(true);

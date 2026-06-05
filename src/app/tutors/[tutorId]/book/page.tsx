@@ -1,30 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Badge } from "@/components/ui/Badge";
-import { useState } from "react";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-
-
-  Calendar,
-  Clock,
-  Video,
-  CreditCard,
-  Wallet,
-  Smartphone,
-  ChevronLeft,
-  CheckCircle2,
-  ArrowRight,
-  User,
-  Star,
-  Globe,
-  Info
-} from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Input from "@/components/ui/Input";, Badge from "@/components/ui/Badge";, useState from "react";, Link from "next/link";, cn from "@/lib/utils";, Calendar, Clock, Video, CreditCard, Wallet, Smartphone, ChevronLeft, CheckCircle2, ArrowRight, User, Star, Globe, Info } from "lucide-react";
 
 export default function BookTutorSession() {
   const [step, setStep] = useState(1);

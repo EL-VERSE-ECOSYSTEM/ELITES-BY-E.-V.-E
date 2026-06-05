@@ -1,9 +1,4 @@
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { Code, Rocket, Award, Briefcase, ChevronRight, Star, Users, ArrowRight, Play, Globe, CheckCircle2, BookOpen } from "lucide-react";
+import { Footer from "@/components/layout/Footer";, Button from "@/components/ui/Button";, Card, CardContent from "@/components/ui/Card";, Badge from "@/components/ui/Badge"; } from "lucide-react";
 import Link from "next/link";
 
 export default function LandingPage() {
