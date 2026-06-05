@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Card, CardContent } from "@/components/ui/Card";
@@ -5,7 +7,7 @@ import { Badge } from "@/components/ui/Badge";
 import Link from "next/link";
 import { useState } from "react";
 import { Mail, ArrowLeft, CheckCircle2, AlertCircle } from "lucide-react";
-"use client";
+
 
 
 export default function ForgotPasswordPage() {

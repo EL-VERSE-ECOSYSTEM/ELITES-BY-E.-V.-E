@@ -1,9 +1,11 @@
+"use client";
+
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Star } from "lucide-react";
-"use client";
+
 
 export default function MyReviews() {
   return (
