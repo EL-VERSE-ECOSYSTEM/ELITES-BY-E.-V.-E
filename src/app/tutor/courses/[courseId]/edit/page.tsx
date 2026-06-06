@@ -1,13 +1,7 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Save, ChevronLeft, Play, Plus, Trash2, GripVertical } from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Input from "@/components/ui/Input"; } from "lucide-react";
 import Link from "next/link";
-
 
 export default function CourseEditor() {
   return (

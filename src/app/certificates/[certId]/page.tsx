@@ -1,14 +1,7 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { Award, Download, Share2, Printer, CheckCircle2, ShieldCheck, ExternalLink, QrCode, Globe } from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge"; } from "lucide-react";
 import Link from "next/link";
-
-
 
 export default function CertificateDetail() {
   return (

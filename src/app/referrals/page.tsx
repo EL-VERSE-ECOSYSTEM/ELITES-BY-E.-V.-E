@@ -1,28 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { Input } from "@/components/ui/Input";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-
-
-  Users,
-  Copy,
-  Check,
-  Share2,
-  Twitter,
-  Mail,
-  MessageSquare,
-  DollarSign,
-  TrendingUp,
-  Gift,
-  ArrowRight,
-  Sparkles
-} from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Input from "@/components/ui/Input";, useState from "react";, cn from "@/lib/utils";, Users, Copy, Check, Share2, Twitter, Mail, MessageSquare, DollarSign, TrendingUp, Gift, ArrowRight, Sparkles } from "lucide-react";
 
 export default function ReferralProgramPage() {
   const [copied, setCopied] = useState(false);

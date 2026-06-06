@@ -1,13 +1,6 @@
 "use client";
 
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Mail, MessageCircle, MapPin, Phone, Send, Globe, Github, Linkedin, Twitter } from "lucide-react";
-
-
+import { Footer from "@/components/layout/Footer";, Button from "@/components/ui/Button";, Input from "@/components/ui/Input";, Card, CardContent from "@/components/ui/Card"; } from "lucide-react";
 
 export default function ContactPage() {
   return (

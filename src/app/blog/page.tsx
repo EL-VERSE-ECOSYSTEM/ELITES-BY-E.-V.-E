@@ -1,15 +1,7 @@
 "use client";
 
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { Input } from "@/components/ui/Input";
-import { Search, Clock, User, ArrowRight, ChevronRight, TrendingUp } from "lucide-react";
+import { Footer from "@/components/layout/Footer";, Card, CardContent from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Input from "@/components/ui/Input"; } from "lucide-react";
 import Link from "next/link";
-
-
 
 export default function BlogIndex() {
   const posts = Array.from({ length: 6 }).map((_, i) => ({

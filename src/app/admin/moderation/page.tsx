@@ -1,26 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-
-
-  AlertTriangle,
-  MessageSquare,
-  Flag,
-  ShieldAlert,
-  UserX,
-  CheckCircle,
-  Eye,
-  MoreVertical,
-  Filter,
-  Trash2,
-  AlertCircle
-} from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, AlertTriangle, MessageSquare, Flag, ShieldAlert, UserX, CheckCircle, Eye, MoreVertical, Filter, Trash2, AlertCircle } from "lucide-react";
 
 export default function ModerationPage() {
   const [activeTab, setActiveTab] = useState<"reported" | "content" | "disputes">("reported");

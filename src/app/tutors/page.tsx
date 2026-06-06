@@ -1,15 +1,7 @@
 "use client";
 
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Input } from "@/components/ui/Input";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { Search, Star, MessageSquare, BookOpen, Users, MapPin, ChevronRight, Globe, Shield } from "lucide-react";
+import { Footer from "@/components/layout/Footer";, Input from "@/components/ui/Input";, Button from "@/components/ui/Button";, Card, CardContent, CardHeader, CardTitle, CardDescription from "@/components/ui/Card";, Badge from "@/components/ui/Badge"; } from "lucide-react";
 import Link from "next/link";
-
-
 
 export default function TutorDirectory() {
   const tutors = Array.from({ length: 8 }).map((_, i) => ({

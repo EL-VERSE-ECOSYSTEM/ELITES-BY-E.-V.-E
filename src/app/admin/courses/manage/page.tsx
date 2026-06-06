@@ -1,30 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-
-
-  BookOpen,
-  Search,
-  Filter,
-  Eye,
-  CheckCircle2,
-  XCircle,
-  AlertCircle,
-  MoreVertical,
-  Star,
-  Users,
-  Clock,
-  ChevronLeft,
-  ChevronRight,
-  TrendingUp,
-  Globe
-} from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, BookOpen, Search, Filter, Eye, CheckCircle2, XCircle, AlertCircle, MoreVertical, Star, Users, Clock, ChevronLeft, ChevronRight, TrendingUp, Globe } from "lucide-react";
 
 export default function CourseManagement() {
   const [activeTab, setActiveTab] = useState<"all" | "pending" | "published">("all");

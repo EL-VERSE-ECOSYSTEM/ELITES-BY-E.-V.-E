@@ -1,28 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { Navbar } from "@/components/layout/Navbar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { ProgressBar } from "@/components/ui/ProgressBar";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-
-  BookOpen,
-  Clock,
-  Flame,
-  Zap,
-  Coins,
-  Trophy,
-  Calendar,
-  Play,
-  ChevronRight,
-  TrendingUp,
-  Target,
-  Bell
-} from "lucide-react";
+import { Navbar from "@/components/layout/Navbar";, MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle, CardDescription from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, ProgressBar from "@/components/ui/ProgressBar";, Link from "next/link";, cn from "@/lib/utils";, BookOpen, Clock, Flame, Zap, Coins, Trophy, Calendar, Play, ChevronRight, TrendingUp, Target, Bell } from "lucide-react";
   LineChart,
   Line,
   XAxis,

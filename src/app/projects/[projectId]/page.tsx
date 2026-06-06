@@ -1,29 +1,6 @@
 "use client";
 
-import { Sidebar } from "@/components/layout/Sidebar";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { ProgressBar } from "@/components/ui/ProgressBar";
-import { useState } from "react";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
-
-
-  Github,
-  Globe,
-  Upload,
-  FileText,
-  MessageSquare,
-  CheckCircle2,
-  AlertCircle,
-  ChevronLeft,
-  ExternalLink,
-  Save,
-  Send,
-  Trash2
-} from "lucide-react";
+import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, ProgressBar from "@/components/ui/ProgressBar";, useState from "react";, Link from "next/link";, cn from "@/lib/utils";, Github, Globe, Upload, FileText, MessageSquare, CheckCircle2, AlertCircle, ChevronLeft, ExternalLink, Save, Send, Trash2 } from "lucide-react";
 
 export default function ProjectSubmission() {
   const [activeTab, setActiveTab] = useState<"brief" | "submission" | "feedback">("brief");

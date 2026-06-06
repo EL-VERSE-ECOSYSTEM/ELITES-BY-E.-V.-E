@@ -1,27 +1,6 @@
 "use client";
 
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-
-
-  Star,
-  MapPin,
-  Calendar,
-  Users,
-  BookOpen,
-  CheckCircle2,
-  Globe,
-  Play,
-  MessageSquare,
-  Clock,
-  Briefcase
-} from "lucide-react";
+import { Footer from "@/components/layout/Footer";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Link from "next/link";, Star, MapPin, Calendar, Users, BookOpen, CheckCircle2, Globe, Play, MessageSquare, Clock, Briefcase } from "lucide-react";
 
 export default function TutorProfilePage() {
   const [activeTab, setActiveTab] = useState<"courses" | "reviews" | "availability">("courses");
