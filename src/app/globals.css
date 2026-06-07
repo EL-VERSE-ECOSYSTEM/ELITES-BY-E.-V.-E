@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-elite-primary-50: #F5F3FF;
+  --color-elite-primary-100: #EDE9FE;
+  --color-elite-primary-200: #DDD6FE;
+  --color-elite-primary-300: #C4B5FD;
+  --color-elite-primary-400: #A78BFA;
+  --color-elite-primary-500: #8B5CF6;
+  --color-elite-primary-600: #7C3AED;
+  --color-elite-primary-700: #6D28D9;
+  --color-elite-primary-800: #5B21B6;
+  --color-elite-primary-900: #4C1D95;
+  --color-elite-primary-950: #2D1B69;
+
+  --color-elite-accent-50: #FFFBEB;
+  --color-elite-accent-100: #FEF3C7;
+  --color-elite-accent-200: #FDE68A;
+  --color-elite-accent-300: #FCD34D;
+  --color-elite-accent-400: #FBBF24;
+  --color-elite-accent-500: #F59E0B;
+  --color-elite-accent-600: #D97706;
+  --color-elite-accent-700: #B45309;
+  --color-elite-accent-800: #92400E;
+  --color-elite-accent-900: #78350F;
+
+  --color-elite-success: #10B981;
+  --color-elite-error: #EF4444;
+  --color-elite-warning: #F97316;
+  --color-elite-info: #06B6D4;
+
+  --color-elite-xp: #8B5CF6;
+  --color-elite-coin: #F59E0B;
+  --color-elite-streak: #F97316;
+  --color-elite-levelUp: #10B981;
+
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-inter: var(--font-inter);
+  --font-jetbrains-mono: var(--font-jetbrains-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #2D1B69;
+}
+
+.dark {
+  --background: #2D1B69;
+  --foreground: #F5F3FF;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+code, pre {
+  font-family: var(--font-jetbrains-mono), monospace;
+}

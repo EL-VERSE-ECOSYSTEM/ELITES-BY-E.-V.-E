@@ -1,0 +1,16 @@
+{
+  "name": "ELITE",
+  "short_name": "ELITE",
+  "description": "Africa's premier tech skills learning platform by EL VERSE ECOSYSTEM.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2D1B69",
+  "theme_color": "#F59E0B",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}
