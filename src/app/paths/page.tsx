@@ -4,6 +4,7 @@ import { Footer from "@/components/layout/Footer";, Card, CardContent from "@/co
 
 export default function PathsPage() {
   const paths = [
+    {
       title: "Frontend Engineering",
       icon: Code,
       desc: "Master the art of building modern, responsive, and performant web interfaces.",
@@ -12,6 +13,7 @@ export default function PathsPage() {
       students: "5.2k",
       salary: "$2,000 - $8,000"
     },
+    {
       title: "UX Design Lead",
       icon: Layers,
       desc: "From user research to high-fidelity prototyping and design systems.",
@@ -20,6 +22,7 @@ export default function PathsPage() {
       students: "3.1k",
       salary: "$1,500 - $6,000"
     },
+    {
       title: "Data Science & AI",
       icon: TrendingUp,
       desc: "Analyze data and build intelligent systems using Python and Machine Learning.",
@@ -28,6 +31,7 @@ export default function PathsPage() {
       students: "4.8k",
       salary: "$2,500 - $10,000"
     },
+    {
       title: "Full Stack Master",
       icon: Briefcase,
       desc: "The complete journey from database to browser. Become a versatile engineer.",

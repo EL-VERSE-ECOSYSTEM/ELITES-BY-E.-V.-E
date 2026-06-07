@@ -6,6 +6,7 @@ export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState<"active" | "completed">("active");
 
   const projects = [
+    {
       id: 1,
       title: "Real-time Chat Application",
       course: "Next.js 15 Masterclass",
@@ -15,6 +16,7 @@ export default function ProjectsPage() {
       requirements: 12,
       completedReqs: 8
     },
+    {
       id: 2,
       title: "E-commerce Design System",
       course: "UI/UX for Developers",
@@ -24,6 +26,7 @@ export default function ProjectsPage() {
       requirements: 15,
       completedReqs: 14
     },
+    {
       id: 3,
       title: "Weather Dashboard",
       course: "Python Foundations",

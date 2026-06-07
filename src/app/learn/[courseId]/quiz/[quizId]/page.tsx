@@ -19,8 +19,10 @@ export default function QuizPage() {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${mins}:${secs.toString().padStart(2, "0")}`;
+  };
 
   const questions = [
+    {
       question: "Which of the following is NOT a benefit of Server Components in Next.js?",
       options: [
         "Reduced bundle size on the client",
@@ -30,6 +32,7 @@ export default function QuizPage() {
       ],
       correct: 2
     },
+    {
        question: "What is the correct file name for creating a layout in the App Router?",
        options: [
          "layout.js",

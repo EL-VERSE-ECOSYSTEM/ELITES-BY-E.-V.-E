@@ -6,6 +6,7 @@ export default function HackathonsPage() {
   const [activeTab, setActiveTab] = useState<"upcoming" | "active" | "past">("active");
 
   const hackathons = [
+    {
       id: 1,
       title: "FinTech Innovation 2024",
       organizer: "ELITE x PayStack",
@@ -15,6 +16,7 @@ export default function HackathonsPage() {
       category: "FinTech",
       status: "active"
     },
+    {
       id: 2,
       title: "Clean Energy Hack",
       organizer: "EL VERSE Ecosystem",

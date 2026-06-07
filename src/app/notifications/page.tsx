@@ -6,6 +6,7 @@ export default function NotificationsPage() {
   const [activeTab, setActiveTab] = useState<"all" | "unread" | "achievements">("all");
 
   const notifications = [
+    {
       id: 1,
       title: "Course Updated",
       msg: "New lessons added to 'Next.js 15 Masterclass'. Check them out!",
@@ -13,6 +14,7 @@ export default function NotificationsPage() {
       time: "2m ago",
       unread: true
     },
+    {
       id: 2,
       title: "Achievement Unlocked",
       msg: "You earned the 'Code Ninja' badge! +250 XP awarded.",
@@ -20,6 +22,7 @@ export default function NotificationsPage() {
       time: "1h ago",
       unread: true
     },
+    {
       id: 3,
       title: "Wallet Credit",
       msg: "Your referral reward of $5.00 has been credited to your wallet.",
@@ -27,6 +30,7 @@ export default function NotificationsPage() {
       time: "3h ago",
       unread: false
     },
+    {
       id: 4,
       title: "New Message",
       msg: "Amara Okafor replied to your comment in the study group.",

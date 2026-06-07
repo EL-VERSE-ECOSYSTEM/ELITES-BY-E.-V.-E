@@ -26,10 +26,8 @@ export default function BlogIndex() {
               <div className="relative max-w-2xl mx-auto mt-8">
                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-elite-primary-400" size={20} />
                  <Input placeholder="Search articles..." className="pl-12 h-14 rounded-2xl" />
-              <MobileBottomNav />
-      </div>
-           <MobileBottomNav />
-      </div>
+              </div>
+           </div>
 
            {/* Featured Post */}
            <div className="mb-20">
@@ -45,15 +43,11 @@ export default function BlogIndex() {
                           <span className="flex items-center gap-2"><User size={16} /> David Mensah</span>
                           <span className="flex items-center gap-2"><Clock size={16} /> 10 min read</span>
                           <span>Feb 15, 2024</span>
-                       <MobileBottomNav />
-      </div>
-                    <MobileBottomNav />
-      </div>
-                 <MobileBottomNav />
-      </div>
+                       </div>
+                    </div>
+                 </div>
               </Link>
-           <MobileBottomNav />
-      </div>
+           </div>
 
            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Blog Grid */}
@@ -68,13 +62,11 @@ export default function BlogIndex() {
                          <div className="pt-4 border-t border-elite-primary-50 flex items-center justify-between">
                             <span className="text-[10px] font-bold text-elite-primary-400 uppercase tracking-tighter">{post.date}</span>
                             <Link href={`/blog/${post.id}`} className="text-xs font-bold text-elite-primary-600 flex items-center gap-1 hover:underline">Read More <ArrowRight size={14} /></Link>
-                         <MobileBottomNav />
-      </div>
+                         </div>
                       </CardContent>
                    </Card>
                  ))}
-              <MobileBottomNav />
-      </div>
+              </div>
 
               {/* Sidebar */}
               <aside className="space-y-12">
@@ -86,16 +78,13 @@ export default function BlogIndex() {
                        {["Development", "Design", "Product", "AI/ML", "Career", "Success Stories"].map((c) => (
                          <button key={c} className="px-4 py-2 rounded-full border border-elite-primary-100 dark:border-elite-primary-800 text-xs font-bold hover:bg-elite-primary-50 transition-colors">{c}</button>
                        ))}
-                    <MobileBottomNav />
-      </div>
-                 <MobileBottomNav />
-      </div>
+                    </div>
+                 </div>
 
                  <Card className="bg-elite-primary-950 text-white p-8 space-y-6 overflow-hidden relative border-none shadow-2xl">
                     <div className="absolute top-0 right-0 p-4 opacity-10 rotate-12 scale-150">
                        <ArrowRight size={100} />
-                    <MobileBottomNav />
-      </div>
+                    </div>
                     <div className="relative z-10 space-y-4">
                        <h3 className="text-xl font-bold font-space-grotesk">Subscribe to Newsletter</h3>
                        <p className="text-xs text-elite-primary-300">Get the latest tech trends and course updates directly in your inbox.</p>
@@ -103,18 +92,14 @@ export default function BlogIndex() {
                           <input type="email" placeholder="email@example.com" className="w-full h-10 px-4 rounded-lg bg-white/10 border border-white/20 text-sm focus:outline-none focus:border-elite-accent-500" />
                           <Button variant="accent" className="w-full">Join the List</Button>
                        </form>
-                    <MobileBottomNav />
-      </div>
+                    </div>
                  </Card>
               </aside>
-           <MobileBottomNav />
-      </div>
-        <MobileBottomNav />
-      </div>
+           </div>
+        </div>
       </main>
 
       <Footer />
-    <MobileBottomNav />
-      </div>
+    </div>
   );
 }

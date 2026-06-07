@@ -15,6 +15,7 @@ export default function ForgotPasswordPage() {
       setIsLoading(false);
       setIsSubmitted(true);
     }, 1500);
+  };
 
   return (
     <div className="min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950 flex flex-col justify-center items-center p-4">

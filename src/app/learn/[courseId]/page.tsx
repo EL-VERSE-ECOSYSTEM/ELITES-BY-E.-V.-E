@@ -7,6 +7,7 @@ export default function CoursePlayer() {
   const [activeTab, setActiveTab] = useState<"discussion" | "resources" | "notes">("discussion");
 
   const modules = [
+    {
       title: "Introduction to Next.js 15",
       lessons: [
         { id: 1, title: "Course Overview", duration: "05:24", completed: true },
@@ -14,6 +15,7 @@ export default function CoursePlayer() {
         { id: 3, title: "Why Next.js 15?", duration: "08:45", completed: false },
       ]
     },
+    {
       title: "The App Router",
       lessons: [
         { id: 4, title: "Layouts & Pages", duration: "15:20", completed: false },
@@ -42,21 +44,17 @@ export default function CoursePlayer() {
               <div className="flex justify-between text-[10px] font-bold uppercase text-elite-primary-400">
                  <span>Course Progress</span>
                  <span>33%</span>
-              <MobileBottomNav />
-      </div>
+              </div>
               <ProgressBar value={33} className="h-1.5" />
-           <MobileBottomNav />
-      </div>
-        <MobileBottomNav />
-      </div>
+           </div>
+        </div>
 
         <div className="flex-1 overflow-y-auto">
            {modules.map((module, mIdx) => (
              <div key={mIdx}>
                 <div className="px-6 py-4 bg-elite-primary-50 dark:bg-elite-primary-900/30 text-xs font-bold uppercase tracking-wider text-elite-primary-400 border-y border-elite-primary-100 dark:border-elite-primary-900">
                    {module.title}
-                <MobileBottomNav />
-      </div>
+                </div>
                 <div className="divide-y divide-elite-primary-50 dark:divide-elite-primary-900">
                    {module.lessons.map((lesson) => (
                      <button
@@ -72,28 +70,21 @@ export default function CoursePlayer() {
                           ) : (
                             <div className="w-[18px] h-[18px] rounded-full border-2 border-elite-primary-200" />
                           )}
-                       <MobileBottomNav />
-      </div>
+                       </div>
                        <div className="flex-1 min-w-0">
                           <div className={cn("text-sm font-bold truncate", lesson.id === currentLesson.id ? "text-elite-primary-900 dark:text-white" : "text-elite-primary-600")}>
                              {lesson.title}
-                          <MobileBottomNav />
-      </div>
+                          </div>
                           <div className="text-[10px] font-medium text-elite-primary-400 flex items-center gap-1 mt-0.5">
                              <Play size={10} /> {lesson.duration}
-                          <MobileBottomNav />
-      </div>
-                       <MobileBottomNav />
-      </div>
+                          </div>
+                       </div>
                      </button>
                    ))}
-                <MobileBottomNav />
-      </div>
-             <MobileBottomNav />
-      </div>
+                </div>
+             </div>
            ))}
-        <MobileBottomNav />
-      </div>
+        </div>
       </aside>
 
       {/* Main Content */}
@@ -103,8 +94,7 @@ export default function CoursePlayer() {
            {/* Placeholder for Video Player */}
            <div className="absolute inset-0 flex items-center justify-center text-white/20">
               <Monitor size={120} />
-           <MobileBottomNav />
-      </div>
+           </div>
 
            {/* Controls Overlay (Fake) */}
            <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent flex flex-col gap-4 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -113,21 +103,16 @@ export default function CoursePlayer() {
                  <div className="flex items-center gap-6">
                     <button><Play size={20} fill="white" /></button>
                     <button><ChevronRight size={20} /></button>
-                    <div className="text-xs font-bold">12:45 / {currentLesson.duration}<MobileBottomNav />
-      </div>
+                    <div className="text-xs font-bold">12:45 / {currentLesson.duration}</div>
                     <button className="flex items-center gap-2"><Volume2 size={20} /> <div className="w-16 h-1 bg-white/20 rounded-full"><div className="w-1/2 h-full bg-white rounded-full" /></div></button>
-                 <MobileBottomNav />
-      </div>
+                 </div>
                  <div className="flex items-center gap-6">
                     <button className="text-xs font-bold uppercase tracking-widest bg-white/10 px-2 py-1 rounded">1x</button>
                     <button><Settings size={20} /></button>
                     <button><Maximize2 size={20} /></button>
-                 <MobileBottomNav />
-      </div>
-              <MobileBottomNav />
-      </div>
-           <MobileBottomNav />
-      </div>
+                 </div>
+              </div>
+           </div>
 
            {/* Sidebar Toggle */}
            <button
@@ -136,26 +121,21 @@ export default function CoursePlayer() {
            >
               {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
            </button>
-        <MobileBottomNav />
-      </div>
+        </div>
 
         {/* Lesson Info & Tabs */}
         <div className="flex-1 flex flex-col min-h-0">
            <div className="px-8 py-6 border-b border-elite-primary-100 dark:border-elite-primary-900 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shrink-0">
               <div className="space-y-1">
-                 <div className="text-xs font-bold text-elite-primary-400 uppercase tracking-widest">Currently Watching<MobileBottomNav />
-      </div>
+                 <div className="text-xs font-bold text-elite-primary-400 uppercase tracking-widest">Currently Watching</div>
                  <h1 className="text-2xl font-bold font-space-grotesk">{currentLesson.title}</h1>
-              <MobileBottomNav />
-      </div>
+              </div>
               <div className="flex items-center gap-3">
                  <Button variant="outline" size="sm">Previous</Button>
                  <Button variant="accent" size="sm">Mark as Complete</Button>
                  <Button variant="primary" size="sm">Next Lesson <ChevronRight size={16} className="ml-1" /></Button>
-              <MobileBottomNav />
-      </div>
-           <MobileBottomNav />
-      </div>
+              </div>
+           </div>
 
            <div className="flex-1 flex flex-col md:flex-row min-h-0">
               <div className="flex-1 overflow-y-auto p-8 space-y-8">
@@ -178,8 +158,7 @@ export default function CoursePlayer() {
                         {activeTab === tab.id && <div className="absolute bottom-0 left-0 w-full h-1 bg-elite-primary-600 rounded-full" />}
                       </button>
                     ))}
-                 <MobileBottomNav />
-      </div>
+                 </div>
 
                  <div className="animate-in fade-in duration-300">
                     {activeTab === "discussion" && (
@@ -194,12 +173,9 @@ export default function CoursePlayer() {
                                />
                                <div className="flex justify-end">
                                   <Button variant="primary" size="sm">Post Comment</Button>
-                               <MobileBottomNav />
-      </div>
-                            <MobileBottomNav />
-      </div>
-                         <MobileBottomNav />
-      </div>
+                               </div>
+                            </div>
+                         </div>
 
                          <div className="space-y-6">
                             {[1, 2].map((i) => (
@@ -210,25 +186,19 @@ export default function CoursePlayer() {
                                        <span className="font-bold text-sm">Amara Okafor</span>
                                        <Badge variant="primary" className="text-[10px]">Tutor</Badge>
                                        <span className="text-[10px] text-elite-primary-400 font-bold uppercase">2 hours ago</span>
-                                    <MobileBottomNav />
-      </div>
+                                    </div>
                                     <p className="text-sm text-elite-primary-700 dark:text-elite-primary-300">
                                        Great question! Next.js 15 introduces dynamic partial prerendering which really helps with performance. Let me know if you need a code example.
                                     </p>
                                     <div className="flex items-center gap-4">
                                        <button className="text-[10px] font-bold uppercase text-elite-primary-400 hover:text-elite-primary-600 transition-colors">Reply</button>
                                        <button className="text-[10px] font-bold uppercase text-elite-primary-400 hover:text-elite-primary-600 transition-colors">Helpful (4)</button>
-                                    <MobileBottomNav />
-      </div>
-                                 <MobileBottomNav />
-      </div>
-                              <MobileBottomNav />
-      </div>
+                                    </div>
+                                 </div>
+                              </div>
                             ))}
-                         <MobileBottomNav />
-      </div>
-                      <MobileBottomNav />
-      </div>
+                         </div>
+                      </div>
                     )}
 
                     {activeTab === "resources" && (
@@ -242,34 +212,22 @@ export default function CoursePlayer() {
                                <div className="flex items-center gap-3">
                                   <div className="w-10 h-10 bg-elite-primary-50 dark:bg-elite-primary-900 rounded-lg flex items-center justify-center text-elite-primary-600">
                                      <FileText size={20} />
-                                  <MobileBottomNav />
-      </div>
+                                  </div>
                                   <div>
-                                     <div className="text-sm font-bold">{res.name}<MobileBottomNav />
-      </div>
-                                     <div className="text-[10px] text-elite-primary-400 font-bold uppercase">{res.type} • {res.size}<MobileBottomNav />
-      </div>
-                                  <MobileBottomNav />
-      </div>
-                               <MobileBottomNav />
-      </div>
+                                     <div className="text-sm font-bold">{res.name}</div>
+                                     <div className="text-[10px] text-elite-primary-400 font-bold uppercase">{res.type} • {res.size}</div>
+                                  </div>
+                               </div>
                                <Download size={18} className="text-elite-primary-400 group-hover:text-elite-primary-900 transition-colors" />
-                            <MobileBottomNav />
-      </div>
+                            </div>
                           ))}
-                       <MobileBottomNav />
-      </div>
+                       </div>
                     )}
-                 <MobileBottomNav />
-      </div>
-              <MobileBottomNav />
-      </div>
-           <MobileBottomNav />
-      </div>
-        <MobileBottomNav />
-      </div>
+                 </div>
+              </div>
+           </div>
+        </div>
       </main>
-    <MobileBottomNav />
-      </div>
+    </div>
   );
 }

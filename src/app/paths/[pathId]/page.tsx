@@ -23,8 +23,7 @@ export default function PathDetail() {
                  <div className="flex items-center gap-4">
                     <Badge variant="accent">CAREER PATH</Badge>
                     <span className="text-elite-primary-400 font-bold uppercase tracking-widest text-xs">Full Stack Mastery</span>
-                 <MobileBottomNav />
-      </div>
+                 </div>
                  <h1 className="text-4xl md:text-7xl font-bold font-space-grotesk tracking-tighter leading-tight">
                     Become a <span className="text-elite-accent-500 text-6xl md:text-8xl block">Senior Engineer.</span>
                  </h1>
@@ -32,19 +31,13 @@ export default function PathDetail() {
                     This path is designed to take you from a basic understanding of code to architecting complex, production-ready systems for global companies.
                  </p>
                  <div className="flex flex-wrap gap-8 text-sm font-bold uppercase tracking-widest text-elite-primary-400">
-                    <div className="flex items-center gap-2"><Users size={20} /> 8.4k Learners<MobileBottomNav />
-      </div>
-                    <div className="flex items-center gap-2"><Clock size={20} /> 240 Hours<MobileBottomNav />
-      </div>
-                    <div className="flex items-center gap-2"><Award size={20} /> 12 Certificates<MobileBottomNav />
-      </div>
-                 <MobileBottomNav />
-      </div>
+                    <div className="flex items-center gap-2"><Users size={20} /> 8.4k Learners</div>
+                    <div className="flex items-center gap-2"><Clock size={20} /> 240 Hours</div>
+                    <div className="flex items-center gap-2"><Award size={20} /> 12 Certificates</div>
+                 </div>
                  <Button variant="accent" size="lg" className="h-14 px-12 text-lg font-bold">Enroll in Path</Button>
-              <MobileBottomNav />
-      </div>
-           <MobileBottomNav />
-      </div>
+              </div>
+           </div>
         </section>
 
         <div className="container mx-auto px-4 py-20">
@@ -65,8 +58,7 @@ export default function PathDetail() {
                            "bg-elite-primary-100 dark:bg-elite-primary-900 text-elite-primary-400"
                          )}>
                             {step.status === 'completed' ? <CheckCircle2 size={16} /> : <div className="text-[10px] font-bold">{idx + 1}</div>}
-                         <MobileBottomNav />
-      </div>
+                         </div>
 
                          <Card className={cn(
                            "border-none shadow-lg group-hover:shadow-xl transition-all",
@@ -77,33 +69,26 @@ export default function PathDetail() {
                                   <div className="space-y-1">
                                      <h3 className="text-xl font-bold font-space-grotesk">{step.title}</h3>
                                      <p className="text-sm text-elite-primary-500">{step.courses} Intensive Courses • Includes Practical Exams</p>
-                                  <MobileBottomNav />
-      </div>
+                                  </div>
                                   <Button variant={step.status === 'locked' ? 'outline' : 'primary'} size="sm" disabled={step.status === 'locked'}>
                                      {step.status === 'completed' ? 'Review Content' : step.status === 'current' ? 'Continue' : 'Locked'}
                                   </Button>
-                               <MobileBottomNav />
-      </div>
+                               </div>
                                {step.status === 'current' && (
                                  <div className="mt-6 space-y-2">
                                     <div className="flex justify-between text-[10px] font-bold text-elite-primary-400 uppercase tracking-widest">
                                        <span>Step Progress</span>
                                        <span>40%</span>
-                                    <MobileBottomNav />
-      </div>
+                                    </div>
                                     <ProgressBar value={40} className="h-1.5" />
-                                 <MobileBottomNav />
-      </div>
+                                 </div>
                                )}
                             </CardContent>
                          </Card>
-                      <MobileBottomNav />
-      </div>
+                      </div>
                     ))}
-                 <MobileBottomNav />
-      </div>
-              <MobileBottomNav />
-      </div>
+                 </div>
+              </div>
 
               {/* Path Stats Sidebar */}
               <aside className="space-y-12">
@@ -120,16 +105,12 @@ export default function PathDetail() {
                             <div className="flex justify-between text-xs font-bold text-elite-primary-600 dark:text-elite-primary-400">
                                <span>{skill.name}</span>
                                <span>Advanced</span>
-                            <MobileBottomNav />
-      </div>
+                            </div>
                             <ProgressBar value={skill.level} className="h-1 bg-elite-primary-50 dark:bg-elite-primary-900" indicatorClassName="bg-elite-primary-600" />
-                         <MobileBottomNav />
-      </div>
+                         </div>
                        ))}
-                    <MobileBottomNav />
-      </div>
-                 <MobileBottomNav />
-      </div>
+                    </div>
+                 </div>
 
                  <div className="space-y-6 pt-8 border-t border-elite-primary-50 dark:border-elite-primary-900">
                     <h3 className="text-xl font-bold font-space-grotesk">Career Outcomes</h3>
@@ -142,50 +123,34 @@ export default function PathDetail() {
                          <div key={i} className="flex items-center gap-4 p-4 rounded-2xl bg-elite-primary-50 dark:bg-elite-primary-900/50">
                             <div className="w-10 h-10 rounded-xl bg-white dark:bg-elite-primary-900 flex items-center justify-center text-elite-primary-600 shadow-sm">
                                <o.icon size={20} />
-                            <MobileBottomNav />
-      </div>
+                            </div>
                             <div>
-                               <div className="text-[10px] font-bold text-elite-primary-400 uppercase tracking-widest">{o.label}<MobileBottomNav />
-      </div>
-                               <div className="font-bold text-sm">{o.value}<MobileBottomNav />
-      </div>
-                            <MobileBottomNav />
-      </div>
-                         <MobileBottomNav />
-      </div>
+                               <div className="text-[10px] font-bold text-elite-primary-400 uppercase tracking-widest">{o.label}</div>
+                               <div className="font-bold text-sm">{o.value}</div>
+                            </div>
+                         </div>
                        ))}
-                    <MobileBottomNav />
-      </div>
-                 <MobileBottomNav />
-      </div>
+                    </div>
+                 </div>
 
                  <Card className="bg-elite-primary-950 text-white p-8 space-y-6 border-none shadow-2xl">
                     <div className="space-y-2">
                        <h3 className="text-xl font-bold font-space-grotesk">Companies Hiring</h3>
                        <p className="text-xs text-elite-primary-300">Graduates from this path are working at world-class companies.</p>
-                    <MobileBottomNav />
-      </div>
+                    </div>
                     <div className="grid grid-cols-2 gap-4 grayscale opacity-50">
-                       <div className="h-8 bg-white/10 rounded flex items-center justify-center font-bold text-[10px]">ELCODERS<MobileBottomNav />
-      </div>
-                       <div className="h-8 bg-white/10 rounded flex items-center justify-center font-bold text-[10px]">STRIPE<MobileBottomNav />
-      </div>
-                       <div className="h-8 bg-white/10 rounded flex items-center justify-center font-bold text-[10px]">PAYSTACK<MobileBottomNav />
-      </div>
-                       <div className="h-8 bg-white/10 rounded flex items-center justify-center font-bold text-[10px]">GOOGLE<MobileBottomNav />
-      </div>
-                    <MobileBottomNav />
-      </div>
+                       <div className="h-8 bg-white/10 rounded flex items-center justify-center font-bold text-[10px]">ELCODERS</div>
+                       <div className="h-8 bg-white/10 rounded flex items-center justify-center font-bold text-[10px]">STRIPE</div>
+                       <div className="h-8 bg-white/10 rounded flex items-center justify-center font-bold text-[10px]">PAYSTACK</div>
+                       <div className="h-8 bg-white/10 rounded flex items-center justify-center font-bold text-[10px]">GOOGLE</div>
+                    </div>
                  </Card>
               </aside>
-           <MobileBottomNav />
-      </div>
-        <MobileBottomNav />
-      </div>
+           </div>
+        </div>
       </main>
 
       <Footer />
-    <MobileBottomNav />
-      </div>
+    </div>
   );
 }

@@ -26,8 +26,7 @@ export default function CourseDetail() {
                 <div className="flex flex-wrap gap-3">
                   <Badge variant="accent">Bestseller</Badge>
                   <Badge variant="primary" className="bg-white/10 text-white border-none">Web Development</Badge>
-                <MobileBottomNav />
-      </div>
+                </div>
                 <h1 className="text-4xl md:text-5xl font-bold font-space-grotesk leading-tight">
                   Complete Full Stack Development with Next.js 15, TypeScript & Tailwind CSS
                 </h1>
@@ -39,26 +38,19 @@ export default function CourseDetail() {
                     <Star size={18} fill="currentColor" />
                     <span>4.9</span>
                     <span className="text-white/60 font-medium">(1,240 reviews)</span>
-                  <MobileBottomNav />
-      </div>
+                  </div>
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-white/20" />
                     <span>Created by David Mensah</span>
-                  <MobileBottomNav />
-      </div>
+                  </div>
                   <div className="flex items-center gap-2 text-white/60">
                     <Globe size={18} />
                     <span>English (Auto-generated subtitles)</span>
-                  <MobileBottomNav />
-      </div>
-                <MobileBottomNav />
-      </div>
-              <MobileBottomNav />
-      </div>
-            <MobileBottomNav />
-      </div>
-          <MobileBottomNav />
-      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <div className="container mx-auto px-4 py-12">
@@ -72,22 +64,15 @@ export default function CourseDetail() {
                  <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-20 h-20 bg-elite-accent-500 rounded-full flex items-center justify-center text-white transform group-hover:scale-110 transition-transform">
                       <Play size={40} fill="currentColor" />
-                    <MobileBottomNav />
-      </div>
-                 <MobileBottomNav />
-      </div>
+                    </div>
+                 </div>
                  <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end text-white">
                     <div>
-                      <div className="text-lg font-bold">Course Preview<MobileBottomNav />
-      </div>
-                      <div className="text-sm opacity-60">2:45m<MobileBottomNav />
-      </div>
-                    <MobileBottomNav />
-      </div>
-                 <MobileBottomNav />
-      </div>
-              <MobileBottomNav />
-      </div>
+                      <div className="text-lg font-bold">Course Preview</div>
+                      <div className="text-sm opacity-60">2:45m</div>
+                    </div>
+                 </div>
+              </div>
 
               {/* Tabs */}
               <div className="border-b border-elite-primary-100 dark:border-elite-primary-900 sticky top-20 bg-white dark:bg-elite-primary-950 z-20">
@@ -109,10 +94,8 @@ export default function CourseDetail() {
                       )}
                     </button>
                   ))}
-                <MobileBottomNav />
-      </div>
-              <MobileBottomNav />
-      </div>
+                </div>
+              </div>
 
               {/* Tab Content */}
               <div className="space-y-12">
@@ -132,13 +115,10 @@ export default function CourseDetail() {
                           <div key={idx} className="flex gap-3">
                             <CheckCircle2 className="text-elite-success shrink-0" size={20} />
                             <span className="text-elite-primary-700 dark:text-elite-primary-300">{item}</span>
-                          <MobileBottomNav />
-      </div>
+                          </div>
                         ))}
-                      <MobileBottomNav />
-      </div>
-                    <MobileBottomNav />
-      </div>
+                      </div>
+                    </div>
 
                     <div className="space-y-6">
                       <h2 className="text-2xl font-bold font-space-grotesk">Requirements</h2>
@@ -147,18 +127,15 @@ export default function CourseDetail() {
                         <li>Experience with React (Hooks, Components)</li>
                         <li>Familiarity with HTML and CSS</li>
                       </ul>
-                    <MobileBottomNav />
-      </div>
+                    </div>
 
                     <div className="space-y-6">
                       <h2 className="text-2xl font-bold font-space-grotesk">Description</h2>
                       <div className="prose prose-elite dark:prose-invert max-w-none text-elite-primary-700 dark:text-elite-primary-300">
                         <p>Welcome to the most comprehensive Next.js course available. This course is designed to take you from a React developer to a full-stack engineering pro.</p>
                         <p>Throughout this course, we will build a real-world tech learning platform similar to ELITE itself, covering every aspect of modern web architecture.</p>
-                      <MobileBottomNav />
-      </div>
-                    <MobileBottomNav />
-      </div>
+                      </div>
+                    </div>
                   </>
                 )}
 
@@ -168,19 +145,15 @@ export default function CourseDetail() {
                       <div key={idx} className="border border-elite-primary-100 dark:border-elite-primary-900 rounded-xl overflow-hidden">
                         <div className="p-4 bg-elite-primary-50 dark:bg-elite-primary-900/50 flex justify-between items-center cursor-pointer">
                           <div className="flex items-center gap-4">
-                            <div className="font-bold text-elite-primary-400">Module {idx + 1}<MobileBottomNav />
-      </div>
+                            <div className="font-bold text-elite-primary-400">Module {idx + 1}</div>
                             <h3 className="font-bold">{module.title}</h3>
-                          <MobileBottomNav />
-      </div>
+                          </div>
                           <div className="flex items-center gap-4 text-xs font-medium text-elite-primary-500">
                             <span>{module.lessons} Lessons</span>
                             <span>{module.duration}</span>
                             <ChevronDown size={16} />
-                          <MobileBottomNav />
-      </div>
-                        <MobileBottomNav />
-      </div>
+                          </div>
+                        </div>
                         <div className="divide-y divide-elite-primary-50 dark:divide-elite-primary-900">
                            {Array.from({ length: module.lessons }).map((_, lIdx) => (
                              <div key={lIdx} className="p-4 flex items-center justify-between text-sm hover:bg-elite-primary-50/50 dark:hover:bg-white/5 transition-colors">
@@ -189,24 +162,17 @@ export default function CourseDetail() {
                                   <span className={cn(lIdx === 0 && idx === 0 ? "text-elite-primary-900 dark:text-white font-medium" : "text-elite-primary-500")}>
                                     Lesson {lIdx + 1}: {idx === 0 ? "Introduction to the course" : "Deep diving into the topic"}
                                   </span>
-                               <MobileBottomNav />
-      </div>
+                               </div>
                                {lIdx === 0 && idx === 0 && <button className="text-xs text-elite-primary-600 font-bold hover:underline">Preview</button>}
-                             <MobileBottomNav />
-      </div>
+                             </div>
                            ))}
-                        <MobileBottomNav />
-      </div>
-                      <MobileBottomNav />
-      </div>
+                        </div>
+                      </div>
                     ))}
-                  <MobileBottomNav />
-      </div>
+                  </div>
                 )}
-              <MobileBottomNav />
-      </div>
-            <MobileBottomNav />
-      </div>
+              </div>
+            </div>
 
             {/* Sticky Sidebar */}
             <div className="lg:relative">
@@ -217,47 +183,34 @@ export default function CourseDetail() {
                        <span className="text-4xl font-bold text-elite-primary-900 dark:text-white">$15.00</span>
                        <span className="text-lg text-elite-primary-400 line-through">$89.00</span>
                        <Badge variant="success" className="ml-auto">85% OFF</Badge>
-                    <MobileBottomNav />
-      </div>
+                    </div>
                     <div className="text-sm font-bold text-elite-error flex items-center gap-2">
                       <Clock size={16} />
                       <span>Special price ends in 12h 45m!</span>
-                    <MobileBottomNav />
-      </div>
+                    </div>
                     <div className="space-y-3">
                       <Button variant="accent" size="lg" className="w-full">Enroll Now</Button>
                       <Button variant="outline" size="lg" className="w-full">Add to Cart</Button>
-                    <MobileBottomNav />
-      </div>
+                    </div>
                     <p className="text-center text-xs text-elite-primary-400">30-Day Money-Back Guarantee</p>
 
                     <div className="space-y-4">
-                      <div className="text-sm font-bold uppercase tracking-wider">This course includes:<MobileBottomNav />
-      </div>
+                      <div className="text-sm font-bold uppercase tracking-wider">This course includes:</div>
                       <div className="space-y-2 text-sm text-elite-primary-600 dark:text-elite-primary-300">
-                        <div className="flex items-center gap-3"><Play size={16} /> 15.5 hours on-demand video<MobileBottomNav />
-      </div>
-                        <div className="flex items-center gap-3"><Download size={16} /> 24 downloadable resources<MobileBottomNav />
-      </div>
-                        <div className="flex items-center gap-3"><Award size={16} /> Certificate of completion<MobileBottomNav />
-      </div>
-                        <div className="flex items-center gap-3"><BarChart size={16} /> Full lifetime access<MobileBottomNav />
-      </div>
-                        <div className="flex items-center gap-3"><Calendar size={16} /> Regular updates<MobileBottomNav />
-      </div>
-                      <MobileBottomNav />
-      </div>
-                    <MobileBottomNav />
-      </div>
+                        <div className="flex items-center gap-3"><Play size={16} /> 15.5 hours on-demand video</div>
+                        <div className="flex items-center gap-3"><Download size={16} /> 24 downloadable resources</div>
+                        <div className="flex items-center gap-3"><Award size={16} /> Certificate of completion</div>
+                        <div className="flex items-center gap-3"><BarChart size={16} /> Full lifetime access</div>
+                        <div className="flex items-center gap-3"><Calendar size={16} /> Regular updates</div>
+                      </div>
+                    </div>
 
                     <div className="flex justify-between pt-4 border-t border-elite-primary-50 dark:border-elite-primary-800">
                        <button className="flex items-center gap-2 text-xs font-bold hover:text-elite-primary-600 transition-colors"><Share2 size={16} /> Share</button>
                        <button className="flex items-center gap-2 text-xs font-bold hover:text-elite-primary-600 transition-colors"><Bookmark size={16} /> Save</button>
                        <button className="flex items-center gap-2 text-xs font-bold hover:text-elite-primary-600 transition-colors"><MessageCircle size={16} /> Gift</button>
-                    <MobileBottomNav />
-      </div>
-                  <MobileBottomNav />
-      </div>
+                    </div>
+                  </div>
                 </Card>
 
                 <Card>
@@ -266,57 +219,39 @@ export default function CourseDetail() {
                     <div className="flex items-center gap-4">
                       <div className="w-16 h-16 rounded-full bg-elite-primary-100" />
                       <div>
-                        <div className="font-bold text-lg">David Mensah<MobileBottomNav />
-      </div>
-                        <div className="text-xs text-elite-primary-400 font-medium">Senior Software Engineer<MobileBottomNav />
-      </div>
-                      <MobileBottomNav />
-      </div>
-                    <MobileBottomNav />
-      </div>
+                        <div className="font-bold text-lg">David Mensah</div>
+                        <div className="text-xs text-elite-primary-400 font-medium">Senior Software Engineer</div>
+                      </div>
+                    </div>
                     <p className="text-sm text-elite-primary-600 dark:text-elite-primary-400">
                       Over 10 years of experience in full-stack development and cloud architecture. Passionate about teaching the next generation of African tech talent.
                     </p>
                     <div className="flex gap-4 pt-2">
                        <div className="text-center">
-                         <div className="font-bold">4.9<MobileBottomNav />
-      </div>
-                         <div className="text-[10px] uppercase text-elite-primary-400">Rating<MobileBottomNav />
-      </div>
-                       <MobileBottomNav />
-      </div>
+                         <div className="font-bold">4.9</div>
+                         <div className="text-[10px] uppercase text-elite-primary-400">Rating</div>
+                       </div>
                        <div className="text-center border-x border-elite-primary-50 dark:border-elite-primary-800 px-4">
-                         <div className="font-bold">12k<MobileBottomNav />
-      </div>
-                         <div className="text-[10px] uppercase text-elite-primary-400">Students<MobileBottomNav />
-      </div>
-                       <MobileBottomNav />
-      </div>
+                         <div className="font-bold">12k</div>
+                         <div className="text-[10px] uppercase text-elite-primary-400">Students</div>
+                       </div>
                        <div className="text-center">
-                         <div className="font-bold">15<MobileBottomNav />
-      </div>
-                         <div className="text-[10px] uppercase text-elite-primary-400">Courses<MobileBottomNav />
-      </div>
-                       <MobileBottomNav />
-      </div>
-                    <MobileBottomNav />
-      </div>
+                         <div className="font-bold">15</div>
+                         <div className="text-[10px] uppercase text-elite-primary-400">Courses</div>
+                       </div>
+                    </div>
                     <Button variant="ghost" className="w-full" asChild>
                       <Link href="/tutors/1">View Profile</Link>
                     </Button>
                   </CardContent>
                 </Card>
               </aside>
-            <MobileBottomNav />
-      </div>
-          <MobileBottomNav />
-      </div>
-        <MobileBottomNav />
-      </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       <Footer />
-    <MobileBottomNav />
-      </div>
+    </div>
   );
 }

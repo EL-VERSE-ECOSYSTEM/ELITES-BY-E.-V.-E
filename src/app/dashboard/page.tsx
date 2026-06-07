@@ -1,6 +1,14 @@
 "use client";
 
 import { Navbar from "@/components/layout/Navbar";, MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle, CardDescription from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, ProgressBar from "@/components/ui/ProgressBar";, Link from "next/link";, cn from "@/lib/utils";, BookOpen, Clock, Flame, Zap, Coins, Trophy, Calendar, Play, ChevronRight, TrendingUp, Target, Bell } from "lucide-react";
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  BarChart,
   Bar
 } from 'recharts';
 

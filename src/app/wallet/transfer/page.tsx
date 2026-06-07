@@ -14,6 +14,7 @@ export default function InternalTransferPage() {
       setIsVerified(true);
       setStep(2);
     }
+  };
 
   return (
     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">

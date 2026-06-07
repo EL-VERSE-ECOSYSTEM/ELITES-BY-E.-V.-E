@@ -10,6 +10,7 @@ export default function ReferralProgramPage() {
     navigator.clipboard.writeText(`https://elites.africa/join?ref=${referralCode}`);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">

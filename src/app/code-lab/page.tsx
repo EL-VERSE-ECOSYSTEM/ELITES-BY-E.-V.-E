@@ -11,6 +11,7 @@ export default function CodingLab() {
     setIsRunning(true);
     setOutput([...output, "> node index.js", "Server running on port 3000...", "Fetching data...", "Success! Output: { status: 200, data: [...] }"]);
     setTimeout(() => setIsRunning(false), 1500);
+  };
 
   return (
     <div className="flex flex-col h-screen bg-elite-primary-950 text-white overflow-hidden">

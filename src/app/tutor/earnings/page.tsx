@@ -1,6 +1,12 @@
 "use client";
 
 import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, DollarSign, TrendingUp, ArrowUpRight, ArrowDownLeft, Clock, Download, Filter, Calendar, CheckCircle2, AlertCircle, Landmark, CreditCard, ChevronRight } from "lucide-react";
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
   ResponsiveContainer
 } from 'recharts';
 

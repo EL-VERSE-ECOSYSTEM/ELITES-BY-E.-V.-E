@@ -20,20 +20,14 @@ export default function BlogPostDetail() {
                  </h1>
                  <div className="flex flex-wrap items-center gap-6 text-sm text-elite-primary-500 font-medium">
                     <div className="flex items-center gap-2">
-                       <div className="w-10 h-10 rounded-full bg-elite-primary-100 flex items-center justify-center font-bold">DM<MobileBottomNav />
-      </div>
+                       <div className="w-10 h-10 rounded-full bg-elite-primary-100 flex items-center justify-center font-bold">DM</div>
                        <span>By David Mensah</span>
-                    <MobileBottomNav />
-      </div>
-                    <div className="flex items-center gap-2"><Clock size={18} /> 10 min read<MobileBottomNav />
-      </div>
+                    </div>
+                    <div className="flex items-center gap-2"><Clock size={18} /> 10 min read</div>
                     <span>Published Feb 15, 2024</span>
-                 <MobileBottomNav />
-      </div>
-              <MobileBottomNav />
-      </div>
-           <MobileBottomNav />
-      </div>
+                 </div>
+              </div>
+           </div>
 
            <div className="aspect-[21/9] bg-elite-primary-50 rounded-[40px] mb-12" />
 
@@ -50,8 +44,7 @@ export default function BlogPostDetail() {
 
                  <div className="my-8 p-8 bg-elite-primary-50 dark:bg-elite-primary-900/50 rounded-3xl border-l-4 border-l-elite-accent-500 italic text-lg text-elite-primary-900 dark:text-white font-medium">
                     "The next Google or Stripe won't just be built for Africa; it will be built in Africa, by talent trained on platforms like ELITE."
-                 <MobileBottomNav />
-      </div>
+                 </div>
 
                  <h2 className="text-3xl font-bold font-space-grotesk mt-12">Why Remote Work is a Game Changer</h2>
                  <p>
@@ -62,18 +55,14 @@ export default function BlogPostDetail() {
                     <div className="flex gap-4">
                        <Button variant="outline" size="sm"><Share2 size={16} className="mr-2" /> Share</Button>
                        <Button variant="outline" size="sm"><Bookmark size={16} className="mr-2" /> Save</Button>
-                    <MobileBottomNav />
-      </div>
+                    </div>
                     <div className="flex gap-2">
                        {["Next.js", "Africa", "Careers"].map(t => (
                          <Badge key={t} variant="primary" className="text-[10px]">{t}</Badge>
                        ))}
-                    <MobileBottomNav />
-      </div>
-                 <MobileBottomNav />
-      </div>
-              <MobileBottomNav />
-      </div>
+                    </div>
+                 </div>
+              </div>
 
               {/* Sticky Author Sidebar */}
               <aside className="lg:col-span-4 lg:sticky lg:top-32 h-fit space-y-8">
@@ -81,17 +70,12 @@ export default function BlogPostDetail() {
                     <CardContent className="p-8 space-y-6">
                        <h3 className="font-bold uppercase tracking-widest text-[10px] text-elite-primary-400">About the Author</h3>
                        <div className="flex items-center gap-4">
-                          <div className="w-16 h-16 rounded-2xl bg-elite-primary-100 flex items-center justify-center font-bold text-xl">DM<MobileBottomNav />
-      </div>
+                          <div className="w-16 h-16 rounded-2xl bg-elite-primary-100 flex items-center justify-center font-bold text-xl">DM</div>
                           <div>
-                             <div className="font-bold text-lg leading-tight">David Mensah<MobileBottomNav />
-      </div>
-                             <div className="text-xs text-elite-primary-500">Senior Engineer @ ELCODERS<MobileBottomNav />
-      </div>
-                          <MobileBottomNav />
-      </div>
-                       <MobileBottomNav />
-      </div>
+                             <div className="font-bold text-lg leading-tight">David Mensah</div>
+                             <div className="text-xs text-elite-primary-500">Senior Engineer @ ELCODERS</div>
+                          </div>
+                       </div>
                        <p className="text-xs text-elite-primary-500 leading-relaxed">David is passionate about scaling tech ecosystems in Africa and has trained over 5,000 developers.</p>
                        <Button variant="primary" className="w-full text-xs font-bold uppercase tracking-widest">Follow David</Button>
                     </CardContent>
@@ -107,13 +91,11 @@ export default function BlogPostDetail() {
                     </CardContent>
                  </Card>
               </aside>
-           <MobileBottomNav />
-      </div>
+           </div>
         </article>
       </main>
 
       <Footer />
-    <MobileBottomNav />
-      </div>
+    </div>
   );
 }

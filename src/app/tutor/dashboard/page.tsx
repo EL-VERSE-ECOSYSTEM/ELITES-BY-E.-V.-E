@@ -1,6 +1,14 @@
 "use client";
 
 import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Link from "next/link";, cn from "@/lib/utils";, Users, BookOpen, TrendingUp, DollarSign, Plus, Calendar, Star, ChevronRight, BarChart3, MessageCircle, Bell } from "lucide-react";
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  AreaChart,
   Area
 } from 'recharts';
 
