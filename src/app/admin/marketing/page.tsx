@@ -42,6 +42,7 @@ export default function AdminMarketing() {
       <div className="flex-1 flex flex-col min-w-0">
         <header className="px-6 py-8 space-y-6">
            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <h1 className="text-3xl font-bold font-space-grotesk text-elite-primary-900 dark:text-white">Marketing & Growth</h1>
               <h1 className="text-3xl font-bold font-space-grotesk">Marketing & Growth</h1>
               <div className="flex gap-2">
                  <Button variant="outline" size="sm"><Zap size={18} className="mr-2" /> Quick Broadcast</Button>
@@ -51,6 +52,11 @@ export default function AdminMarketing() {
         </header>
 
         <main className="px-6 pb-24 space-y-6">
+           <Card className="p-6">
+              <CardContent>
+                 <p className="text-elite-primary-600">Marketing management modules.</p>
+              </CardContent>
+           </Card>
            <div className="flex flex-col md:flex-row gap-4 justify-between items-center bg-white dark:bg-elite-primary-900 p-4 rounded-xl shadow-sm border border-elite-primary-100 dark:border-elite-primary-800">
               <div className="flex gap-4 p-1 bg-elite-primary-50 dark:bg-elite-primary-950 rounded-xl w-fit">
                  {["coupons", "campaigns", "notifications"].map((tab) => (
