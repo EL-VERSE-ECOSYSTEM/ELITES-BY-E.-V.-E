@@ -15,7 +15,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-elite-primary-300 max-w-xs">
-              Africa's premier tech skills learning platform designed to train, certify, and connect African tech talent to jobs.
+              Africa&apos;s premier tech skills learning platform designed to train, certify, and connect African tech talent to jobs.
             </p>
             <div className="flex gap-4">
               {/* Social Icons Placeholder */}

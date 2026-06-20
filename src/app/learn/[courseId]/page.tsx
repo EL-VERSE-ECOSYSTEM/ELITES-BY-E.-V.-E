@@ -1,6 +1,12 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
-import { Button from "@/components/ui/Button";, ProgressBar from "@/components/ui/ProgressBar";, Badge from "@/components/ui/Badge";, cn from "@/lib/utils";, Link from "next/link";, ChevronLeft, ChevronRight, Menu, X, Play, CheckCircle2, MessageSquare, FileText, Download, Settings, Maximize2, Volume2, Monitor, StickyNote } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { ProgressBar } from "@/components/ui/ProgressBar";
+import { Badge } from "@/components/ui/Badge";
+import { CheckCircle2, ChevronLeft, ChevronRight, Download, FileText, Maximize2, Menu, MessageSquare, Monitor, Play, Settings, StickyNote, Volume2, X } from "lucide-react";
 
 export default function CoursePlayer() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -147,7 +153,7 @@ export default function CoursePlayer() {
                     ].map((tab) => (
                       <button
                         key={tab.id}
-                        onClick={() => setActiveTab(tab.id as any)}
+                        onClick={() => setActiveTab(tab.id as unknown)}
                         className={cn(
                           "pb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wider relative transition-all",
                           activeTab === tab.id ? "text-elite-primary-600 dark:text-white" : "text-elite-primary-400 hover:text-elite-primary-600"

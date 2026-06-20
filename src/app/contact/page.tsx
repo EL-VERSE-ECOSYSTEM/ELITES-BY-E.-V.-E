@@ -1,6 +1,11 @@
 "use client";
+import { Globe, Mail, MapPin } from "lucide-react";
+import { Navbar } from "@/components/layout/Navbar";
 
-import { Footer from "@/components/layout/Footer";, Button from "@/components/ui/Button";, Input from "@/components/ui/Input";, Card, CardContent from "@/components/ui/Card"; } from "lucide-react";
+import { Footer } from "@/components/layout/Footer";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Card, CardContent } from "@/components/ui/Card";
 
 export default function ContactPage() {
   return (
@@ -44,7 +49,7 @@ export default function ContactPage() {
                  <div className="pt-8 space-y-4">
                     <h3 className="font-bold">Follow Our Journey</h3>
                     <div className="flex gap-3">
-                       {[Twitter, Github, Linkedin, Globe].map((Icon, i) => (
+                       {[Linkedin, Globe].map((Icon, i) => (
                          <button key={i} className="w-10 h-10 rounded-full bg-elite-primary-950 text-white flex items-center justify-center hover:bg-elite-accent-500 transition-colors">
                             <Icon size={18} />
                          </button>

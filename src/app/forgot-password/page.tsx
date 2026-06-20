@@ -1,6 +1,11 @@
 "use client";
+import Link from "next/link";
+import { AlertCircle, ArrowLeft, CheckCircle2, Mail } from "lucide-react";
+import { useState } from "react";
 
-import { Input from "@/components/ui/Input";, Card, CardContent from "@/components/ui/Card";, Badge from "@/components/ui/Badge";, Link from "next/link";, useState from "react"; } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -53,7 +58,7 @@ export default function ForgotPasswordPage() {
               <div className="p-4 bg-elite-info/10 rounded-xl flex gap-3 border border-elite-info/20">
                  <AlertCircle className="text-elite-info shrink-0" size={18} />
                  <p className="text-xs text-elite-info leading-relaxed">
-                    If you don't receive an email within a few minutes, please check your spam folder or contact support.
+                    If you don&apos;t receive an email within a few minutes, please check your spam folder or contact support.
                  </p>
               </div>
             </div>

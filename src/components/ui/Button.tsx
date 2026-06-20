@@ -1,5 +1,4 @@
 import * as React from "react";
-import { cn } from "@/lib/utils";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -33,17 +32,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     // For this task, we will handle children if asChild is true.
 
     if (asChild) {
-        const child = React.Children.only(props.children) as React.ReactElement<any>;
+        const child = React.Children.only(props.children) as React.ReactElement<{className?: string, children?: React.ReactNode}>;
         return React.cloneElement(child, {
             className: cn(
                 "inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elite-primary-500 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
                 variants[variant],
                 sizes[size],
                 className,
-                child.props.className
+                (child.props as any).className
             ),
             ...props,
-            children: child.props.children
+            children: (child.props as any).children
         });
     }
 

@@ -1,17 +1,13 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { BarChart3, Clock, Download, Globe, MapPin, MousePointer2, Share2, Sun, TrendingDown, TrendingUp, X } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Users, BookOpen, Star, TrendingUp, TrendingDown, Clock, MapPin, Globe, BarChart3, PieChart as PieChartIcon, MousePointer2, Share2 } from "lucide-react";
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Cell,
-  PieChart,
-  Pie
-} from 'recharts';
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Bar, BarChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export default function TutorAnalytics() {
   const engagementData = [

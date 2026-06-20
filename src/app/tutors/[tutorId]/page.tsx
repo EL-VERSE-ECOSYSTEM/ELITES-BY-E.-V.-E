@@ -1,6 +1,14 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Navbar } from "@/components/layout/Navbar";
 
-import { Footer from "@/components/layout/Footer";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Link from "next/link";, Star, MapPin, Calendar, Users, BookOpen, CheckCircle2, Globe, Play, MessageSquare, Clock, Briefcase } from "lucide-react";
+import { Footer } from "@/components/layout/Footer";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { BookOpen, Briefcase, Calendar, CheckCircle2, Clock, Globe, MapPin, MessageSquare, Play, Star, Users } from "lucide-react";
 
 export default function TutorProfilePage() {
   const [activeTab, setActiveTab] = useState<"courses" | "reviews" | "availability">("courses");
@@ -48,7 +56,7 @@ export default function TutorProfilePage() {
                        {["courses", "reviews", "availability"].map((tab) => (
                          <button
                           key={tab}
-                          onClick={() => setActiveTab(tab as any)}
+                          onClick={() => setActiveTab(tab as unknown)}
                           className={cn(
                             "pb-4 text-sm font-bold uppercase tracking-widest relative transition-all",
                             activeTab === tab ? "text-elite-primary-600 dark:text-white" : "text-elite-primary-400 hover:text-elite-primary-900"

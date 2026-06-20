@@ -1,6 +1,10 @@
 "use client";
+import Link from "next/link";
+import { Eye, Lock, Mail, User } from "lucide-react";
+import { useState } from "react";
 
-import { Input from "@/components/ui/Input";, Card, CardContent from "@/components/ui/Card";, Link from "next/link";, useState from "react"; } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);

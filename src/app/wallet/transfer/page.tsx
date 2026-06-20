@@ -1,6 +1,14 @@
 "use client";
+import Link from "next/link";
+import {  ArrowLeft, CheckCircle2, ChevronRight, Search, Shield, ShieldCheck , Send, Info } from "lucide-react";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Input from "@/components/ui/Input";, Badge from "@/components/ui/Badge";, useState from "react";, Link from "next/link";, cn from "@/lib/utils";, ArrowLeft, Search, Send, User, ShieldCheck, Clock, AlertCircle, Coins, Wallet, Info, CheckCircle2, ChevronRight } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 
 export default function InternalTransferPage() {
   const [recipient, setRecipient] = useState("");
@@ -48,7 +56,7 @@ export default function InternalTransferPage() {
                         placeholder="Enter ELITES ID or Email"
                       />
                    </div>
-                   <p className="text-[10px] text-elite-primary-400 font-bold uppercase tracking-tighter">TIP: You can find a user's ELITES ID on their public profile.</p>
+                   <p className="text-[10px] text-elite-primary-400 font-bold uppercase tracking-tighter">TIP: You can find a user&apos;s ELITES ID on their public profile.</p>
                 </div>
 
                 <Button variant="accent" size="lg" className="w-full h-14 text-lg font-bold" disabled={!recipient} onClick={handleVerify}>
@@ -101,7 +109,7 @@ export default function InternalTransferPage() {
                          <label className="text-sm font-medium">Add a note (Optional)</label>
                          <textarea
                           className="w-full p-4 rounded-xl border border-elite-primary-100 bg-white text-sm min-h-[100px] outline-none focus:ring-2 focus:ring-elite-primary-500"
-                          placeholder="What's this for?"
+                          placeholder="What&apos;s this for?"
                          />
                       </div>
 
@@ -120,7 +128,7 @@ export default function InternalTransferPage() {
                 </div>
                 <div className="space-y-2">
                    <h2 className="text-3xl font-bold font-space-grotesk text-elite-primary-900 dark:text-white">Transfer Sent!</h2>
-                   <p className="text-elite-primary-500 max-w-sm mx-auto">You've successfully sent <span className="font-bold text-elite-primary-900 dark:text-white">${amount}.00</span> to Sarah Kamau.</p>
+                   <p className="text-elite-primary-500 max-w-sm mx-auto">You&apos;ve successfully sent <span className="font-bold text-elite-primary-900 dark:text-white">${amount}.00</span> to Sarah Kamau.</p>
                 </div>
                 <div className="flex flex-col gap-3">
                    <Button variant="outline" className="w-full" asChild><Link href="/wallet">Back to Wallet</Link></Button>

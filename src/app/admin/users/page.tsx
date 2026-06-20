@@ -1,6 +1,12 @@
 "use client";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Input from "@/components/ui/Input";, Badge from "@/components/ui/Badge";, Search, Filter, MoreVertical, Eye, UserX, Shield, Download, Mail, MoreHorizontal } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Badge } from "@/components/ui/Badge";
+import { Download, Eye, Filter, Mail, MoreHorizontal, MoreVertical, Search, Shield, User, UserX } from "lucide-react";
 import Link from "next/link";
 
 export default function UserManagement() {

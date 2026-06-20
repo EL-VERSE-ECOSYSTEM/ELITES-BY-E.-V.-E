@@ -1,0 +1,128 @@
+
+> temp-app@0.1.0 build
+> next build
+
+   ▲ Next.js 15.1.0
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./src/app/admin/audit-logs/page.tsx
+Error:   [31mx[0m Expression expected
+    ,-[[36;1;4m/app/src/app/admin/audit-logs/page.tsx[0m:13:1]
+ [2m10[0m | export default function AdminAuditLogs() {
+ [2m11[0m |   const logs = Array.from({ length: 8 }).map((_, i) => ({
+ [2m12[0m |     id: i + 1,
+ [2m13[0m |     admin: [&quot;Alice Mod&quot;, &quot;Bob Super&quot;, &quot;System&quot;, &quot;Alice Mod&quot;][i % 4],
+    : [35;1m            ^[0m
+ [2m14[0m |     action: [&quot;Deleted Comment&quot;, "Updated Course", "Auto-suspended User", "Approved Withdrawal"][i % 4],
+ [2m15[0m |     entity: ["Discussion", "Course #12", "User #450", "Transaction #99"][i % 4],
+ [2m16[0m |     time: "2m ago",
+    `----
+  [31mx[0m Expected ',', got ';'
+    ,-[[36;1;4m/app/src/app/admin/audit-logs/page.tsx[0m:13:1]
+ [2m10[0m | export default function AdminAuditLogs() {
+ [2m11[0m |   const logs = Array.from({ length: 8 }).map((_, i) => ({
+ [2m12[0m |     id: i + 1,
+ [2m13[0m |     admin: [&quot;Alice Mod&quot;, &quot;Bob Super&quot;, &quot;System&quot;, &quot;Alice Mod&quot;][i % 4],
+    : [35;1m                 ^[0m
+ [2m14[0m |     action: [&quot;Deleted Comment&quot;, "Updated Course", "Auto-suspended User", "Approved Withdrawal"][i % 4],
+ [2m15[0m |     entity: ["Discussion", "Course #12", "User #450", "Transaction #99"][i % 4],
+ [2m16[0m |     time: "2m ago",
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/audit-logs/page.tsx
+
+./src/app/admin/moderation/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/app/src/app/admin/moderation/page.tsx[0m:22:1]
+ [2m19[0m |   ];
+ [2m20[0m |
+ [2m21[0m |   return (
+ [2m22[0m |     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">
+    : [35;1m     ^^^[0m
+ [2m23[0m |       <Sidebar />
+ [2m24[0m |       <div className="flex-1 flex flex-col min-w-0">
+ [2m25[0m |         <header className="px-6 py-8 space-y-6">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/moderation/page.tsx
+
+./src/app/admin/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/app/src/app/admin/page.tsx[0m:32:1]
+ [2m29[0m |   ];
+ [2m30[0m |
+ [2m31[0m |   return (
+ [2m32[0m |     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">
+    : [35;1m     ^^^[0m
+ [2m33[0m |       <Sidebar />
+ [2m34[0m |       <div className="flex-1 flex flex-col min-w-0">
+ [2m35[0m |         <header className="px-6 py-6 bg-white/80 dark:bg-elite-primary-950/80 backdrop-blur-md border-b border-elite-primary-100 dark:border-elite-primary-900 sticky top-0 z-30 flex items-center justify-between">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/page.tsx
+
+./src/app/admin/withdrawals/page.tsx
+Error:   [31mx[0m Expression expected
+    ,-[[36;1;4m/app/src/app/admin/withdrawals/page.tsx[0m:15:1]
+ [2m12[0m |     id: `WTH-${1000 + i}`,
+ [2m13[0m |     user: ["David Mensah", "Sarah Kamau", "Kofi Anan", "Amara Okafor"][i % 4],
+ [2m14[0m |     amount: [450, 1200, 85, 2400][i % 4],
+ [2m15[0m |     method: i % 2 === 0 ? &quot;Bank Transfer&quot; : "Mobile Money",
+    : [35;1m                          ^[0m
+ [2m16[0m |     account: i % 2 === 0 ? "Zenith Bank •••• 4567" : "MTN Momo •••• 1234",
+ [2m17[0m |     requestedAt: "2 hours ago",
+ [2m18[0m |     status: i === 0 ? "pending" : "processing",
+    `----
+  [31mx[0m Expected ':', got ';'
+    ,-[[36;1;4m/app/src/app/admin/withdrawals/page.tsx[0m:15:1]
+ [2m12[0m |     id: `WTH-${1000 + i}`,
+ [2m13[0m |     user: ["David Mensah", "Sarah Kamau", "Kofi Anan", "Amara Okafor"][i % 4],
+ [2m14[0m |     amount: [450, 1200, 85, 2400][i % 4],
+ [2m15[0m |     method: i % 2 === 0 ? &quot;Bank Transfer&quot; : "Mobile Money",
+    : [35;1m                               ^[0m
+ [2m16[0m |     account: i % 2 === 0 ? "Zenith Bank •••• 4567" : "MTN Momo •••• 1234",
+ [2m17[0m |     requestedAt: "2 hours ago",
+ [2m18[0m |     status: i === 0 ? "pending" : "processing",
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/withdrawals/page.tsx
+
+./src/app/referrals/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/app/src/app/referrals/page.tsx[0m:24:1]
+ [2m21[0m |   };
+ [2m22[0m |
+ [2m23[0m |   return (
+ [2m24[0m |     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">
+    : [35;1m     ^^^[0m
+ [2m25[0m |       <Sidebar />
+ [2m26[0m |       <div className="flex-1 flex flex-col min-w-0">
+ [2m27[0m |         <header className="px-6 py-12 bg-elite-primary-950 text-white relative overflow-hidden">
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/referrals/page.tsx
+
+
+> Build failed because of webpack errors

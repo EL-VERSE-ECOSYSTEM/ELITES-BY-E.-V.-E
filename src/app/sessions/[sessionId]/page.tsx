@@ -1,6 +1,11 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
-import { Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, cn from "@/lib/utils";, Link from "next/link";, Mic, Video, Monitor, MessageSquare, MoreVertical, PhoneOff, Users, Settings, Shield, Hand, X, Code, Layout, ChevronRight, Maximize2, Clock } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { ChevronRight, Clock, Code, Hand, Layout, Maximize2, MessageSquare, Mic, Monitor, MoreVertical, PhoneOff, Settings, Shield, Users, Video, X } from "lucide-react";
 
 export default function SessionRoom() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -90,7 +95,7 @@ export default function SessionRoom() {
                  {["chat", "people"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveSideTab(tab as any)}
+                    onClick={() => setActiveSideTab(tab as unknown)}
                     className={cn(
                       "text-xs font-bold uppercase tracking-widest transition-all relative pb-2",
                       activeSideTab === tab ? "text-elite-primary-900 dark:text-white" : "text-elite-primary-400 hover:text-elite-primary-900"

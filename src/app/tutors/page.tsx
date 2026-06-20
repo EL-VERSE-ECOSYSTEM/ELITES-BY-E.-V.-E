@@ -1,6 +1,12 @@
 "use client";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 
-import { Footer from "@/components/layout/Footer";, Input from "@/components/ui/Input";, Button from "@/components/ui/Button";, Card, CardContent, CardHeader, CardTitle, CardDescription from "@/components/ui/Card";, Badge from "@/components/ui/Badge"; } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
+import { Search, Shield, Star } from "lucide-react";
 import Link from "next/link";
 
 export default function TutorDirectory() {

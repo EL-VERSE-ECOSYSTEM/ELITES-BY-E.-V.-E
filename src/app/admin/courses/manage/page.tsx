@@ -1,6 +1,13 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { AlertCircle, BookOpen, Eye, MoreVertical, Search, Star, TrendingUp, X, XCircle } from "lucide-react";
+import { useState } from "react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, BookOpen, Search, Filter, Eye, CheckCircle2, XCircle, AlertCircle, MoreVertical, Star, Users, Clock, ChevronLeft, ChevronRight, TrendingUp, Globe } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
 export default function CourseManagement() {
   const [activeTab, setActiveTab] = useState<"all" | "pending" | "published">("all");
@@ -53,7 +60,7 @@ export default function CourseManagement() {
                  {["all", "pending", "published"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as any)}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-white dark:bg-elite-primary-800 text-elite-primary-900 shadow-sm" : "text-elite-primary-400"

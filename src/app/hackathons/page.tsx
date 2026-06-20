@@ -1,6 +1,13 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { ArrowRight, Clock, Globe, Target, Trophy, User, Users, Zap } from "lucide-react";
+import { useState } from "react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Trophy, Users, Calendar, Clock, Globe, Rocket, ArrowRight, ChevronRight, Target, Sparkles, Zap, Code } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
 export default function HackathonsPage() {
   const [activeTab, setActiveTab] = useState<"upcoming" | "active" | "past">("active");
@@ -48,7 +55,7 @@ export default function HackathonsPage() {
                     {["active", "upcoming", "past"].map((tab) => (
                       <button
                         key={tab}
-                        onClick={() => setActiveTab(tab as any)}
+                        onClick={() => setActiveTab(tab as unknown)}
                         className={cn(
                           "px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                           activeTab === tab ? "bg-elite-accent-500 text-white shadow-lg" : "text-elite-primary-400 hover:text-white"

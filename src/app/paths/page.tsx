@@ -1,6 +1,12 @@
 "use client";
+import Link from "next/link";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 
-import { Footer from "@/components/layout/Footer";, Card, CardContent from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Link from "next/link";, Layers, Users, Clock, ArrowRight, Briefcase, TrendingUp, CheckCircle2, ChevronRight, Code } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { ArrowRight, Briefcase, CheckCircle2, ChevronRight, Clock, TrendingUp, User, Users } from "lucide-react";
 
 export default function PathsPage() {
   const paths = [

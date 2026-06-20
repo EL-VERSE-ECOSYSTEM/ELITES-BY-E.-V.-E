@@ -1,6 +1,13 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { AlertTriangle, CheckCircle2, Clock, Flag, MessageSquare, Shield, ShieldCheck } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Link from "next/link";, ShieldCheck, MessageSquare, Flag, AlertTriangle, CheckCircle2, Clock, Eye, UserX, Activity, BarChart3, TrendingUp, MoreVertical } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
 export default function ModeratorDashboard() {
   return (

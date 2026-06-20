@@ -1,6 +1,14 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import {  BookOpen, ChevronRight, Eye, MoreVertical, Plus, Search, Star, User, Users , Edit3 } from "lucide-react";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, Link from "next/link";, cn from "@/lib/utils";, Plus, Search, Filter, MoreVertical, Eye, Edit3, Trash2, TrendingUp, Users, DollarSign, Star, ChevronRight, BookOpen } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 
 export default function TutorMyCourses() {
   const [activeTab, setActiveTab] = useState<"published" | "draft" | "review">("published");
@@ -31,7 +39,7 @@ export default function TutorMyCourses() {
                  {["published", "draft", "review"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as any)}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"
@@ -98,7 +106,7 @@ export default function TutorMyCourses() {
                 </div>
                 <div className="space-y-1">
                    <h3 className="text-xl font-bold font-space-grotesk">No courses found</h3>
-                   <p className="text-sm text-elite-primary-500">You don't have any courses in the {activeTab} status yet.</p>
+                   <p className="text-sm text-elite-primary-500">You don&apos;t have any courses in the {activeTab} status yet.</p>
                 </div>
                 <Button variant="accent" asChild>
                    <Link href="/tutor/courses/create">Create My First Course</Link>

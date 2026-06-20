@@ -1,6 +1,14 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Input from "@/components/ui/Input";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, FileText, Download, Share2, Plus, GripVertical, User, Briefcase, GraduationCap, Award, Code, Eye, Save, CheckCircle2, Trash2 } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Badge } from "@/components/ui/Badge";
+import { Award, Briefcase, CheckCircle2, Code, Download, Eye, FileText, GraduationCap, GripVertical, Plus, Save, Share2, Trash2, User } from "lucide-react";
 
 export default function CVBuilderPage() {
   const [activeTab, setActiveTab] = useState<"edit" | "preview">("edit");

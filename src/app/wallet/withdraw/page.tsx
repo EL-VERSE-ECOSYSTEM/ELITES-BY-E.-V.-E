@@ -1,18 +1,15 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { AlertCircle, ArrowDownLeft, ArrowLeft, CheckCircle2, ChevronRight, Clock, Landmark, Lock, Shield, ShieldCheck, Smartphone } from "lucide-react";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, Link from "next/link";, cn from "@/lib/utils"; } from "lucide-react";
-
-  ArrowLeft,
-  Landmark,
-  Smartphone,
-  Clock,
-  AlertCircle,
-  CheckCircle2,
-  ShieldCheck,
-  Lock,
-  ChevronRight,
-  Wallet
-} from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { ChevronRight, Wallet } from "lucide-react";
 
 export default function WithdrawPage() {
   const [step, setStep] = useState(1);
@@ -137,7 +134,7 @@ export default function WithdrawPage() {
                 </div>
                 <div className="space-y-2">
                    <h2 className="text-3xl font-bold font-space-grotesk">Withdrawal Requested</h2>
-                   <p className="text-sm text-elite-primary-500 max-w-sm mx-auto">Your request is being processed. You'll receive a notification once the funds are sent.</p>
+                   <p className="text-sm text-elite-primary-500 max-w-sm mx-auto">Your request is being processed. You&apos;ll receive a notification once the funds are sent.</p>
                 </div>
                 <div className="flex flex-col gap-3">
                    <Button variant="outline" className="w-full" asChild><Link href="/wallet">Back to Wallet</Link></Button>

@@ -1,6 +1,9 @@
 "use client";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent from "@/components/ui/Card"; } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/Card";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Star } from "lucide-react";
 
 export default function TutorReviews() {
   return (
