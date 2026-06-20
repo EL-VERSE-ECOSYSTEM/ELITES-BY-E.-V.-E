@@ -1,19 +1,14 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { AlertTriangle, ArrowDownRight, ArrowUpRight, Bell, BookOpen, DollarSign, Search, ShieldCheck, Sun, Users, X } from "lucide-react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, cn from "@/lib/utils";, Link from "next/link";, Users, BookOpen, DollarSign, ShieldCheck, AlertTriangle, TrendingUp, Activity, ArrowUpRight, ArrowDownRight, MoreVertical, Bell, Search } from "lucide-react";
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  LineChart,
-  Line,
-  PieChart,
-  Pie,
-  Cell
-} from 'recharts';
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Bar, BarChart, CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export default function AdminDashboard() {
   const revenueData = [

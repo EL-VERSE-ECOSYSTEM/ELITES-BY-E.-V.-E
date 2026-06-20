@@ -1,6 +1,12 @@
 "use client";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 
-import { Footer from "@/components/layout/Footer";, Card, CardContent from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Input from "@/components/ui/Input"; } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
+import { ArrowRight, Clock, Search, TrendingUp, User } from "lucide-react";
 import Link from "next/link";
 
 export default function BlogIndex() {

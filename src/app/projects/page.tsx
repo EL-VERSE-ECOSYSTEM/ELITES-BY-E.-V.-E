@@ -1,6 +1,15 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { Award, Briefcase, CheckCircle2, ChevronRight, Filter, Layout, MessageSquare, Plus } from "lucide-react";
+import { useState } from "react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, ProgressBar from "@/components/ui/ProgressBar";, useState from "react";, cn from "@/lib/utils";, Link from "next/link";, Plus, Search, Filter, Calendar, Clock, CheckCircle2, AlertCircle, MessageSquare, ExternalLink, Github, Layout, ChevronRight, FileText } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { ProgressBar } from "@/components/ui/ProgressBar";
 
 export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState<"active" | "completed">("active");
@@ -59,7 +68,7 @@ export default function ProjectsPage() {
               {["active", "completed"].map((tab) => (
                 <button
                   key={tab}
-                  onClick={() => setActiveTab(tab as any)}
+                  onClick={() => setActiveTab(tab as unknown)}
                   className={cn(
                     "px-6 py-2 text-xs font-bold uppercase tracking-widest rounded-lg transition-all",
                     activeTab === tab ? "bg-white dark:bg-elite-primary-800 shadow-sm text-elite-primary-900 dark:text-white" : "text-elite-primary-500 hover:text-elite-primary-700"

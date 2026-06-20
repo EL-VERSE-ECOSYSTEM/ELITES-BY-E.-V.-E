@@ -1,6 +1,13 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Bell, BookOpen, MessageSquare, Award, DollarSign, Trash2, CheckCircle2, Clock, ChevronRight, Filter, User, Zap } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Award, Bell, BookOpen, CheckCircle2, ChevronRight, Clock, DollarSign, Filter, MessageSquare, Trash2, User, Zap } from "lucide-react";
 
 export default function NotificationsPage() {
   const [activeTab, setActiveTab] = useState<"all" | "unread" | "achievements">("all");
@@ -58,7 +65,7 @@ export default function NotificationsPage() {
                  {["all", "unread", "achievements"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as any)}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"

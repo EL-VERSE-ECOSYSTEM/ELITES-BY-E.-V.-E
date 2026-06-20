@@ -1,6 +1,11 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
-import { Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Card, CardContent from "@/components/ui/Card";, cn from "@/lib/utils";, Terminal, Play, Save, RotateCcw, Share2, Sparkles, CheckCircle2, ChevronRight, FileCode, Layout, MessageSquare, X, Zap } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Card, CardContent } from "@/components/ui/Card";
+import { CheckCircle2, ChevronRight, FileCode, Layout, MessageSquare, Play, RotateCcw, Save, Share2, Sparkles, Terminal, X, Zap } from "lucide-react";
 
 export default function CodingLab() {
   const [activeFile, setActiveFile] = useState("index.js");

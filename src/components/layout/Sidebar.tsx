@@ -1,8 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import {
+  LogOut,
+  Flame,
+  Zap,
   Home,
   BookOpen,
   Layers,
@@ -12,14 +16,10 @@ import {
   Wallet,
   Settings,
   ChevronLeft,
-  ChevronRight,
-  LogOut,
-  Flame,
-  Zap
+  ChevronRight
 } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { useState } from "react";
 import { ProgressBar } from "@/components/ui/ProgressBar";
+import { cn } from "@/lib/utils";
 
 interface SidebarItem {
   name: string;
@@ -58,12 +58,12 @@ export function Sidebar() {
         )}
         {collapsed && <div className="mx-auto w-8 h-8 bg-elite-accent-500 rounded flex items-center justify-center font-bold">E</div>}
 
-        {/* <button
+        <button
           onClick={() => setCollapsed(!collapsed)}
           className="p-1.5 hover:bg-elite-primary-900 rounded-lg transition-colors"
         >
           {collapsed ? <ChevronRight size={20} /> : <ChevronLeft size={20} />}
-        </button> */}
+        </button>
       </div>
 
       {!collapsed && (

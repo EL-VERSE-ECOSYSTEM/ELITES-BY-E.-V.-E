@@ -1,6 +1,13 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Plus, Search, Upload, FileCode, FileText, Layout, MoreVertical, Download, Trash2, Link as LinkIcon, Filter, CheckCircle2, ExternalLink, ChevronRight, FolderPlus } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { CheckCircle2, ChevronRight, Download, ExternalLink, FileCode, FileText, Filter, FolderPlus, Layout, Link, LinkIcon, MoreVertical, Plus, Search, Trash2, Upload, as } from "lucide-react";
 
 export default function ResourceLibrary() {
   const [activeTab, setActiveTab] = useState<"all" | "code" | "docs">("all");
@@ -30,7 +37,7 @@ export default function ResourceLibrary() {
                  {["all", "code", "docs"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as any)}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"

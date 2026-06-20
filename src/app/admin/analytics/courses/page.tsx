@@ -1,6 +1,13 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, from 'recharts';, BookOpen, Star, TrendingUp, TrendingDown, Clock, Users, Award, ChevronRight, Filter, Download, Flame } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Award, Clock, Download, Filter, Flame, Star, TrendingDown, TrendingUp, User, Users, X } from "lucide-react";
 
 export default function CourseAnalytics() {
   const topCourses = [

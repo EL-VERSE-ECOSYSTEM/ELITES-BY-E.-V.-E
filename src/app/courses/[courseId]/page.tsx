@@ -1,6 +1,16 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { useState } from "react";
+import { Navbar } from "@/components/layout/Navbar";
 
-import { Footer from "@/components/layout/Footer";, Button from "@/components/ui/Button";, Card, CardContent from "@/components/ui/Card";, Badge from "@/components/ui/Badge";, ProgressBar from "@/components/ui/ProgressBar";, useState from "react";, cn from "@/lib/utils";, Link from "next/link";, Star, Clock, Globe, Play, CheckCircle2, Lock, Download, Share2, Bookmark, ChevronDown, Award, BarChart, Calendar, MessageCircle } from "lucide-react";
+import { Footer } from "@/components/layout/Footer";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { ProgressBar } from "@/components/ui/ProgressBar";
+import { Award, Bookmark, Calendar, CheckCircle2, ChevronDown, Clock, Download, Globe, Lock, MessageCircle, Play, Save, Share2, Star } from "lucide-react";
 
 export default function CourseDetail() {
   const [activeTab, setActiveTab] = useState<"overview" | "curriculum" | "reviews" | "faq">("overview");
@@ -80,7 +90,7 @@ export default function CourseDetail() {
                   {["overview", "curriculum", "reviews", "faq"].map((tab) => (
                     <button
                       key={tab}
-                      onClick={() => setActiveTab(tab as any)}
+                      onClick={() => setActiveTab(tab as unknown)}
                       className={cn(
                         "pb-4 text-sm font-bold uppercase tracking-widest transition-all relative",
                         activeTab === tab

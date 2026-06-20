@@ -1,6 +1,15 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, ProgressBar from "@/components/ui/ProgressBar";, useState from "react";, Link from "next/link";, cn from "@/lib/utils";, Github, Globe, Upload, FileText, MessageSquare, CheckCircle2, AlertCircle, ChevronLeft, ExternalLink, Save, Send, Trash2 } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { ProgressBar } from "@/components/ui/ProgressBar";
+import { AlertCircle, CheckCircle2, ChevronLeft, ExternalLink, FileText, Globe, MessageSquare, Save, Send, Trash2, Upload } from "lucide-react";
 
 export default function ProjectSubmission() {
   const [activeTab, setActiveTab] = useState<"brief" | "submission" | "feedback">("brief");
@@ -41,7 +50,7 @@ export default function ProjectSubmission() {
               ].map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as any)}
+                  onClick={() => setActiveTab(tab.id as unknown)}
                   className={cn(
                     "pb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wider relative transition-all",
                     activeTab === tab.id ? "text-elite-primary-600 dark:text-white" : "text-elite-primary-400 hover:text-elite-primary-600"
@@ -99,7 +108,7 @@ export default function ProjectSubmission() {
                          <CardContent className="p-8 space-y-6">
                             <div className="space-y-4">
                                <div className="flex items-center gap-2 text-elite-primary-900 dark:text-white font-bold">
-                                  <Github size={20} /> Repository URL
+                                  <User size={20} /> Repository URL
                                </div>
                                <Input placeholder="https://github.com/username/project-repo" />
                             </div>

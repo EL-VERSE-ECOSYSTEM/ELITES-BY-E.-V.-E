@@ -1,6 +1,13 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Plus, Search, Filter, Building2, Briefcase, MapPin, DollarSign, Users, CheckCircle2, ExternalLink, MoreVertical, Clock, Layout, TrendingUp, FileText } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Briefcase, Building2, CheckCircle2, Clock, DollarSign, ExternalLink, FileText, Filter, Layout, MapPin, MoreVertical, Plus, Search, TrendingUp, Users } from "lucide-react";
 
 export default function AdminJobManagement() {
   const [activeTab, setActiveTab] = useState<"all" | "active" | "applications">("all");
@@ -47,7 +54,7 @@ export default function AdminJobManagement() {
                  {["all", "active", "applications"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as any)}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-white dark:bg-elite-primary-800 text-elite-primary-900 shadow-sm" : "text-elite-primary-400"

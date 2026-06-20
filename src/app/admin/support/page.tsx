@@ -1,6 +1,13 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, MessageSquare, Search, Filter, AlertTriangle, Clock, CheckCircle2, User, MoreVertical, ChevronLeft, ChevronRight, Mail, Zap, ArrowRight } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { AlertTriangle, ArrowRight, CheckCircle2, ChevronLeft, ChevronRight, Clock, Filter, Mail, MessageSquare, MoreVertical, Search, User, Zap } from "lucide-react";
 
 export default function AdminSupportTickets() {
   const [activeTab, setActiveTab] = useState<"open" | "assigned" | "closed">("open");
@@ -50,7 +57,7 @@ export default function AdminSupportTickets() {
                  {["open", "assigned", "closed"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as any)}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-white dark:bg-elite-primary-800 text-elite-primary-900 shadow-sm" : "text-elite-primary-400"

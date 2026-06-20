@@ -1,12 +1,7 @@
 "use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/Button";
 import { Menu, X, Bell, User, Search, Moon, Sun } from "lucide-react";
-import { useTheme } from "next-themes";
-import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +11,7 @@ export function Navbar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    if (!mounted) // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);

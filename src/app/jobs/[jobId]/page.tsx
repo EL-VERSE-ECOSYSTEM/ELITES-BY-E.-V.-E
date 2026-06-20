@@ -1,6 +1,12 @@
 "use client";
+import Link from "next/link";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Link from "next/link";, Building2, MapPin, Briefcase, DollarSign, Clock, CheckCircle2, ChevronLeft, ExternalLink, ShieldCheck, Globe, Share2, Bookmark } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { ChevronLeft, Share2, Shield, ShieldCheck } from "lucide-react";
 
 export default function JobDetailPage() {
   return (

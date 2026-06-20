@@ -1,6 +1,12 @@
 "use client";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, User, Mail, Phone, MapPin, Calendar, Shield, Ban, CheckCircle2, Wallet, BookOpen, Award, MessageSquare, History, ExternalLink } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Award, Ban, BookOpen, Calendar, CheckCircle2, ExternalLink, History, Mail, MapPin, MessageSquare, Phone, Shield, User, Wallet } from "lucide-react";
 
 export default function UserDetailPage() {
   const [status, setStatus] = useState("Active");

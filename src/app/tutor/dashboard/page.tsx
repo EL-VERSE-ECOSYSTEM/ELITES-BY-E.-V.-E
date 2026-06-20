@@ -1,16 +1,14 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import {  BookOpen, ChevronRight, DollarSign, Plus, Star, TrendingUp, Users, X , Calendar } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, Link from "next/link";, cn from "@/lib/utils";, Users, BookOpen, TrendingUp, DollarSign, Plus, Calendar, Star, ChevronRight, BarChart3, MessageCircle, Bell } from "lucide-react";
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  AreaChart,
-  Area
-} from 'recharts';
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Area, AreaChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export default function TutorDashboard() {
   const revenueData = [

@@ -1,3 +1,5 @@
 "use client";
-
-import { Footer from "@/components/layout/Footer";, Button from "@/components/ui/Button";, Card, CardContent from "@/components/ui/Card";, Badge from "@/components/ui/Badge"; } from "lucide-react";
+import { Footer } from "@/components/layout/Footer";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";

@@ -1,6 +1,15 @@
 "use client";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent from "@/components/ui/Card";, Button from "@/components/ui/Button";, Input from "@/components/ui/Input";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, Link from "next/link";, ChevronRight, ChevronLeft, Plus, Video, FileText, Code, Image as ImageIcon, Trash2, GripVertical, CheckCircle2, Save, Eye, Rocket } from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Badge } from "@/components/ui/Badge";
+import { CheckCircle2, ChevronLeft, ChevronRight, Code, Eye, FileText, GripVertical, Image, ImageIcon, Plus, Rocket, Save, Trash2, Video, as } from "lucide-react";
 
 export default function CourseCreator() {
   const [step, setStep] = useState(1);

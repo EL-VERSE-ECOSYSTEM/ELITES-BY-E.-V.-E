@@ -1,5 +1,4 @@
 import * as React from "react";
-import { cn } from "@/lib/utils";
 
 interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: "success" | "warning" | "error" | "info" | "primary" | "accent";

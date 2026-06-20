@@ -1,4 +1,6 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
@@ -6,27 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { Input } from "@/components/ui/Input";
-import { cn } from "@/lib/utils";
-import { useState } from "react";
-import {
-  Send,
-  Search,
-  Filter,
-  Tag,
-  MessageCircle,
-  Plus,
-  MoreVertical,
-  Eye,
-  Trash2,
-  TrendingUp,
-  Users,
-  Calendar,
-  Sparkles,
-  Zap,
-  Layout,
-  Mail,
-  Smartphone
-} from "lucide-react";
+import { Mail, Plus, Smartphone, Zap } from "lucide-react";
 
 export default function AdminMarketing() {
   const [activeTab, setActiveTab] = useState<"coupons" | "campaigns" | "notifications">("coupons");
@@ -62,7 +44,7 @@ export default function AdminMarketing() {
                  {["coupons", "campaigns", "notifications"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as any)}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-white dark:bg-elite-primary-800 text-elite-primary-900 shadow-sm" : "text-elite-primary-400"
