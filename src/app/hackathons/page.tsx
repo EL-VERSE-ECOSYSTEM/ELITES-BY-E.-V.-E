@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Clock, Globe, Target, Trophy, User, Users, Zap } from "lucide-react";
+import { ArrowRight, Clock, Globe, Target, Trophy, User, Users, Zap, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";

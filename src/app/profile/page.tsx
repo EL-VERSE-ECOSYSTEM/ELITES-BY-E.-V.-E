@@ -1,5 +1,5 @@
 "use client";
-import { MapPin } from "lucide-react";
+import { MapPin, Edit3, Calendar } from "lucide-react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 

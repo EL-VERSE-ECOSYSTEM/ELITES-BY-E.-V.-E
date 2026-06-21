@@ -1,4 +1,5 @@
 "use client";
+import { Send } from "lucide-react";
 import { Globe, Mail, MapPin } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 

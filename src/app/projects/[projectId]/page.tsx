@@ -1,4 +1,5 @@
 "use client";
+import { Input } from "@/components/ui/Input";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
@@ -9,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { ProgressBar } from "@/components/ui/ProgressBar";
-import { AlertCircle, CheckCircle2, ChevronLeft, ExternalLink, FileText, Globe, MessageSquare, Save, Send, Trash2, Upload } from "lucide-react";
+import { AlertCircle, CheckCircle2, ChevronLeft, ExternalLink, FileText, Globe, MessageSquare, Save, Send, Trash2, Upload, User } from "lucide-react";
 
 export default function ProjectSubmission() {
   const [activeTab, setActiveTab] = useState<"brief" | "submission" | "feedback">("brief");
