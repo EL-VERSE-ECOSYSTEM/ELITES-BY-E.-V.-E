@@ -24,7 +24,7 @@ import { cn } from "@/lib/utils";
 interface SidebarItem {
   name: string;
   href: string;
-  icon: any;
+  icon: React.ElementType;
 }
 
 export function Sidebar() {
