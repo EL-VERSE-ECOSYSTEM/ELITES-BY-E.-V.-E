@@ -1,4 +1,5 @@
 "use client";
+import { Bookmark } from "lucide-react";
 import Link from "next/link";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";

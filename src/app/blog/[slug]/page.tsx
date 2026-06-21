@@ -49,7 +49,7 @@ export default function BlogPostDetail() {
                  </p>
 
                  <div className="my-8 p-8 bg-elite-primary-50 dark:bg-elite-primary-900/50 rounded-3xl border-l-4 border-l-elite-accent-500 italic text-lg text-elite-primary-900 dark:text-white font-medium">
-                    "The next Google or Stripe won&apos;t just be built for Africa; it will be built in Africa, by talent trained on platforms like ELITE."
+                    "The next Google or Stripe won't just be built for Africa; it will be built in Africa, by talent trained on platforms like ELITE."
                  </div>
 
                  <h2 className="text-3xl font-bold font-space-grotesk mt-12">Why Remote Work is a Game Changer</h2>

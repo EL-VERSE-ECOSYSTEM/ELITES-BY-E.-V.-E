@@ -93,7 +93,7 @@ export default function CodingLab() {
               </div>
               <div className="pl-10 space-y-1">
                  <div className="text-purple-400">import <span className="text-blue-300">{"{ useState }"}</span> from <span className="text-emerald-400">"react"</span>;</div>
-                 <div className="text-gray-500">// Practice your server actions here</div>
+                 <div className="text-gray-500">{/* Practice your server actions here */}</div>
                  <div className="text-purple-400">async function <span className="text-yellow-200">submitForm</span><span className="text-white">(formData) {"{"}</span></div>
                  <div className="pl-6 text-white">"use server";</div>
                  <div className="pl-6 text-white">const name = formData.get(<span className="text-emerald-400">"name"</span>);</div>

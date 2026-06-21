@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import { AlertCircle, ArrowLeft, CheckCircle2, Mail } from "lucide-react";
 import { useState } from "react";
