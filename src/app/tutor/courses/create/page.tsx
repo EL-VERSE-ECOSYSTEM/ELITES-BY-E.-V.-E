@@ -153,7 +153,7 @@ export default function CourseCreator() {
                  </div>
                  <div className="space-y-2">
                     <h2 className="text-3xl font-bold font-space-grotesk">Ready to Launch!</h2>
-                    <p className="text-elite-primary-500 max-w-md">Your course "Advanced Next.js 15 Masterclass" is ready to be submitted for review. Once approved, it will be visible to thousands of students.</p>
+                    <p className="text-elite-primary-500 max-w-md">Your course &quot;Advanced Next.js 15 Masterclass&quot; is ready to be submitted for review. Once approved, it will be visible to thousands of students.</p>
                  </div>
 
                  <div className="bg-white dark:bg-elite-primary-900 border border-elite-primary-100 dark:border-elite-primary-800 p-6 rounded-2xl w-full text-left space-y-4">
