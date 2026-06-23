@@ -115,7 +115,7 @@ export default function SessionSchedule() {
            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
               <Card>
                  <CardHeader>
-                    <CardTitle className="text-lg">Today&apos;s Sessions</CardTitle>
+                    <CardTitle className="text-lg">Today{"'"}s Sessions</CardTitle>
                  </CardHeader>
                  <CardContent className="space-y-4">
                     <div className="p-4 rounded-xl border border-elite-primary-100 dark:border-elite-primary-800 flex items-center justify-between">

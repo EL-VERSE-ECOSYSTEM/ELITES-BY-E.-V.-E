@@ -143,7 +143,7 @@ export default function TutorDashboard() {
                             </div>
                          </div>
                          <p className="text-xs text-elite-primary-500 leading-relaxed italic">
-                            &quot;Excellent tutor! David explains complex Next.js concepts in a very simple way that is easy for beginners to understand.&quot;
+                            {"'"}Excellent tutor! David explains complex Next.js concepts in a very simple way that is easy for beginners to understand.{"'"}
                          </p>
                       </div>
                     ))}

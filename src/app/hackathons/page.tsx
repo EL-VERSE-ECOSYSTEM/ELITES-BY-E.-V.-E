@@ -55,7 +55,7 @@ export default function HackathonsPage() {
                     {["active", "upcoming", "past"].map((tab) => (
                       <button
                         key={tab}
-                        onClick={() => setActiveTab(tab as unknown)}
+                        onClick={() => setActiveTab(tab as "upcoming" | "active" | "past")}
                         className={cn(
                           "px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                           activeTab === tab ? "bg-elite-accent-500 text-white shadow-lg" : "text-elite-primary-400 hover:text-white"

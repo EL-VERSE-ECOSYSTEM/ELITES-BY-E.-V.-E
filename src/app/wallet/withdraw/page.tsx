@@ -134,7 +134,7 @@ export default function WithdrawPage() {
                 </div>
                 <div className="space-y-2">
                    <h2 className="text-3xl font-bold font-space-grotesk">Withdrawal Requested</h2>
-                   <p className="text-sm text-elite-primary-500 max-w-sm mx-auto">Your request is being processed. You&apos;ll receive a notification once the funds are sent.</p>
+                   <p className="text-sm text-elite-primary-500 max-w-sm mx-auto">Your request is being processed. You{"'"}ll receive a notification once the funds are sent.</p>
                 </div>
                 <div className="flex flex-col gap-3">
                    <Button variant="outline" className="w-full" asChild><Link href="/wallet">Back to Wallet</Link></Button>

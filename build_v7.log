@@ -1,0 +1,101 @@
+
+> temp-app@0.1.0 build
+> next build
+
+   ▲ Next.js 15.1.0
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./src/app/about/page.tsx
+Error:   [31mx[0m The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+    ,-[[36;1;4m/app/src/app/about/page.tsx[0m:8:1]
+ [2m 5[0m | import { Badge } from "@/components/ui/Badge";
+ [2m 6[0m | import { Target, Users, Award, Globe, Rocket, ShieldCheck, ChevronRight } from "lucide-react";
+ [2m 7[0m | import Link from "next/link";
+ [2m 8[0m | "use client";
+    : [35;1m^^^^^^^^^^^^^[0m
+ [2m 9[0m |
+ [2m10[0m |
+ [2m11[0m | export default function AboutPage() {
+    `----
+
+Import trace for requested module:
+./src/app/about/page.tsx
+
+./src/app/achievements/page.tsx
+Error:   [31mx[0m The "use client" directive must be placed before other expressions. Move it to the top of the file to resolve this issue.
+    ,-[[36;1;4m/app/src/app/achievements/page.tsx[0m:9:1]
+ [2m 6[0m | import { ProgressBar } from "@/components/ui/ProgressBar";
+ [2m 7[0m | import { Zap, Coins, Flame, Star, Award, Target, Rocket, ShieldCheck, Code, Users } from "lucide-react";
+ [2m 8[0m | import { cn } from "@/lib/utils";
+ [2m 9[0m | "use client";
+    : [35;1m^^^^^^^^^^^^^[0m
+ [2m10[0m |
+ [2m11[0m |
+ [2m12[0m | export default function AchievementsPage() {
+    `----
+
+Import trace for requested module:
+./src/app/achievements/page.tsx
+
+./src/app/admin/analytics/courses/page.tsx
+Error:   [31mx[0m Expected ',', got '{'
+    ,-[[36;1;4m/app/src/app/admin/analytics/courses/page.tsx[0m:7:1]
+ [2m 4[0m | import { Button } from "@/components/ui/Button";
+ [2m 5[0m | import { Badge } from "@/components/ui/Badge";
+ [2m 6[0m | import {
+ [2m 7[0m | import {
+    : [35;1m       ^[0m
+ [2m 8[0m | import { useState } from "react";
+ [2m 9[0m | import { cn } from "@/lib/utils";
+ [2m10[0m | "use client";
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/analytics/courses/page.tsx
+
+./src/app/admin/analytics/revenue/page.tsx
+Error:   [31mx[0m Expected ',', got '{'
+    ,-[[36;1;4m/app/src/app/admin/analytics/revenue/page.tsx[0m:7:1]
+ [2m 4[0m | import { Button } from "@/components/ui/Button";
+ [2m 5[0m | import { Badge } from "@/components/ui/Badge";
+ [2m 6[0m | import {
+ [2m 7[0m | import {
+    : [35;1m       ^[0m
+ [2m 8[0m | import { useState } from "react";
+ [2m 9[0m | import { cn } from "@/lib/utils";
+ [2m10[0m | "use client";
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/analytics/revenue/page.tsx
+
+./src/app/admin/analytics/users/page.tsx
+Error:   [31mx[0m Expected ',', got '{'
+    ,-[[36;1;4m/app/src/app/admin/analytics/users/page.tsx[0m:7:1]
+ [2m 4[0m | import { Button } from "@/components/ui/Button";
+ [2m 5[0m | import { Badge } from "@/components/ui/Badge";
+ [2m 6[0m | import {
+ [2m 7[0m | import {
+    : [35;1m       ^[0m
+ [2m 8[0m | import { useState } from "react";
+ [2m 9[0m | import { cn } from "@/lib/utils";
+ [2m10[0m | "use client";
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/analytics/users/page.tsx
+
+
+> Build failed because of webpack errors

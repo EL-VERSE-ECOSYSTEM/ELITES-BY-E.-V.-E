@@ -39,7 +39,7 @@ export default function TutorMyCourses() {
                  {["published", "draft", "review"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as unknown)}
+                    onClick={() => setActiveTab(tab as "published" | "draft" | "review")}
                     className={cn(
                       "px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"
@@ -106,7 +106,7 @@ export default function TutorMyCourses() {
                 </div>
                 <div className="space-y-1">
                    <h3 className="text-xl font-bold font-space-grotesk">No courses found</h3>
-                   <p className="text-sm text-elite-primary-500">You don&apos;t have any courses in the {activeTab} status yet.</p>
+                   <p className="text-sm text-elite-primary-500">You don{"'"}t have any courses in the {activeTab} status yet.</p>
                 </div>
                 <Button variant="accent" asChild>
                    <Link href="/tutor/courses/create">Create My First Course</Link>
