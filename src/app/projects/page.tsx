@@ -68,7 +68,7 @@ export default function ProjectsPage() {
               {["active", "completed"].map((tab) => (
                 <button
                   key={tab}
-                  onClick={() => setActiveTab(tab as unknown)}
+                  onClick={() => setActiveTab(tab as "active" | "completed")}
                   className={cn(
                     "px-6 py-2 text-xs font-bold uppercase tracking-widest rounded-lg transition-all",
                     activeTab === tab ? "bg-white dark:bg-elite-primary-800 shadow-sm text-elite-primary-900 dark:text-white" : "text-elite-primary-500 hover:text-elite-primary-700"

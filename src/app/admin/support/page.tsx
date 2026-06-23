@@ -57,7 +57,7 @@ export default function AdminSupportTickets() {
                  {["open", "assigned", "closed"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as unknown)}
+                    onClick={() => setActiveTab(tab as "open" | "assigned" | "closed")}
                     className={cn(
                       "px-6 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-white dark:bg-elite-primary-800 text-elite-primary-900 shadow-sm" : "text-elite-primary-400"

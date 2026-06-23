@@ -56,7 +56,7 @@ export default function TutorProfilePage() {
                        {["courses", "reviews", "availability"].map((tab) => (
                          <button
                           key={tab}
-                          onClick={() => setActiveTab(tab as unknown)}
+                          onClick={() => setActiveTab(tab as "courses" | "reviews" | "availability")}
                           className={cn(
                             "pb-4 text-sm font-bold uppercase tracking-widest relative transition-all",
                             activeTab === tab ? "text-elite-primary-600 dark:text-white" : "text-elite-primary-400 hover:text-elite-primary-900"

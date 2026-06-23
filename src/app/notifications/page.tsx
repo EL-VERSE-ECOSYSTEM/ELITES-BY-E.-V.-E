@@ -65,7 +65,7 @@ export default function NotificationsPage() {
                  {["all", "unread", "achievements"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as unknown)}
+                    onClick={() => setActiveTab(tab as "all" | "unread" | "achievements")}
                     className={cn(
                       "px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"
