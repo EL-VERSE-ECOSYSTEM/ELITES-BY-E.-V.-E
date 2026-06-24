@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import {  BookOpen, ChevronRight, DollarSign, Plus, Star, TrendingUp, Users, X , Calendar } from "lucide-react";
+import {  BookOpen, ChevronRight, DollarSign, Plus, Star, TrendingUp, Users,  , Calendar } from "lucide-react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
+import {  } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Area, AreaChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export default function TutorDashboard() {
   const revenueData = [
@@ -143,7 +143,7 @@ export default function TutorDashboard() {
                             </div>
                          </div>
                          <p className="text-xs text-elite-primary-500 leading-relaxed italic">
-                            {"'"}Excellent tutor! David explains complex Next.js concepts in a very simple way that is easy for beginners to understand.{"'"}
+                            <p className="text-xs text-elite-primary-500 leading-relaxed italic">{"\"Excellent tutor! David explains complex Next.js concepts in a very simple way that is easy for beginners to understand.\""}</p>
                          </p>
                       </div>
                     ))}

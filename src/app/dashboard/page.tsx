@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Bell, BookOpen, ChevronRight, Clock, Flame, Play, Sun, Target, Trophy, X, Zap, Coins } from "lucide-react";
+import { Bell, BookOpen, ChevronRight, Clock, Flame, Play, Target, Trophy, Zap, Coins } from "lucide-react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Navbar } from "@/components/layout/Navbar";
+import {  } from "@/components/layout/Navbar";
 import { ProgressBar } from "@/components/ui/ProgressBar";
-import { Bar, BarChart, CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export default function StudentDashboard() {
   const activityData = [

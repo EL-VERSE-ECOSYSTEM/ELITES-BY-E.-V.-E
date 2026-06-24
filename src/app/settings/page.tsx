@@ -4,11 +4,11 @@ import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent,  } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
+import {  } from "@/components/ui/Badge";
 import { Input } from "@/components/ui/Input";
-import { Bell, Camera, ChevronRight, CreditCard, Eye, Globe, Lock, Mail, Monitor, Save, Settings, Shield, Smartphone, Trash2, User } from "lucide-react";
+import { Bell, Camera, ChevronRight, CreditCard, Globe, Lock, Mail, Monitor, Shield, Smartphone, Trash2, User } from "lucide-react";
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<"profile" | "account" | "notifications" | "privacy" | "payments" | "danger">("profile");

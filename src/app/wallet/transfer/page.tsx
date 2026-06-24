@@ -1,20 +1,20 @@
 "use client";
 import Link from "next/link";
-import {  ArrowLeft, CheckCircle2, ChevronRight, Search, Shield, ShieldCheck , Send, Info } from "lucide-react";
+import {  ArrowLeft, CheckCircle2, ChevronRight, Search, ShieldCheck , Send, Info } from "lucide-react";
 import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
+import {  } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Input } from "@/components/ui/Input";
+import { Card, CardContent,  } from "@/components/ui/Card";
+import {  } from "@/components/ui/Input";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 
 export default function InternalTransferPage() {
   const [recipient, setRecipient] = useState("");
   const [amount, setAmount] = useState("");
   const [step, setStep] = useState(1);
-  const [isVerified, setIsVerified] = useState(false);
+  const [_isVerified, setIsVerified] = useState(false);
 
   const handleVerify = () => {
     // Simulate verification

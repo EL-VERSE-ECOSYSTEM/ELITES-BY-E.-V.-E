@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { ChevronRight, MessageSquare, Plus, Search, TrendingUp, User, Users } from "lucide-react";
+import { ChevronRight, MessageSquare, Plus, Search, TrendingUp, Users } from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
@@ -33,7 +33,7 @@ export default function StudyGroupsPage() {
                  {["my-groups", "discover"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as "my-groups" | "discover")}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"

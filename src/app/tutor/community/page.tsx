@@ -1,3 +1,3 @@
 "use client";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent } from "@/components/ui/Card";
+import {  } from "@/components/layout/MobileBottomNav";
+import { ,  } from "@/components/ui/Card";

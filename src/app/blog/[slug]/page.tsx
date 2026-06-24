@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, Bookmark, ChevronLeft, Clock, MessageSquare, Save, Share2, TrendingUp, User } from "lucide-react";
+import { ArrowRight, Bookmark, ChevronLeft, Clock, Share2,  } from "lucide-react";
 
 export default function BlogPostDetail() {
   return (

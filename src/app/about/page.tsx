@@ -2,11 +2,11 @@
 import { Navbar } from "@/components/layout/Navbar";
 
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
+import {  } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Footer } from "@/components/layout/Footer";
-import { Globe, Target, User, Users } from "lucide-react";
-import Link from "next/link";
+import { Globe, Target, Users } from "lucide-react";
+import _Link from "next/link";
 
 export default function AboutPage() {
   const stats = [

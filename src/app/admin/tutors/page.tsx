@@ -1,13 +1,13 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { Clock, Eye, Filter, MoreVertical, Shield, ShieldCheck, Star, User, Users, X, XCircle } from "lucide-react";
+import { Clock, Eye, Filter, MoreVertical, ShieldCheck, Star, Users, XCircle } from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card,  } from "@/components/ui/Card";
 
 export default function TutorManagement() {
   const [activeTab, setActiveTab] = useState<"all" | "pending" | "verified">("all");
@@ -60,7 +60,7 @@ export default function TutorManagement() {
                  {["all", "pending", "verified"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as "all" | "pending" | "verified")}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-white dark:bg-elite-primary-800 text-elite-primary-900 shadow-sm" : "text-elite-primary-400"

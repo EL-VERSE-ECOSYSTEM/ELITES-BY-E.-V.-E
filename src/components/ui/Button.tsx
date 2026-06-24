@@ -25,7 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       icon: "h-10 w-10 p-2",
     };
 
-    const Comp = asChild ? React.Fragment : "button";
+    const _Comp = asChild ? React.Fragment : "button";
 
     // Note: React.Fragment doesn't take className.
     // Usually asChild is implemented with a Slot component from Radix.

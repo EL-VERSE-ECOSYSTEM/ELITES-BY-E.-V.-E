@@ -1,7 +1,7 @@
 "use client";
-import { Footer } from "@/components/layout/Footer";
-import { Input } from "@/components/ui/Input";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import Link from "next/link";
+import {  } from "@/components/layout/Footer";
+import {  } from "@/components/ui/Input";
+import {  } from "@/components/ui/Button";
+import { ,  } from "@/components/ui/Card";
+import {  } from "@/components/ui/Badge";
+import _Link from "next/link";

@@ -7,15 +7,15 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
+import {  } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
-import { ArrowRight, Calendar, CheckCircle2, ChevronLeft, Clock, CreditCard, Globe, Info, Smartphone, Star, User, Video, Wallet } from "lucide-react";
+import { ArrowRight, ChevronLeft, Clock, CreditCard, Star, Wallet } from "lucide-react";
 
 export default function BookTutorSession() {
   const [step, setStep] = useState(1);
   const [selectedType, setSelectedType] = useState<string | null>(null);
   const [selectedDuration, setSelectedDuration] = useState("60");
-  const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [_selectedDate, setSelectedDate] = useState<string | null>(null);
   const [selectedTime, setSelectedDate_Time] = useState<string | null>(null);
 
   const types = [

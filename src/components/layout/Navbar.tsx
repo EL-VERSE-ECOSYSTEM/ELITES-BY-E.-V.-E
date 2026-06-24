@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import { Menu, X, Bell, User, Search, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

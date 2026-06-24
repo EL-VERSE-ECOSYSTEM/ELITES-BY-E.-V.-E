@@ -1,13 +1,13 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Clock, Globe, Target, Trophy, User, Users, Zap, Sparkles } from "lucide-react";
+import { ArrowRight, Clock, Globe, Target, Trophy, Users, Zap, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent,  } from "@/components/ui/Card";
 
 export default function HackathonsPage() {
   const [activeTab, setActiveTab] = useState<"upcoming" | "active" | "past">("active");
@@ -55,7 +55,7 @@ export default function HackathonsPage() {
                     {["active", "upcoming", "past"].map((tab) => (
                       <button
                         key={tab}
-                        onClick={() => setActiveTab(tab as "upcoming" | "active" | "past")}
+                        onClick={() => setActiveTab(tab as unknown)}
                         className={cn(
                           "px-6 py-2 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                           activeTab === tab ? "bg-elite-accent-500 text-white shadow-lg" : "text-elite-primary-400 hover:text-white"

@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { AlertTriangle, ArrowDownRight, ArrowUpRight, Bell, BookOpen, DollarSign, Search, ShieldCheck, Sun, Users, X } from "lucide-react";
+import { AlertTriangle, ArrowDownRight, ArrowUpRight, Bell, BookOpen, DollarSign, Search, ShieldCheck, Users,  } from "lucide-react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Bar, BarChart, CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { , CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export default function AdminDashboard() {
   const revenueData = [

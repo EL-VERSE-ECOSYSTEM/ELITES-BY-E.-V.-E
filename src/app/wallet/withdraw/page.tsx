@@ -1,15 +1,15 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { AlertCircle, ArrowDownLeft, ArrowLeft, CheckCircle2, ChevronRight, Clock, Landmark, Lock, Shield, ShieldCheck, Smartphone } from "lucide-react";
+import { , ArrowDownLeft, ArrowLeft, Clock, Landmark, ShieldCheck, Smartphone } from "lucide-react";
 import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
+import {  } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent,  } from "@/components/ui/Card";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { ChevronRight, Wallet } from "lucide-react";
+import { ChevronRight,  } from "lucide-react";
 
 export default function WithdrawPage() {
   const [step, setStep] = useState(1);

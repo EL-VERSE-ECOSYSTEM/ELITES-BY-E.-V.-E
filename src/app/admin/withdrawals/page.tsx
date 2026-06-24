@@ -1,11 +1,11 @@
 "use client";
-import { CheckCircle2, ChevronLeft, ChevronRight, Clock, DollarSign, Landmark, MoreVertical, Smartphone, User, X, XCircle } from "lucide-react";
+import { CheckCircle2, ChevronLeft, ChevronRight, Clock, DollarSign, Landmark, MoreVertical, Smartphone, XCircle } from "lucide-react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent } from "@/components/ui/Card";
+import { Card,  } from "@/components/ui/Card";
 
 export default function WithdrawalApprovals() {
   const withdrawals = Array.from({ length: 6 }).map((_, i) => ({

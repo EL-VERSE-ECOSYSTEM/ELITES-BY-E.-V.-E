@@ -1,5 +1,5 @@
 "use client";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
+import {  } from "@/components/layout/MobileBottomNav";
+import { ,  } from "@/components/ui/Card";
+import {  } from "@/components/ui/Button";
+import {  } from "@/components/ui/Badge";

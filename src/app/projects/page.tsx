@@ -8,7 +8,7 @@ import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent,  } from "@/components/ui/Card";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 
 export default function ProjectsPage() {
@@ -68,7 +68,7 @@ export default function ProjectsPage() {
               {["active", "completed"].map((tab) => (
                 <button
                   key={tab}
-                  onClick={() => setActiveTab(tab as "active" | "completed")}
+                  onClick={() => setActiveTab(tab as unknown)}
                   className={cn(
                     "px-6 py-2 text-xs font-bold uppercase tracking-widest rounded-lg transition-all",
                     activeTab === tab ? "bg-white dark:bg-elite-primary-800 shadow-sm text-elite-primary-900 dark:text-white" : "text-elite-primary-500 hover:text-elite-primary-700"

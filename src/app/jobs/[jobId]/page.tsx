@@ -7,7 +7,7 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { ChevronLeft, Share2, Shield, ShieldCheck } from "lucide-react";
+import { ChevronLeft, Share2, ShieldCheck } from "lucide-react";
 
 export default function JobDetailPage() {
   return (

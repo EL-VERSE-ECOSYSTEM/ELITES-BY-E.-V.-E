@@ -4,16 +4,16 @@ import { useState } from "react";
 
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent,  } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { Input } from "@/components/ui/Input";
-import { Mail, Plus, Smartphone, Zap } from "lucide-react";
+import {  } from "@/components/ui/Badge";
+import {  } from "@/components/ui/Input";
+import { , Plus, Zap } from "lucide-react";
 
 export default function AdminMarketing() {
   const [activeTab, setActiveTab] = useState<"coupons" | "campaigns" | "notifications">("coupons");
 
-  const coupons = [
+  const _coupons = [
     { id: 1, code: "ELITE2024", discount: "20% OFF", usage: "450/1000", expires: "Mar 15, 2024", status: "Active" },
     { id: 2, code: "AFRICATECH", discount: "$10.00", usage: "124/500", expires: "Dec 31, 2024", status: "Active" },
   ];
@@ -44,7 +44,7 @@ export default function AdminMarketing() {
                  {["coupons", "campaigns", "notifications"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveTab(tab as "coupons" | "campaigns" | "notifications")}
+                    onClick={() => setActiveTab(tab as unknown)}
                     className={cn(
                       "px-6 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest transition-all",
                       activeTab === tab ? "bg-white dark:bg-elite-primary-800 text-elite-primary-900 shadow-sm" : "text-elite-primary-400"

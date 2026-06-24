@@ -6,7 +6,7 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { ProgressBar } from "@/components/ui/ProgressBar";
+import {  } from "@/components/ui/ProgressBar";
 import Link from "next/link";
 
 export default function ProfilePage() {

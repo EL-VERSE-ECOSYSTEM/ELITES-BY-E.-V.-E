@@ -3,9 +3,9 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
+import {  } from "@/components/ui/Badge";
 import { Card, CardContent } from "@/components/ui/Card";
-import { CheckCircle2, ChevronRight, FileCode, Layout, MessageSquare, Play, RotateCcw, Save, Share2, Sparkles, Terminal, X, Zap } from "lucide-react";
+import { CheckCircle2, FileCode, Layout, MessageSquare, Play, RotateCcw, Save, Sparkles, X, Zap } from "lucide-react";
 
 export default function CodingLab() {
   const [activeFile, setActiveFile] = useState("index.js");

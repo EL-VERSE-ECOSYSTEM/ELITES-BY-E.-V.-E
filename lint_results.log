@@ -1,0 +1,427 @@
+
+> temp-app@0.1.0 lint
+> eslint
+
+
+/app/desktop/src/App.tsx
+  2:10  warning  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/mobile/App.tsx
+  16:54  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/app/src/app/about/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/achievements/page.tsx
+  2:10  warning  'MobileBottomNav' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+  3:16  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+  3:29  warning  'CardHeader' is defined but never used       @typescript-eslint/no-unused-vars
+  3:41  warning  'CardTitle' is defined but never used        @typescript-eslint/no-unused-vars
+  4:10  warning  'Button' is defined but never used           @typescript-eslint/no-unused-vars
+  5:10  warning  'Badge' is defined but never used            @typescript-eslint/no-unused-vars
+  6:10  warning  'ProgressBar' is defined but never used      @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/analytics/courses/page.tsx
+   3:10  warning  'Area' is defined but never used       @typescript-eslint/no-unused-vars
+   3:16  warning  'AreaChart' is defined but never used  @typescript-eslint/no-unused-vars
+   3:63  warning  'Line' is defined but never used       @typescript-eslint/no-unused-vars
+   3:69  warning  'LineChart' is defined but never used  @typescript-eslint/no-unused-vars
+   3:80  warning  'Pie' is defined but never used        @typescript-eslint/no-unused-vars
+   3:85  warning  'PieChart' is defined but never used   @typescript-eslint/no-unused-vars
+  10:81  warning  'User' is defined but never used       @typescript-eslint/no-unused-vars
+  10:94  warning  'X' is defined but never used          @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/analytics/revenue/page.tsx
+  2:67  warning  'X' is defined but never used      @typescript-eslint/no-unused-vars
+  6:10  warning  'Badge' is defined but never used  @typescript-eslint/no-unused-vars
+  9:27  warning  'Bar' is defined but never used    @typescript-eslint/no-unused-vars
+  9:47  warning  'Cell' is defined but never used   @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/analytics/users/page.tsx
+   7:10  warning  'Badge' is defined but never used  @typescript-eslint/no-unused-vars
+  10:62  warning  'User' is defined but never used   @typescript-eslint/no-unused-vars
+  10:96  warning  'X' is defined but never used      @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/audit-logs/page.tsx
+  2:48  warning  'Shield' is defined but never used       @typescript-eslint/no-unused-vars
+  2:69  warning  'Target' is defined but never used       @typescript-eslint/no-unused-vars
+  2:77  warning  'User' is defined but never used         @typescript-eslint/no-unused-vars
+  8:16  warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+  8:29  warning  'CardHeader' is defined but never used   @typescript-eslint/no-unused-vars
+  8:41  warning  'CardTitle' is defined but never used    @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/courses/approvals/page.tsx
+  5:10  warning  'Badge' is defined but never used  @typescript-eslint/no-unused-vars
+  8:29  warning  'X' is defined but never used      @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/courses/manage/page.tsx
+   3:78  warning  'X' is defined but never used            @typescript-eslint/no-unused-vars
+  10:16  warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+  10:29  warning  'CardHeader' is defined but never used   @typescript-eslint/no-unused-vars
+  10:41  warning  'CardTitle' is defined but never used    @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/jobs/page.tsx
+   7:16   warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+   7:29   warning  'CardHeader' is defined but never used   @typescript-eslint/no-unused-vars
+   7:41   warning  'CardTitle' is defined but never used    @typescript-eslint/no-unused-vars
+  10:46   warning  'Clock' is defined but never used        @typescript-eslint/no-unused-vars
+  10:53   warning  'DollarSign' is defined but never used   @typescript-eslint/no-unused-vars
+  10:89   warning  'Filter' is defined but never used       @typescript-eslint/no-unused-vars
+  10:97   warning  'Layout' is defined but never used       @typescript-eslint/no-unused-vars
+  10:141  warning  'TrendingUp' is defined but never used   @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/marketing/page.tsx
+   7:29  warning  'CardHeader' is defined but never used        @typescript-eslint/no-unused-vars
+   7:41  warning  'CardTitle' is defined but never used         @typescript-eslint/no-unused-vars
+   9:10  warning  'Badge' is defined but never used             @typescript-eslint/no-unused-vars
+  10:10  warning  'Input' is defined but never used             @typescript-eslint/no-unused-vars
+  11:10  warning  'Mail' is defined but never used              @typescript-eslint/no-unused-vars
+  11:22  warning  'Smartphone' is defined but never used        @typescript-eslint/no-unused-vars
+  16:9   warning  'coupons' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/moderation/page.tsx
+   3:99   warning  'Shield' is defined but never used       @typescript-eslint/no-unused-vars
+   3:120  warning  'User' is defined but never used         @typescript-eslint/no-unused-vars
+   3:133  warning  'Users' is defined but never used        @typescript-eslint/no-unused-vars
+  10:16   warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/page.tsx
+   4:104  warning  'Sun' is defined but never used       @typescript-eslint/no-unused-vars
+   4:116  warning  'X' is defined but never used         @typescript-eslint/no-unused-vars
+  11:10   warning  'Bar' is defined but never used       @typescript-eslint/no-unused-vars
+  11:15   warning  'BarChart' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/support/page.tsx
+   7:16   warning  'CardContent' is defined but never used   @typescript-eslint/no-unused-vars
+   7:29   warning  'CardHeader' is defined but never used    @typescript-eslint/no-unused-vars
+   7:41   warning  'CardTitle' is defined but never used     @typescript-eslint/no-unused-vars
+  10:51   warning  'ChevronLeft' is defined but never used   @typescript-eslint/no-unused-vars
+  10:64   warning  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+  10:78   warning  'Clock' is defined but never used         @typescript-eslint/no-unused-vars
+  10:85   warning  'Filter' is defined but never used        @typescript-eslint/no-unused-vars
+  10:93   warning  'Mail' is defined but never used          @typescript-eslint/no-unused-vars
+  10:114  warning  'MoreVertical' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/tutors/page.tsx
+   3:44  warning  'Shield' is defined but never used       @typescript-eslint/no-unused-vars
+   3:71  warning  'User' is defined but never used         @typescript-eslint/no-unused-vars
+   3:84  warning  'X' is defined but never used            @typescript-eslint/no-unused-vars
+  10:16  warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+  10:29  warning  'CardHeader' is defined but never used   @typescript-eslint/no-unused-vars
+  10:41  warning  'CardTitle' is defined but never used    @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/users/[userId]/page.tsx
+   6:16   warning  'CardContent' is defined but never used         @typescript-eslint/no-unused-vars
+   6:29   warning  'CardHeader' is defined but never used          @typescript-eslint/no-unused-vars
+   6:41   warning  'CardTitle' is defined but never used           @typescript-eslint/no-unused-vars
+   8:10   warning  'Badge' is defined but never used               @typescript-eslint/no-unused-vars
+   9:10   warning  'Award' is defined but never used               @typescript-eslint/no-unused-vars
+   9:22   warning  'BookOpen' is defined but never used            @typescript-eslint/no-unused-vars
+   9:42   warning  'CheckCircle2' is defined but never used        @typescript-eslint/no-unused-vars
+   9:56   warning  'ExternalLink' is defined but never used        @typescript-eslint/no-unused-vars
+   9:70   warning  'History' is defined but never used             @typescript-eslint/no-unused-vars
+   9:93   warning  'MessageSquare' is defined but never used       @typescript-eslint/no-unused-vars
+   9:115  warning  'Shield' is defined but never used              @typescript-eslint/no-unused-vars
+   9:123  warning  'User' is defined but never used                @typescript-eslint/no-unused-vars
+   9:129  warning  'Wallet' is defined but never used              @typescript-eslint/no-unused-vars
+  12:10   warning  'status' is assigned a value but never used     @typescript-eslint/no-unused-vars
+  12:18   warning  'setStatus' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/users/page.tsx
+  5:16  warning  'CardContent' is defined but never used     @typescript-eslint/no-unused-vars
+  5:29  warning  'CardHeader' is defined but never used      @typescript-eslint/no-unused-vars
+  5:41  warning  'CardTitle' is defined but never used       @typescript-eslint/no-unused-vars
+  7:10  warning  'Input' is defined but never used           @typescript-eslint/no-unused-vars
+  9:25  warning  'Filter' is defined but never used          @typescript-eslint/no-unused-vars
+  9:33  warning  'Mail' is defined but never used            @typescript-eslint/no-unused-vars
+  9:39  warning  'MoreHorizontal' is defined but never used  @typescript-eslint/no-unused-vars
+  9:55  warning  'MoreVertical' is defined but never used    @typescript-eslint/no-unused-vars
+  9:69  warning  'Search' is defined but never used          @typescript-eslint/no-unused-vars
+  9:77  warning  'Shield' is defined but never used          @typescript-eslint/no-unused-vars
+  9:85  warning  'User' is defined but never used            @typescript-eslint/no-unused-vars
+  9:91  warning  'UserX' is defined but never used           @typescript-eslint/no-unused-vars
+
+/app/src/app/admin/withdrawals/page.tsx
+  2:106  warning  'User' is defined but never used         @typescript-eslint/no-unused-vars
+  2:112  warning  'X' is defined but never used            @typescript-eslint/no-unused-vars
+  8:16   warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/blog/[slug]/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/certificates/[certId]/page.tsx
+  8:57  warning  'Shield' is defined but never used  @typescript-eslint/no-unused-vars
+  9:8   warning  'Link' is defined but never used    @typescript-eslint/no-unused-vars
+
+/app/src/app/code-lab/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/contact/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/courses/[courseId]/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/courses/page.tsx
+  2:10  warning  'Footer' is defined but never used       @typescript-eslint/no-unused-vars
+  3:10  warning  'Input' is defined but never used        @typescript-eslint/no-unused-vars
+  4:10  warning  'Button' is defined but never used       @typescript-eslint/no-unused-vars
+  5:10  warning  'Card' is defined but never used         @typescript-eslint/no-unused-vars
+  5:16  warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+  6:10  warning  'Badge' is defined but never used        @typescript-eslint/no-unused-vars
+  7:8   warning  'Link' is defined but never used         @typescript-eslint/no-unused-vars
+
+/app/src/app/cv-builder/page.tsx
+   7:29  warning  'CardHeader' is defined but never used  @typescript-eslint/no-unused-vars
+   7:41  warning  'CardTitle' is defined but never used   @typescript-eslint/no-unused-vars
+  10:10  warning  'Badge' is defined but never used       @typescript-eslint/no-unused-vars
+
+/app/src/app/dashboard/page.tsx
+  2:0  error  Parsing error: Expression expected
+
+/app/src/app/forgot-password/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/hackathons/page.tsx
+   3:52  warning  'User' is defined but never used        @typescript-eslint/no-unused-vars
+  10:29  warning  'CardHeader' is defined but never used  @typescript-eslint/no-unused-vars
+  10:41  warning  'CardTitle' is defined but never used   @typescript-eslint/no-unused-vars
+
+/app/src/app/jobs/[jobId]/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/jobs/page.tsx
+  2:10  warning  'MobileBottomNav' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+  3:16  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+  4:10  warning  'Button' is defined but never used           @typescript-eslint/no-unused-vars
+  5:10  warning  'Badge' is defined but never used            @typescript-eslint/no-unused-vars
+
+/app/src/app/layout.tsx
+  1:15  warning  'Metadata' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/leaderboard/page.tsx
+  2:10  warning  'MobileBottomNav' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+  3:16  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+  4:10  warning  'Button' is defined but never used           @typescript-eslint/no-unused-vars
+  5:10  warning  'Badge' is defined but never used            @typescript-eslint/no-unused-vars
+
+/app/src/app/learn/[courseId]/quiz/[quizId]/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/login/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/moderator/page.tsx
+  4:67  warning  'Shield' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/moderator/review/page.tsx
+  2:10  warning  'MobileBottomNav' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+  3:16  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+
+/app/src/app/my-courses/page.tsx
+  2:10  warning  'MobileBottomNav' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+  3:16  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+  4:10  warning  'Button' is defined but never used           @typescript-eslint/no-unused-vars
+  5:10  warning  'Badge' is defined but never used            @typescript-eslint/no-unused-vars
+  6:10  warning  'ProgressBar' is defined but never used      @typescript-eslint/no-unused-vars
+
+/app/src/app/notifications/page.tsx
+   7:29   warning  'CardHeader' is defined but never used    @typescript-eslint/no-unused-vars
+   7:41   warning  'CardTitle' is defined but never used     @typescript-eslint/no-unused-vars
+   9:10   warning  'Badge' is defined but never used         @typescript-eslint/no-unused-vars
+  10:10   warning  'Award' is defined but never used         @typescript-eslint/no-unused-vars
+  10:17   warning  'Bell' is defined but never used          @typescript-eslint/no-unused-vars
+  10:47   warning  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+  10:61   warning  'Clock' is defined but never used         @typescript-eslint/no-unused-vars
+  10:111  warning  'User' is defined but never used          @typescript-eslint/no-unused-vars
+
+/app/src/app/page.tsx
+  1:23  error  Parsing error: Expression expected
+
+/app/src/app/paths/[pathId]/page.tsx
+  1:0  error  Parsing error: Expression expected
+
+/app/src/app/paths/page.tsx
+  9:80  warning  'User' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/pricing/page.tsx
+  2:10  warning  'Footer' is defined but never used       @typescript-eslint/no-unused-vars
+  3:10  warning  'Button' is defined but never used       @typescript-eslint/no-unused-vars
+  4:10  warning  'Card' is defined but never used         @typescript-eslint/no-unused-vars
+  4:16  warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+  5:10  warning  'Badge' is defined but never used        @typescript-eslint/no-unused-vars
+
+/app/src/app/profile/page.tsx
+  9:10  warning  'ProgressBar' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/projects/[projectId]/page.tsx
+  13:50   warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
+  13:108  warning  'Trash2' is defined but never used        @typescript-eslint/no-unused-vars
+
+/app/src/app/projects/page.tsx
+  11:29  warning  'CardHeader' is defined but never used  @typescript-eslint/no-unused-vars
+  11:41  warning  'CardTitle' is defined but never used   @typescript-eslint/no-unused-vars
+
+/app/src/app/register/page.tsx
+  2:10  warning  'Input' is defined but never used        @typescript-eslint/no-unused-vars
+  3:10  warning  'Card' is defined but never used         @typescript-eslint/no-unused-vars
+  3:16  warning  'CardContent' is defined but never used  @typescript-eslint/no-unused-vars
+  4:10  warning  'Badge' is defined but never used        @typescript-eslint/no-unused-vars
+
+/app/src/app/reviews/page.tsx
+  4:10  warning  'Badge' is defined but never used       @typescript-eslint/no-unused-vars
+  5:29  warning  'CardHeader' is defined but never used  @typescript-eslint/no-unused-vars
+  5:41  warning  'CardTitle' is defined but never used   @typescript-eslint/no-unused-vars
+
+/app/src/app/sessions/[sessionId]/page.tsx
+  8:31   warning  'Code' is defined but never used          @typescript-eslint/no-unused-vars
+  8:43   warning  'Layout' is defined but never used        @typescript-eslint/no-unused-vars
+  8:91   warning  'MoreVertical' is defined but never used  @typescript-eslint/no-unused-vars
+  8:125  warning  'Shield' is defined but never used        @typescript-eslint/no-unused-vars
+  8:133  warning  'Users' is defined but never used         @typescript-eslint/no-unused-vars
+
+/app/src/app/settings/page.tsx
+   7:29  warning  'CardHeader' is defined but never used  @typescript-eslint/no-unused-vars
+   7:41  warning  'CardTitle' is defined but never used   @typescript-eslint/no-unused-vars
+   9:10  warning  'Badge' is defined but never used       @typescript-eslint/no-unused-vars
+  11:50  warning  'Eye' is defined but never used         @typescript-eslint/no-unused-vars
+  11:83  warning  'Save' is defined but never used        @typescript-eslint/no-unused-vars
+  11:89  warning  'Settings' is defined but never used    @typescript-eslint/no-unused-vars
+
+/app/src/app/study-groups/page.tsx
+  3:65  warning  'User' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/tutor/analytics/page.tsx
+  3:28   warning  'Download' is defined but never used  @typescript-eslint/no-unused-vars
+  3:76   warning  'Sun' is defined but never used       @typescript-eslint/no-unused-vars
+  3:107  warning  'X' is defined but never used         @typescript-eslint/no-unused-vars
+  7:10   warning  'Badge' is defined but never used     @typescript-eslint/no-unused-vars
+
+/app/src/app/tutor/availability/page.tsx
+  6:29  warning  'CardHeader' is defined but never used  @typescript-eslint/no-unused-vars
+  6:41  warning  'CardTitle' is defined but never used   @typescript-eslint/no-unused-vars
+  7:23  warning  'Settings' is defined but never used    @typescript-eslint/no-unused-vars
+
+/app/src/app/tutor/community/page.tsx
+  2:10  warning  'MobileBottomNav' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+  3:16  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+
+/app/src/app/tutor/courses/create/page.tsx
+   11:10   warning  'Badge' is defined but never used                @typescript-eslint/no-unused-vars
+   12:51   warning  'Code' is defined but never used                 @typescript-eslint/no-unused-vars
+   12:86   warning  'Image' is defined but never used                @typescript-eslint/no-unused-vars
+   12:93   warning  'ImageIcon' is defined but never used            @typescript-eslint/no-unused-vars
+   12:139  warning  'as' is defined but never used                   @typescript-eslint/no-unused-vars
+   18:19   warning  'setModules' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  122:57   warning  'lIdx' is defined but never used                 @typescript-eslint/no-unused-vars
+
+/app/src/app/tutor/courses/page.tsx
+   4:74  warning  'User' is defined but never used        @typescript-eslint/no-unused-vars
+   8:10  warning  'Badge' is defined but never used       @typescript-eslint/no-unused-vars
+  10:29  warning  'CardHeader' is defined but never used  @typescript-eslint/no-unused-vars
+  10:41  warning  'CardTitle' is defined but never used   @typescript-eslint/no-unused-vars
+
+/app/src/app/tutor/dashboard/page.tsx
+   4:78  warning  'X' is defined but never used          @typescript-eslint/no-unused-vars
+   8:10  warning  'Badge' is defined but never used      @typescript-eslint/no-unused-vars
+  11:42  warning  'Line' is defined but never used       @typescript-eslint/no-unused-vars
+  11:48  warning  'LineChart' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/tutor/resources/page.tsx
+   7:29   warning  'CardHeader' is defined but never used    @typescript-eslint/no-unused-vars
+   7:41   warning  'CardTitle' is defined but never used     @typescript-eslint/no-unused-vars
+  10:10   warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+  10:24   warning  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+  10:48   warning  'ExternalLink' is defined but never used  @typescript-eslint/no-unused-vars
+  10:82   warning  'Filter' is defined but never used        @typescript-eslint/no-unused-vars
+  10:102  warning  'Layout' is defined but never used        @typescript-eslint/no-unused-vars
+  10:110  warning  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+  10:116  warning  'LinkIcon' is defined but never used      @typescript-eslint/no-unused-vars
+  10:126  warning  'MoreVertical' is defined but never used  @typescript-eslint/no-unused-vars
+  10:170  warning  'as' is defined but never used            @typescript-eslint/no-unused-vars
+
+/app/src/app/tutor/schedule/page.tsx
+  4:54  warning  'Sun' is defined but never used   @typescript-eslint/no-unused-vars
+  4:59  warning  'User' is defined but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/tutor/students/page.tsx
+  2:10  warning  'MobileBottomNav' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+  3:16  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+  4:10  warning  'Button' is defined but never used           @typescript-eslint/no-unused-vars
+  5:10  warning  'Badge' is defined but never used            @typescript-eslint/no-unused-vars
+
+/app/src/app/tutors/[tutorId]/book/page.tsx
+  10:10   warning  'Input' is defined but never used                  @typescript-eslint/no-unused-vars
+  12:22   warning  'Calendar' is defined but never used               @typescript-eslint/no-unused-vars
+  12:32   warning  'CheckCircle2' is defined but never used           @typescript-eslint/no-unused-vars
+  12:78   warning  'Globe' is defined but never used                  @typescript-eslint/no-unused-vars
+  12:85   warning  'Info' is defined but never used                   @typescript-eslint/no-unused-vars
+  12:91   warning  'Smartphone' is defined but never used             @typescript-eslint/no-unused-vars
+  12:109  warning  'User' is defined but never used                   @typescript-eslint/no-unused-vars
+  12:115  warning  'Video' is defined but never used                  @typescript-eslint/no-unused-vars
+  18:10   warning  'selectedDate' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/tutors/[tutorId]/page.tsx
+   8:29   warning  'CardHeader' is defined but never used     @typescript-eslint/no-unused-vars
+   8:41   warning  'CardTitle' is defined but never used      @typescript-eslint/no-unused-vars
+  11:10   warning  'BookOpen' is defined but never used       @typescript-eslint/no-unused-vars
+  11:31   warning  'Calendar' is defined but never used       @typescript-eslint/no-unused-vars
+  11:41   warning  'CheckCircle2' is defined but never used   @typescript-eslint/no-unused-vars
+  11:77   warning  'MessageSquare' is defined but never used  @typescript-eslint/no-unused-vars
+  11:92   warning  'Play' is defined but never used           @typescript-eslint/no-unused-vars
+  11:98   warning  'Star' is defined but never used           @typescript-eslint/no-unused-vars
+  11:104  warning  'Users' is defined but never used          @typescript-eslint/no-unused-vars
+
+/app/src/app/wallet/deposit/page.tsx
+  4:64  warning  'Shield' is defined but never used  @typescript-eslint/no-unused-vars
+  9:10  warning  'Badge' is defined but never used   @typescript-eslint/no-unused-vars
+
+/app/src/app/wallet/page.tsx
+  2:10  warning  'MobileBottomNav' is defined but never used  @typescript-eslint/no-unused-vars
+  3:10  warning  'Card' is defined but never used             @typescript-eslint/no-unused-vars
+  3:16  warning  'CardContent' is defined but never used      @typescript-eslint/no-unused-vars
+  3:29  warning  'CardHeader' is defined but never used       @typescript-eslint/no-unused-vars
+  3:41  warning  'CardTitle' is defined but never used        @typescript-eslint/no-unused-vars
+  4:10  warning  'Button' is defined but never used           @typescript-eslint/no-unused-vars
+  5:10  warning  'Badge' is defined but never used            @typescript-eslint/no-unused-vars
+
+/app/src/app/wallet/transfer/page.tsx
+   3:58  warning  'Shield' is defined but never used               @typescript-eslint/no-unused-vars
+   7:10  warning  'Badge' is defined but never used                @typescript-eslint/no-unused-vars
+   9:29  warning  'CardHeader' is defined but never used           @typescript-eslint/no-unused-vars
+   9:41  warning  'CardTitle' is defined but never used            @typescript-eslint/no-unused-vars
+  10:10  warning  'Input' is defined but never used                @typescript-eslint/no-unused-vars
+  17:10  warning  'isVerified' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/src/app/wallet/withdraw/page.tsx
+   4:10   warning  'AlertCircle' is defined but never used   @typescript-eslint/no-unused-vars
+   4:49   warning  'CheckCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+   4:63   warning  'ChevronRight' is defined but never used  @typescript-eslint/no-unused-vars
+   4:94   warning  'Lock' is defined but never used          @typescript-eslint/no-unused-vars
+   4:100  warning  'Shield' is defined but never used        @typescript-eslint/no-unused-vars
+   8:10   warning  'Badge' is defined but never used         @typescript-eslint/no-unused-vars
+  10:29   warning  'CardHeader' is defined but never used    @typescript-eslint/no-unused-vars
+  10:41   warning  'CardTitle' is defined but never used     @typescript-eslint/no-unused-vars
+  12:24   warning  'Wallet' is defined but never used        @typescript-eslint/no-unused-vars
+
+/app/src/components/layout/Navbar.tsx
+   4:19  warning  'Bell' is defined but never used                                                                            @typescript-eslint/no-unused-vars
+   4:25  warning  'User' is defined but never used                                                                            @typescript-eslint/no-unused-vars
+   4:31  warning  'Search' is defined but never used                                                                          @typescript-eslint/no-unused-vars
+  19:6   warning  React Hook useEffect has a missing dependency: 'mounted'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/app/src/components/ui/Button.tsx
+  28:11  warning  'Comp' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/app/src/utils/supabase/middleware.ts
+  15:9   warning  'supabase' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  24:48  warning  'options' is defined but never used            @typescript-eslint/no-unused-vars
+
+✖ 283 problems (13 errors, 270 warnings)

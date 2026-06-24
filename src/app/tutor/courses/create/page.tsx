@@ -8,14 +8,14 @@ import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { Badge } from "@/components/ui/Badge";
-import { CheckCircle2, ChevronLeft, ChevronRight, Code, Eye, FileText, GripVertical, Image, ImageIcon, Plus, Rocket, Save, Trash2, Video, as } from "lucide-react";
+import {  } from "@/components/ui/Badge";
+import { CheckCircle2, ChevronLeft, ChevronRight, Eye, FileText, GripVertical, Plus, Rocket, Save, Trash2, Video,  } from "lucide-react";
 
 export default function CourseCreator() {
   const [step, setStep] = useState(1);
   const totalSteps = 5;
 
-  const [modules, setModules] = useState([
+  const [modules, _setModules] = useState([
     { id: 1, title: "Introduction", lessons: [{ id: 101, title: "Course Overview", type: "video" }] }
   ]);
 
@@ -119,7 +119,7 @@ export default function CourseCreator() {
                            <button className="text-elite-error hover:bg-elite-error/10 p-2 rounded-lg transition-colors"><Trash2 size={18} /></button>
                         </div>
                         <CardContent className="p-4 space-y-3">
-                           {module.lessons.map((lesson, lIdx) => (
+                           {module.lessons.map((lesson, _lIdx) => (
                              <div key={lesson.id} className="flex items-center gap-4 p-3 border border-elite-primary-50 dark:border-elite-primary-800 rounded-xl hover:border-elite-primary-200 transition-all group">
                                 <GripVertical size={16} className="text-elite-primary-300" />
                                 <div className={cn(
@@ -153,7 +153,7 @@ export default function CourseCreator() {
                  </div>
                  <div className="space-y-2">
                     <h2 className="text-3xl font-bold font-space-grotesk">Ready to Launch!</h2>
-                    <p className="text-elite-primary-500 max-w-md">Your course {"'"}Advanced Next.js 15 Masterclass{"'"} is ready to be submitted for review. Once approved, it will be visible to thousands of students.</p>
+                    <p className="text-elite-primary-500 max-w-md">Your course {"\"Advanced Next.js 15 Masterclass\""} is ready to be submitted for review. Once approved, it will be visible to thousands of students.</p>
                  </div>
 
                  <div className="bg-white dark:bg-elite-primary-900 border border-elite-primary-100 dark:border-elite-primary-800 p-6 rounded-2xl w-full text-left space-y-4">
