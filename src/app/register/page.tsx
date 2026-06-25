@@ -4,21 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
-  User,
-  Mail,
-  Lock,
   Briefcase,
   GraduationCap,
   ShieldCheck,
   Upload,
-  CheckCircle2,
   ArrowRight,
   ChevronLeft
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Card, CardContent } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
 import { cn } from "@/lib/utils";
 
 type Role = "STUDENT" | "TUTOR" | "ADMIN";
@@ -96,6 +91,7 @@ export default function RegisterPage() {
                 ].map((item) => (
                   <button
                     key={item.id}
+                    type="button"
                     onClick={() => handleRoleSelect(item.id as Role)}
                     className={cn(
                       "flex flex-col items-center p-6 rounded-2xl border-2 transition-all group",
@@ -124,7 +120,7 @@ export default function RegisterPage() {
 
           {step === 2 && (
             <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-500">
-              <button onClick={prevStep} className="flex items-center gap-1 text-sm font-bold text-elite-primary-500 hover:text-elite-primary-900 transition-colors">
+              <button type="button" onClick={prevStep} className="flex items-center gap-1 text-sm font-bold text-elite-primary-500 hover:text-elite-primary-900 transition-colors">
                 <ChevronLeft size={16} /> Back
               </button>
 
@@ -169,7 +165,7 @@ export default function RegisterPage() {
 
           {step === 3 && (
             <div className="space-y-6 animate-in fade-in slide-in-from-right-4 duration-500">
-              <button onClick={prevStep} className="flex items-center gap-1 text-sm font-bold text-elite-primary-500 hover:text-elite-primary-900 transition-colors">
+              <button type="button" onClick={prevStep} className="flex items-center gap-1 text-sm font-bold text-elite-primary-500 hover:text-elite-primary-900 transition-colors">
                 <ChevronLeft size={16} /> Back
               </button>
 
@@ -235,7 +231,7 @@ export default function RegisterPage() {
                     </div>
                     {role === "TUTOR" && (
                       <p className="text-[10px] text-center text-elite-warning italic">
-                        Note: Your profile will be 'Pending' until an admin verifies your CV.
+                        Note: Your profile will be &apos;Pending&apos; until an admin verifies your CV.
                       </p>
                     )}
                   </div>

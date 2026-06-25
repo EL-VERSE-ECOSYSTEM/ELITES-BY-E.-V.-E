@@ -70,7 +70,7 @@ export default function JobDetailPage() {
                        </div>
                        <div className="space-y-1">
                           <h3 className="font-bold text-xl">Apply with ELITE</h3>
-                          <p className="text-xs text-elite-primary-300">We'll use your verified certificates and projects to fast-track your application.</p>
+                          <p className="text-xs text-elite-primary-300">We&apos;ll use your verified certificates and projects to fast-track your application.</p>
                        </div>
                     </div>
                     <Button variant="accent" size="lg" className="w-full h-14 font-bold shadow-xl shadow-elite-accent-500/20">Submit Application</Button>

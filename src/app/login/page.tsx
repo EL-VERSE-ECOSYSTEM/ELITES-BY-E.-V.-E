@@ -8,7 +8,6 @@ import {
   EyeOff,
   Lock,
   Mail,
-  User,
   ArrowRight,
   GraduationCap,
   Briefcase,
@@ -19,11 +18,13 @@ import { Input } from "@/components/ui/Input";
 import { Card, CardContent } from "@/components/ui/Card";
 import { cn } from "@/lib/utils";
 
+type Role = "STUDENT" | "TUTOR" | "ADMIN";
+
 export default function LoginPage() {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [role, setRole] = useState<"STUDENT" | "TUTOR" | "ADMIN">("STUDENT");
+  const [role, setRole] = useState<Role>("STUDENT");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,7 +65,8 @@ export default function LoginPage() {
             ].map((r) => (
               <button
                 key={r.id}
-                onClick={() => setRole(r.id as any)}
+                type="button"
+                onClick={() => setRole(r.id as Role)}
                 className={cn(
                   "flex-1 flex items-center justify-center gap-2 py-2 rounded-lg text-xs font-bold transition-all",
                   role === r.id
@@ -84,7 +86,6 @@ export default function LoginPage() {
               type="email"
               placeholder="name@example.com"
               required
-              icon={<Mail size={18} />}
             />
             <div className="relative">
               <Input
@@ -92,7 +93,6 @@ export default function LoginPage() {
                 type={showPassword ? "text" : "password"}
                 placeholder="••••••••"
                 required
-                icon={<Lock size={18} />}
               />
               <button
                 type="button"
@@ -117,7 +117,7 @@ export default function LoginPage() {
           </form>
 
           <p className="text-center text-sm text-elite-primary-500">
-            Don't have an account? <Link href="/register" className="font-bold text-elite-primary-600 hover:underline">Register now</Link>
+            Don&apos;t have an account? <Link href="/register" className="font-bold text-elite-primary-600 hover:underline">Register now</Link>
           </p>
         </CardContent>
       </Card>

@@ -39,7 +39,7 @@ export default function ForgotPasswordPage() {
                    <Mail size={32} />
                 </div>
                 <h1 className="text-2xl font-bold font-space-grotesk">Forgot Password?</h1>
-                <p className="text-sm text-elite-primary-500">No worries! Enter your email address and we'll send you a link to reset your password.</p>
+                <p className="text-sm text-elite-primary-500">No worries! Enter your email address and we&apos;ll send you a link to reset your password.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -59,7 +59,7 @@ export default function ForgotPasswordPage() {
               <div className="p-4 bg-elite-info/10 rounded-xl flex gap-3 border border-elite-info/20">
                  <AlertCircle className="text-elite-info shrink-0" size={18} />
                  <p className="text-xs text-elite-info leading-relaxed">
-                    If you don't receive an email within a few minutes, please check your spam folder or contact support.
+                    If you don&apos;t receive an email within a few minutes, please check your spam folder or contact support.
                  </p>
               </div>
             </div>
@@ -71,11 +71,11 @@ export default function ForgotPasswordPage() {
                <div className="space-y-2">
                   <h2 className="text-2xl font-bold font-space-grotesk">Email Sent!</h2>
                   <p className="text-sm text-elite-primary-500">
-                     We've sent a password reset link to <span className="font-bold text-elite-primary-900 dark:text-white">{email}</span>.
+                     We&apos;ve sent a password reset link to <span className="font-bold text-elite-primary-900 dark:text-white">{email}</span>.
                   </p>
                </div>
                <div className="space-y-4 pt-4 border-t border-elite-primary-50 dark:border-elite-primary-800">
-                  <p className="text-xs text-elite-primary-400">Didn't receive the email?</p>
+                  <p className="text-xs text-elite-primary-400">Didn&apos;t receive the email?</p>
                   <Button variant="outline" className="w-full" onClick={() => setIsSubmitted(false)}>Resend Link</Button>
                </div>
             </div>

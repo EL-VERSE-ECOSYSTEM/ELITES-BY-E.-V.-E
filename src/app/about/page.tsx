@@ -2,11 +2,9 @@
 import { Navbar } from "@/components/layout/Navbar";
 
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Footer } from "@/components/layout/Footer";
-import { Globe, Target, User, Users } from "lucide-react";
-import Link from "next/link";
+import { Globe, Target, Users } from "lucide-react";
 
 export default function AboutPage() {
   const stats = [
@@ -30,7 +28,7 @@ export default function AboutPage() {
            <div className="container mx-auto px-4 relative z-10 text-center space-y-8">
               <Badge variant="accent">OUR MISSION</Badge>
               <h1 className="text-4xl md:text-7xl font-bold font-space-grotesk max-w-4xl mx-auto leading-tight">
-                Empowering Africa's Next Generation of Tech Leaders.
+                Empowering Africa&apos;s Next Generation of Tech Leaders.
               </h1>
               <p className="text-xl text-elite-primary-200 max-w-2xl mx-auto">
                 ELITE is on a mission to train, certify, and connect 1 million African tech talents to global opportunities by 2030.
@@ -59,10 +57,10 @@ export default function AboutPage() {
                  <div className="space-y-6">
                     <h2 className="text-3xl md:text-5xl font-bold font-space-grotesk">Built by Africans, for the World.</h2>
                     <p className="text-lg text-elite-primary-600 dark:text-elite-primary-300 leading-relaxed">
-                       ELITE was born out of the EL VERSE ECOSYSTEM with a clear vision: to bridge the global tech talent gap using Africa's greatest resource—its youth.
+                       ELITE was born out of the EL VERSE ECOSYSTEM with a clear vision: to bridge the global tech talent gap using Africa&apos;s greatest resource—its youth.
                     </p>
                     <p className="text-lg text-elite-primary-600 dark:text-elite-primary-300 leading-relaxed">
-                       We understand the unique challenges faced by African learners, from internet accessibility to payment hurdles. That's why we've built a platform that is not only premium in quality but also localized for the African context.
+                       We understand the unique challenges faced by African learners, from internet accessibility to payment hurdles. That&apos;s why we&apos;ve built a platform that is not only premium in quality but also localized for the African context.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                        {[

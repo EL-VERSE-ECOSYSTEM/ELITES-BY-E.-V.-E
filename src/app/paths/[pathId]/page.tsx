@@ -100,7 +100,7 @@ export default function PathDetail() {
               {/* Path Stats Sidebar */}
               <aside className="space-y-12">
                  <div className="space-y-6">
-                    <h3 className="text-xl font-bold font-space-grotesk">Skills You'll Master</h3>
+                    <h3 className="text-xl font-bold font-space-grotesk">Skills You&apos;ll Master</h3>
                     <div className="space-y-4">
                        {[
                          { name: "System Architecture", level: 85 },

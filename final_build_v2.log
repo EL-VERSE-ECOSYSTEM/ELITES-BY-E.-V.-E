@@ -22,8 +22,8 @@ You may need an additional loader to handle the result of these loaders.
 Import trace for requested module:
 ./src/app/admin/deposits/page.tsx
 
-./src/app/courses/page.tsx
-Module parse failed: Duplicate export 'default' (20:7)
+./src/app/referrals/page.tsx
+Module parse failed: Duplicate export 'default' (24:7)
 File was processed with these loaders:
  * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
  * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
@@ -35,10 +35,10 @@ You may need an additional loader to handle the result of these loaders.
 | }
 
 Import trace for requested module:
-./src/app/courses/page.tsx
+./src/app/referrals/page.tsx
 
-./src/app/jobs/page.tsx
-Module parse failed: Duplicate export 'default' (15:7)
+./src/app/tutor/earnings/page.tsx
+Module parse failed: Duplicate export 'default' (19:7)
 File was processed with these loaders:
  * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
  * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
@@ -50,37 +50,37 @@ You may need an additional loader to handle the result of these loaders.
 | }
 
 Import trace for requested module:
-./src/app/jobs/page.tsx
+./src/app/tutor/earnings/page.tsx
 
-./src/app/leaderboard/page.tsx
-Module parse failed: Duplicate export 'default' (15:7)
+./src/app/admin/deposits/page.tsx
+Module parse failed: Duplicate export 'default' (7:7)
 File was processed with these loaders:
- * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
  * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
 You may need an additional loader to handle the result of these loaders.
-|     });
-| }
-> export default function Page() {
-|     return null;
-| }
+| "default",
+| );
+> export default registerClientReference(
+| function() { throw new Error("Attempted to call the default export of \"/app/src/app/admin/deposits/page.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component."); },
+| "/app/src/app/admin/deposits/page.tsx",
 
 Import trace for requested module:
-./src/app/leaderboard/page.tsx
+./src/app/admin/deposits/page.tsx
 
-./src/app/my-courses/page.tsx
-Module parse failed: Duplicate export 'default' (15:7)
+./src/app/referrals/page.tsx
+Module parse failed: Duplicate export 'default' (7:7)
 File was processed with these loaders:
- * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-loader/index.js
  * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
 You may need an additional loader to handle the result of these loaders.
-|     });
-| }
-> export default function Page() {
-|     return null;
-| }
+| "default",
+| );
+> export default registerClientReference(
+| function() { throw new Error("Attempted to call the default export of \"/app/src/app/referrals/page.tsx\" from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component."); },
+| "/app/src/app/referrals/page.tsx",
 
 Import trace for requested module:
-./src/app/my-courses/page.tsx
+./src/app/referrals/page.tsx
 
 
 > Build failed because of webpack errors

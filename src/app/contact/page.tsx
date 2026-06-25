@@ -17,7 +17,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
            <div className="max-w-4xl mx-auto text-center space-y-4 mb-16">
               <h1 className="text-4xl md:text-6xl font-bold font-space-grotesk">Get in Touch</h1>
-              <p className="text-xl text-elite-primary-500">Have questions? We're here to help you build your future.</p>
+              <p className="text-xl text-elite-primary-500">Have questions? We&apos;re here to help you build your future.</p>
            </div>
 
            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">

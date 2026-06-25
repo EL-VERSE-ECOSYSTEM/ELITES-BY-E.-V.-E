@@ -3,16 +3,10 @@
 import { useState } from "react";
 import {
   Search,
-  Filter,
   MessageSquare,
   Star,
-  Award,
   Rocket,
-  MoreVertical,
-  CheckCircle2,
-  XCircle,
   ChevronRight,
-  TrendingUp,
   Mail
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
@@ -58,9 +52,22 @@ const MOCK_STUDENTS = [
   },
 ];
 
+interface Student {
+  id: number;
+  name: string;
+  email: string;
+  stack: string;
+  level: string;
+  progress: number;
+  lastActive: string;
+  status: string;
+  isPromoted: boolean;
+  promotedTo?: string;
+}
+
 export default function TutorStudentsPage() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [promotingStudent, setPromotingStudent] = useState<any>(null);
+  const [promotingStudent, setPromotingStudent] = useState<Student | null>(null);
 
   return (
     <div className="p-6 space-y-8 pb-24">
@@ -93,9 +100,6 @@ export default function TutorStudentsPage() {
               />
             </div>
             <div className="flex gap-2">
-              <Button variant="outline" size="icon" className="h-11 w-11">
-                <Filter size={18} />
-              </Button>
               <select className="h-11 rounded-lg border border-elite-primary-200 bg-white px-3 text-sm focus:ring-2 focus:ring-elite-accent-500 dark:bg-elite-primary-950 dark:border-elite-primary-800">
                 <option>All Progress</option>
                 <option>Completed</option>
@@ -191,7 +195,6 @@ export default function TutorStudentsPage() {
         </CardContent>
       </Card>
 
-      {/* Promotion Modal */}
       {promotingStudent && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <Card className="w-full max-w-md animate-in zoom-in-95 duration-200 shadow-2xl">
@@ -223,16 +226,6 @@ export default function TutorStudentsPage() {
                     </button>
                   ))}
                 </div>
-              </div>
-
-              <div className="p-4 bg-elite-primary-50 dark:bg-elite-primary-900 rounded-xl space-y-2">
-                <div className="flex items-center gap-2 text-xs font-bold">
-                  <Award className="text-elite-accent-500" size={14} /> Tutor Recommendation
-                </div>
-                <textarea
-                  className="w-full bg-transparent border-none focus:ring-0 text-sm italic placeholder:text-elite-primary-400 min-h-[60px]"
-                  placeholder="Add a brief note about why this student deserves promotion..."
-                />
               </div>
 
               <div className="flex gap-3 pt-2">

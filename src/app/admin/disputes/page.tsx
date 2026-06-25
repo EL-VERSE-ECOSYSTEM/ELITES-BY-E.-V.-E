@@ -4,14 +4,11 @@ import { useState } from "react";
 import {
   AlertTriangle,
   Search,
-  Filter,
   MessageSquare,
   CheckCircle,
   XCircle,
   ShieldAlert,
-  ArrowRight,
   MoreVertical,
-  History,
   Scale
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
@@ -53,8 +50,19 @@ const MOCK_DISPUTES = [
   },
 ];
 
+interface Dispute {
+  id: string;
+  raiser: string;
+  raiserRole: string;
+  target: string;
+  subject: string;
+  status: string;
+  severity: string;
+  date: string;
+}
+
 export default function AdminDisputesPage() {
-  const [selectedDispute, setSelectedDispute] = useState<any>(null);
+  const [selectedDispute, setSelectedDispute] = useState<Dispute | null>(null);
 
   return (
     <div className="p-6 space-y-8 pb-24">
@@ -169,7 +177,7 @@ export default function AdminDisputesPage() {
                    </h3>
                    <div className="p-6 bg-elite-primary-50 dark:bg-elite-primary-900 rounded-2xl border border-elite-primary-100 dark:border-elite-primary-800 space-y-4">
                       <p className="text-sm leading-relaxed text-elite-primary-700 dark:text-elite-primary-300">
-                         "The tutor promised a live 1-on-1 review session as part of the Premium package, but has ignored all messages for two weeks. The resource materials provided also contain broken links that prevent completion of the project."
+                         {"The tutor promised a live 1-on-1 review session as part of the Premium package, but has ignored all messages for two weeks. The resource materials provided also contain broken links that prevent completion of the project."}
                       </p>
                       <div className="grid grid-cols-2 gap-4">
                          <div className="aspect-video bg-elite-primary-200 rounded-xl flex items-center justify-center text-[10px] font-bold text-elite-primary-500 uppercase">Screenshot_1.png</div>
