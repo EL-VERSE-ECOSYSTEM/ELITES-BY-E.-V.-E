@@ -1,13 +1,13 @@
 "use client";
-import { cn } from "@/lib/utils";
-import { useState } from "react";
-import { Sidebar } from "@/components/layout/Sidebar";
+import {cn} from "@/lib/utils";
+import {useState} from "react";
+import {Sidebar} from "@/components/layout/Sidebar";
 
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { AlertTriangle, ArrowRight, CheckCircle2, ChevronLeft, ChevronRight, Clock, Filter, Mail, MessageSquare, MoreVertical, Search, User, Zap } from "lucide-react";
+import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
+import {Card} from "@/components/ui/Card";
+import {Button} from "@/components/ui/Button";
+import {Badge} from "@/components/ui/Badge";
+import {AlertTriangle, ArrowRight, CheckCircle2, MessageSquare, Search, User, Zap} from "lucide-react";
 
 export default function AdminSupportTickets() {
   const [activeTab, setActiveTab] = useState<"open" | "assigned" | "closed">("open");

@@ -1,6 +1,6 @@
-import { Space_Grotesk, Inter } from "next/font/google";
+import {Space_Grotesk, Inter} from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import {ThemeProvider} from "@/components/ThemeProvider";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],

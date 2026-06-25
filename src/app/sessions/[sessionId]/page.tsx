@@ -1,11 +1,11 @@
 "use client";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { useState } from "react";
+import {cn} from "@/lib/utils";
+import {useState} from "react";
 
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { ChevronRight, Clock, Code, Hand, Layout, Maximize2, MessageSquare, Mic, Monitor, MoreVertical, PhoneOff, Settings, Shield, Users, Video, X } from "lucide-react";
+import {Button} from "@/components/ui/Button";
+import {Badge} from "@/components/ui/Badge";
+import {ChevronRight, Clock, Hand, Maximize2, MessageSquare, Mic, Monitor, PhoneOff, Settings, Video, X} from "lucide-react";
 
 export default function SessionRoom() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
