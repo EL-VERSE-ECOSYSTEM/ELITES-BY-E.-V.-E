@@ -1,151 +1,215 @@
 "use client";
+
+import { useState } from "react";
+import {
+  ArrowLeft,
+  Banknote,
+  Bitcoin,
+  ShieldCheck,
+  Info,
+  ChevronRight,
+  CheckCircle2
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Badge } from "@/components/ui/Badge";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { AlertCircle, ArrowDownLeft, ArrowLeft, CheckCircle2, ChevronRight, Clock, Landmark, Lock, Shield, ShieldCheck, Smartphone } from "lucide-react";
-import { useState } from "react";
-import { Sidebar } from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { ChevronRight, Wallet } from "lucide-react";
+type Method = "BANK_NGN" | "BANK_USD" | "BANK_GBP" | "BANK_EUR" | "CRYPTO_USDT_TRC20" | "CRYPTO_BEP20" | "CRYPTO_TRON";
 
 export default function WithdrawPage() {
   const [step, setStep] = useState(1);
+  const [method, setMethod] = useState<Method>("BANK_NGN");
   const [amount, setAmount] = useState("");
-  const [method, setMethod] = useState<"bank" | "momo">("bank");
+  const [details, setDetails] = useState({
+    accountName: "",
+    bankName: "",
+    accountNumber: "",
+    swift: "",
+    walletAddress: ""
+  });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setDetails(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    // Simulate submission to admin queue
+    setTimeout(() => {
+      setLoading(false);
+      setSuccess(true);
+    }, 2000);
+  };
+
+  if (success) {
+    return (
+      <div className="min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950 flex items-center justify-center p-4">
+        <Card className="w-full max-w-md text-center p-8 space-y-6 border-none shadow-2xl">
+          <div className="w-20 h-20 bg-elite-success/10 text-elite-success rounded-full flex items-center justify-center mx-auto">
+            <CheckCircle2 size={48} />
+          </div>
+          <div className="space-y-2">
+            <h1 className="text-2xl font-bold font-space-grotesk">Request Submitted</h1>
+            <p className="text-elite-primary-500">Your withdrawal request for ${amount} has been sent to the admin for approval. This usually takes 24-48 hours.</p>
+          </div>
+          <Button variant="accent" className="w-full" asChild>
+            <Link href="/wallet">Back to Wallet</Link>
+          </Button>
+        </Card>
+      </div>
+    );
+  }
 
   return (
-    <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">
-      <Sidebar />
-      <div className="flex-1 flex flex-col min-w-0">
-        <header className="px-6 py-6 border-b border-elite-primary-100 dark:border-elite-primary-900 bg-white flex items-center gap-4">
-           <Button variant="ghost" size="icon" asChild><Link href="/wallet"><ArrowLeft size={20} /></Link></Button>
-           <h1 className="text-xl font-bold font-space-grotesk">Withdraw Funds</h1>
+    <div className="min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950 pb-20 p-6">
+      <div className="max-w-2xl mx-auto space-y-8">
+        <Link href="/wallet" className="flex items-center gap-2 text-sm font-bold text-elite-primary-500 hover:text-elite-primary-900 transition-colors">
+          <ArrowLeft size={16} /> Back to Wallet
+        </Link>
+
+        <header>
+          <h1 className="text-3xl font-bold font-space-grotesk">Withdraw Funds</h1>
+          <p className="text-elite-primary-500">Securely move your earnings to your bank or crypto wallet</p>
         </header>
 
-        <main className="max-w-2xl mx-auto w-full p-6 pb-24">
-           <div className="mb-12 space-y-2 text-center">
-              <div className="w-16 h-16 bg-elite-primary-50 dark:bg-elite-primary-900 rounded-full flex items-center justify-center text-elite-primary-600 mx-auto mb-4">
-                 <ArrowDownLeft size={32} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="md:col-span-1 space-y-4">
+            {[
+              { s: 1, title: "Select Method", icon: Banknote },
+              { s: 2, title: "Amount & Details", icon: Bitcoin },
+              { s: 3, title: "Confirm", icon: ShieldCheck }
+            ].map((item) => (
+              <div key={item.s} className={cn(
+                "flex items-center gap-3 p-4 rounded-xl transition-all",
+                step === item.s ? "bg-white dark:bg-elite-primary-900 shadow-sm border-l-4 border-l-elite-accent-500" : "opacity-50"
+              )}>
+                <div className={cn(
+                  "w-8 h-8 rounded-lg flex items-center justify-center",
+                  step === item.s ? "bg-elite-accent-500 text-white" : "bg-elite-primary-200 text-elite-primary-500"
+                )}>
+                  <item.icon size={18} />
+                </div>
+                <span className="text-sm font-bold">{item.title}</span>
               </div>
-              <h2 className="text-2xl font-bold font-space-grotesk">Cash Out</h2>
-              <p className="text-sm text-elite-primary-500 font-medium">Move your earnings or wallet balance to your bank account or mobile money.</p>
-           </div>
+            ))}
+          </div>
 
-           {step === 1 && (
-             <div className="space-y-8 animate-in fade-in duration-300">
-                <div className="space-y-4">
-                   <label className="text-sm font-bold uppercase tracking-widest text-elite-primary-400">Withdraw Amount</label>
-                   <div className="relative">
-                      <div className="absolute left-4 top-1/2 -translate-y-1/2 font-bold text-2xl text-elite-primary-400">$</div>
-                      <input
+          <div className="md:col-span-2">
+            <Card className="border-none shadow-sm">
+              <CardContent className="p-6">
+                {step === 1 && (
+                  <div className="space-y-6 animate-in fade-in slide-in-from-right-4">
+                    <div className="grid grid-cols-1 gap-3">
+                      {[
+                        { id: "BANK_NGN", label: "Nigerian Bank (NGN)", icon: Banknote },
+                        { id: "BANK_USD", label: "US Bank (USD)", icon: Banknote },
+                        { id: "CRYPTO_USDT_TRC20", label: "Crypto (USDT TRC20)", icon: Bitcoin },
+                        { id: "CRYPTO_BEP20", label: "Crypto (BEP20)", icon: Bitcoin },
+                        { id: "CRYPTO_TRON", label: "Crypto (TRON)", icon: Bitcoin },
+                      ].map((m) => (
+                        <button
+                          key={m.id}
+                          onClick={() => setMethod(m.id as Method)}
+                          className={cn(
+                            "flex items-center justify-between p-4 rounded-xl border-2 transition-all",
+                            method === m.id ? "border-elite-accent-500 bg-elite-accent-500/5" : "border-elite-primary-50 hover:border-elite-primary-200"
+                          )}
+                        >
+                          <div className="flex items-center gap-3">
+                            <m.icon size={20} className={method === m.id ? "text-elite-accent-500" : "text-elite-primary-400"} />
+                            <span className="text-sm font-bold">{m.label}</span>
+                          </div>
+                          <ChevronRight size={16} className="text-elite-primary-300" />
+                        </button>
+                      ))}
+                    </div>
+                    <Button variant="accent" className="w-full" onClick={() => setStep(2)}>
+                      Continue
+                    </Button>
+                  </div>
+                )}
+
+                {step === 2 && (
+                  <div className="space-y-6 animate-in fade-in slide-in-from-right-4">
+                    <div className="p-4 bg-elite-primary-50 dark:bg-elite-primary-900 rounded-xl flex items-start gap-3">
+                      <Info size={18} className="text-elite-primary-600 shrink-0 mt-0.5" />
+                      <p className="text-xs text-elite-primary-600">Ensure your account details are correct. Incorrect details may lead to loss of funds.</p>
+                    </div>
+
+                    <div className="space-y-4">
+                      <Input
+                        label="Amount to Withdraw ($)"
                         type="number"
+                        placeholder="0.00"
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
-                        className="w-full h-16 pl-10 pr-4 rounded-2xl border-2 border-elite-primary-100 bg-white text-3xl font-bold outline-none focus:border-elite-primary-600"
-                        placeholder="0.00"
+                        required
                       />
-                   </div>
-                   <div className="flex justify-between text-[10px] font-bold uppercase text-elite-primary-400">
-                      <span>Available: $145.00</span>
-                      <button className="text-elite-primary-600 hover:underline" onClick={() => setAmount("145")}>Withdraw All</button>
-                   </div>
-                </div>
 
-                <div className="space-y-4">
-                   <label className="text-sm font-bold uppercase tracking-widest text-elite-primary-400">Select Destination</label>
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <button
-                        onClick={() => setMethod("bank")}
-                        className={cn(
-                          "p-6 rounded-2xl border-2 text-left transition-all flex items-center gap-4",
-                          method === 'bank' ? "border-elite-primary-600 bg-elite-primary-50 dark:bg-elite-primary-900/50" : "border-elite-primary-100 bg-white"
-                        )}
-                      >
-                         <Landmark size={24} className={method === 'bank' ? "text-elite-primary-600" : "text-elite-primary-400"} />
-                         <div>
-                            <div className="font-bold text-sm">Bank Transfer</div>
-                            <div className="text-[10px] text-elite-primary-500">1-3 Business Days</div>
-                         </div>
-                      </button>
-                      <button
-                        onClick={() => setMethod("momo")}
-                        className={cn(
-                          "p-6 rounded-2xl border-2 text-left transition-all flex items-center gap-4",
-                          method === 'momo' ? "border-elite-primary-600 bg-elite-primary-50 dark:bg-elite-primary-900/50" : "border-elite-primary-100 bg-white"
-                        )}
-                      >
-                         <Smartphone size={24} className={method === 'momo' ? "text-elite-primary-600" : "text-elite-primary-400"} />
-                         <div>
-                            <div className="font-bold text-sm">Mobile Money</div>
-                            <div className="text-[10px] text-elite-primary-500">Instant to 24 hours</div>
-                         </div>
-                      </button>
-                   </div>
-                </div>
+                      {method.startsWith("BANK") ? (
+                        <>
+                          <Input label="Account Name" name="accountName" value={details.accountName} onChange={handleInputChange} placeholder="John Doe" />
+                          <Input label="Bank Name" name="bankName" value={details.bankName} onChange={handleInputChange} placeholder="Access Bank" />
+                          <Input label="Account Number" name="accountNumber" value={details.accountNumber} onChange={handleInputChange} placeholder="0123456789" />
+                          {(method === "BANK_USD" || method === "BANK_GBP" || method === "BANK_EUR") && (
+                            <Input label="SWIFT / IBAN" name="swift" value={details.swift} onChange={handleInputChange} placeholder="ABCDEFGHXXX" />
+                          )}
+                        </>
+                      ) : (
+                        <Input label="Wallet Address" name="walletAddress" value={details.walletAddress} onChange={handleInputChange} placeholder="T..." />
+                      )}
+                    </div>
 
-                <Button variant="accent" size="lg" className="w-full h-14 font-bold" disabled={!amount} onClick={() => setStep(2)}>Review Withdrawal</Button>
-             </div>
-           )}
+                    <div className="flex gap-3">
+                      <Button variant="ghost" className="flex-1" onClick={() => setStep(1)}>Back</Button>
+                      <Button variant="accent" className="flex-2" onClick={() => setStep(3)} disabled={!amount}>Confirm Details</Button>
+                    </div>
+                  </div>
+                )}
 
-           {step === 2 && (
-             <div className="space-y-8 animate-in fade-in slide-in-from-right-5 duration-300">
-                <Card>
-                   <CardContent className="p-8 space-y-6">
-                      <div className="space-y-4">
-                         <div className="flex justify-between text-sm font-bold">
-                            <span className="text-elite-primary-400 uppercase tracking-widest">Amount</span>
-                            <span>${amount}.00</span>
-                         </div>
-                         <div className="flex justify-between text-sm font-bold">
-                            <span className="text-elite-primary-400 uppercase tracking-widest">Fee (2%)</span>
-                            <span className="text-elite-error">${(Number(amount) * 0.02).toFixed(2)}</span>
-                         </div>
-                         <hr className="border-elite-primary-50" />
-                         <div className="flex justify-between text-lg font-bold">
-                            <span>You Receive</span>
-                            <span className="text-elite-primary-600">${(Number(amount) * 0.98).toFixed(2)}</span>
-                         </div>
+                {step === 3 && (
+                  <div className="space-y-6 animate-in fade-in slide-in-from-right-4">
+                    <div className="p-6 bg-elite-primary-900 text-white rounded-2xl space-y-4">
+                      <div className="flex justify-between items-center border-b border-white/10 pb-4">
+                        <span className="text-xs text-elite-primary-400">Withdrawal Amount</span>
+                        <span className="text-2xl font-bold font-space-grotesk text-elite-accent-500">${amount}</span>
                       </div>
-
-                      <div className="p-4 rounded-xl bg-elite-primary-50 dark:bg-elite-primary-900/50 border border-elite-primary-100">
-                         <div className="text-[10px] font-bold text-elite-primary-400 uppercase tracking-widest mb-1">Sending to</div>
-                         <div className="font-bold text-sm">{method === 'bank' ? 'Zenith Bank •••• 4567' : 'MTN Momo +234 •••• 1234'}</div>
+                      <div className="space-y-3">
+                        <div className="flex justify-between text-xs">
+                          <span className="text-elite-primary-400">Method</span>
+                          <span className="font-bold">{method.replace('_', ' ')}</span>
+                        </div>
+                        <div className="flex justify-between text-xs">
+                          <span className="text-elite-primary-400">Fees</span>
+                          <span className="font-bold">$2.50</span>
+                        </div>
+                        <div className="flex justify-between text-xs">
+                          <span className="text-elite-primary-400">You will receive</span>
+                          <span className="font-bold text-elite-success">${(parseFloat(amount) - 2.5).toFixed(2)}</span>
+                        </div>
                       </div>
+                    </div>
 
-                      <div className="space-y-1.5">
-                         <label className="text-xs font-bold uppercase tracking-widest text-elite-primary-400">Confirm with PIN</label>
-                         <input type="password" placeholder="••••" className="w-full h-12 text-center text-2xl tracking-[1em] rounded-xl border border-elite-primary-100 outline-none focus:ring-2 focus:ring-elite-primary-500" />
-                      </div>
-
-                      <Button variant="accent" size="lg" className="w-full" onClick={() => setStep(3)}>Confirm Withdrawal</Button>
-                      <Button variant="ghost" className="w-full text-xs font-bold uppercase" onClick={() => setStep(1)}>Back</Button>
-                   </CardContent>
-                </Card>
-             </div>
-           )}
-
-           {step === 3 && (
-             <div className="text-center space-y-8 animate-in fade-in zoom-in-95 duration-500">
-                <div className="w-24 h-24 bg-elite-primary-950 text-white rounded-full flex items-center justify-center mx-auto shadow-2xl">
-                   <Clock size={48} />
-                </div>
-                <div className="space-y-2">
-                   <h2 className="text-3xl font-bold font-space-grotesk">Withdrawal Requested</h2>
-                   <p className="text-sm text-elite-primary-500 max-w-sm mx-auto">Your request is being processed. You{"'"}ll receive a notification once the funds are sent.</p>
-                </div>
-                <div className="flex flex-col gap-3">
-                   <Button variant="outline" className="w-full" asChild><Link href="/wallet">Back to Wallet</Link></Button>
-                   <div className="flex items-center justify-center gap-2 text-[10px] font-bold text-elite-primary-400 uppercase">
-                      <ShieldCheck size={12} /> Ref: ELT-WTH-99231
-                   </div>
-                </div>
-             </div>
-           )}
-        </main>
-        <MobileBottomNav />
+                    <Button variant="accent" className="w-full h-12 text-lg" onClick={handleSubmit} disabled={loading}>
+                      {loading ? "Processing..." : "Complete Withdrawal"}
+                    </Button>
+                    <button onClick={() => setStep(2)} className="w-full text-xs font-bold text-elite-primary-500 hover:text-elite-primary-900">
+                      Edit Details
+                    </button>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </div>
       </div>
     </div>
   );

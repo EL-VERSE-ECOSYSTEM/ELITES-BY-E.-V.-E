@@ -3,97 +3,28 @@
 > next build
 
    ▲ Next.js 15.1.0
-   - Environments: .env.local
 
    Creating an optimized production build ...
 Failed to compile.
 
-./src/app/about/page.tsx
-Error:   [31mx[0m Expected ',', got 'from'
-   ,-[[36;1;4m/app/src/app/about/page.tsx[0m:3:1]
- [2m1[0m | "use client";
- [2m2[0m |
- [2m3[0m | import { Footer from "@/components/layout/Footer";, Button from "@/components/ui/Button";, Card, CardContent from "@/components/ui/Card";, Badge from "@/components/ui/Badge"; } from "lucide-react";
-   : [35;1m                ^^^^[0m
- [2m4[0m | import Link from "next/link";
- [2m5[0m |
- [2m6[0m | export default function AboutPage() {
-   `----
+./src/app/wallet/withdraw/page.tsx
+Error:   [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4m/app/src/app/wallet/withdraw/page.tsx[0m:72:1]
+ [2m69[0m |   }
+ [2m70[0m |
+ [2m71[0m |   return (
+ [2m72[0m |     <div className="min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950 pb-20 p-6">
+    : [35;1m     ^^^[0m
+ [2m73[0m |       <div className="max-w-2xl mx-auto space-y-8">
+ [2m74[0m |         <Link href="/wallet" className="flex items-center gap-2 text-sm font-bold text-elite-primary-500 hover:text-elite-primary-900 transition-colors">
+ [2m75[0m |           <ArrowLeft size={16} /> Back to Wallet
+    `----
 
 Caused by:
     Syntax Error
 
 Import trace for requested module:
-./src/app/about/page.tsx
-
-./src/app/achievements/page.tsx
-Error:   [31mx[0m Expected ',', got 'from'
-   ,-[[36;1;4m/app/src/app/achievements/page.tsx[0m:3:1]
- [2m1[0m | "use client";
- [2m2[0m |
- [2m3[0m | import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, ProgressBar from "@/components/ui/ProgressBar"; } from "lucide-react";
-   : [35;1m                         ^^^^[0m
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./src/app/achievements/page.tsx
-
-./src/app/admin/analytics/courses/page.tsx
-Error:   [31mx[0m Expected ',', got 'from'
-   ,-[[36;1;4m/app/src/app/admin/analytics/courses/page.tsx[0m:3:1]
- [2m1[0m | "use client";
- [2m2[0m |
- [2m3[0m | import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, from 'recharts';, BookOpen, Star, TrendingUp, TrendingDown, Clock, Users, Award, ChevronRight, Filter, Download, Flame } from "lucide-react";
-   : [35;1m                         ^^^^[0m
- [2m4[0m |
- [2m5[0m | export default function CourseAnalytics() {
- [2m6[0m |   const topCourses = [
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./src/app/admin/analytics/courses/page.tsx
-
-./src/app/admin/analytics/revenue/page.tsx
-Error:   [31mx[0m Expected ',', got 'from'
-   ,-[[36;1;4m/app/src/app/admin/analytics/revenue/page.tsx[0m:3:1]
- [2m1[0m | "use client";
- [2m2[0m |
- [2m3[0m | import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, DollarSign, TrendingUp, ArrowUpRight, ArrowDownLeft, Calendar, Filter, Download, CreditCard, Building2, PieChart as PieChartIcon } from "lucide-react";
-   : [35;1m                         ^^^^[0m
- [2m4[0m |   AreaChart,
- [2m5[0m |   Area,
- [2m6[0m |   XAxis,
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./src/app/admin/analytics/revenue/page.tsx
-
-./src/app/admin/analytics/users/page.tsx
-Error:   [31mx[0m Expected ',', got 'from'
-   ,-[[36;1;4m/app/src/app/admin/analytics/users/page.tsx[0m:3:1]
- [2m1[0m | "use client";
- [2m2[0m |
- [2m3[0m | import { MobileBottomNav from "@/components/layout/MobileBottomNav";, Card, CardContent, CardHeader, CardTitle from "@/components/ui/Card";, Button from "@/components/ui/Button";, Badge from "@/components/ui/Badge";, useState from "react";, cn from "@/lib/utils";, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, Cell, PieChart, Pie, from 'recharts';, Users, UserPlus, UserMinus, Target, Globe, TrendingUp, TrendingDown, Download, Filter, ArrowUpRight } from "lucide-react";
-   : [35;1m                         ^^^^[0m
- [2m4[0m |
- [2m5[0m | export default function UserAnalytics() {
- [2m6[0m |   const growthData = [
-   `----
-
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./src/app/admin/analytics/users/page.tsx
+./src/app/wallet/withdraw/page.tsx
 
 
 > Build failed because of webpack errors

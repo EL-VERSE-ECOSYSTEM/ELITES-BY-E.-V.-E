@@ -11,22 +11,46 @@ datasource db {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  role          Role      @default(STUDENT)
-  eliteId       String?   @unique // ELITES ID
-  xp            Int       @default(0)
-  coins         Int       @default(0)
-  streak        Int       @default(0)
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  accounts      Account[]
-  sessions      Session[]
-  courses       Course[]  @relation("EnrolledStudents")
-  taughtCourses Course[]  @relation("CourseTutor")
+  id                String             @id @default(cuid())
+  name              String?
+  email             String?            @unique
+  emailVerified     DateTime?
+  image             String?
+  role              Role               @default(STUDENT)
+  verificationStatus VerificationStatus @default(PENDING)
+  cvUrl             String?
+  techStack         String?
+  experienceLevel   String?
+
+  // Wallet fields
+  walletBalance     Float              @default(0)
+  projectEarnings   Float              @default(0)
+  totalPaid         Float              @default(0)
+  totalWithdrawn    Float              @default(0)
+
+  eliteId           String?            @unique // ELITES ID
+  xp                Int                @default(0)
+  coins             Int                @default(0)
+  streak            Int                @default(0)
+
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+
+  accounts          Account[]
+  sessions          Session[]
+
+  // Relations
+  courses           Course[]           @relation("EnrolledStudents")
+  taughtCourses     Course[]           @relation("CourseTutor")
+  promotionsSent    Promotion[]        @relation("PromotedBy")
+  promotionsReceived Promotion[]       @relation("PromotedUser")
+  resources         Resource[]
+  disputesRaised    Dispute[]          @relation("DisputeRaiser")
+  disputesAgainst   Dispute[]          @relation("DisputeTarget")
+  withdrawals       WithdrawalRequest[]
+  sentMessages      Message[]          @relation("SentMessages")
+  receivedMessages  Message[]          @relation("ReceivedMessages")
+  supportTickets    SupportTicket[]
 }
 
 model Course {
@@ -42,11 +66,119 @@ model Course {
   updatedAt   DateTime @updatedAt
 }
 
+model Promotion {
+  id          String       @id @default(cuid())
+  learnerId   String
+  tutorId     String
+  targetArm   EcosystemArm
+  status      String       @default("PENDING") // PENDING, APPLIED, ACCEPTED, REJECTED
+  learner     User         @relation("PromotedUser", fields: [learnerId], references: [id])
+  tutor       User         @relation("PromotedBy", fields: [tutorId], references: [id])
+  createdAt   DateTime     @default(now())
+}
+
+model Resource {
+  id          String   @id @default(cuid())
+  title       String
+  content     String   @db.Text // Rich text or description
+  fileUrl     String?
+  videoUrl    String?
+  techStack   String
+  skillLevel  String
+  tutorId     String
+  tutor       User     @relation(fields: [tutorId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Dispute {
+  id          String        @id @default(cuid())
+  raiserId    String
+  targetId    String
+  subject     String
+  description String        @db.Text
+  evidenceUrl String?
+  status      DisputeStatus @default(OPEN)
+  resolution  String?       @db.Text
+  raiser      User          @relation("DisputeRaiser", fields: [raiserId], references: [id])
+  target      User          @relation("DisputeTarget", fields: [targetId], references: [id])
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model WithdrawalRequest {
+  id            String           @id @default(cuid())
+  userId        String
+  amount        Float
+  method        WithdrawalMethod
+  details       Json             // Account details or Wallet address
+  status        WithdrawalStatus @default(PENDING)
+  user          User             @relation(fields: [userId], references: [id])
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+}
+
+model Message {
+  id          String   @id @default(cuid())
+  content     String   @db.Text
+  senderId    String
+  receiverId  String
+  read        Boolean  @default(false)
+  sender      User     @relation("SentMessages", fields: [senderId], references: [id])
+  receiver    User     @relation("ReceivedMessages", fields: [receiverId], references: [id])
+  createdAt   DateTime @default(now())
+}
+
+model SupportTicket {
+  id          String   @id @default(cuid())
+  userId      String
+  subject     String
+  message     String   @db.Text
+  status      String   @default("OPEN") // OPEN, IN_PROGRESS, CLOSED
+  user        User     @relation(fields: [userId], references: [id])
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
 enum Role {
   STUDENT
   TUTOR
   ADMIN
   MODERATOR
+}
+
+enum VerificationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum EcosystemArm {
+  EL_ACCESS
+  EL_CODERS
+  EL_SPACE
+}
+
+enum DisputeStatus {
+  OPEN
+  RESOLVED
+  REJECTED
+}
+
+enum WithdrawalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum WithdrawalMethod {
+  BANK_NGN
+  BANK_USD
+  BANK_GBP
+  BANK_EUR
+  CRYPTO_USDT_TRC20
+  CRYPTO_BEP20
+  CRYPTO_TRON
 }
 
 model Account {
