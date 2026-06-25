@@ -36,7 +36,7 @@ export default function ModerationPage() {
               ].map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as unknown)}
+                  onClick={() => setActiveTab(tab.id as "reported" | "content" | "disputes")}
                   className={cn(
                     "px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-widest transition-all flex items-center gap-2",
                     activeTab === tab.id ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"

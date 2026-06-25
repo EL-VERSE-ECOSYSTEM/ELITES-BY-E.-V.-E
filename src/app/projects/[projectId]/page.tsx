@@ -51,7 +51,7 @@ export default function ProjectSubmission() {
               ].map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as unknown)}
+                  onClick={() => setActiveTab(tab.id as "brief" | "submission" | "feedback")}
                   className={cn(
                     "pb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wider relative transition-all",
                     activeTab === tab.id ? "text-elite-primary-600 dark:text-white" : "text-elite-primary-400 hover:text-elite-primary-600"

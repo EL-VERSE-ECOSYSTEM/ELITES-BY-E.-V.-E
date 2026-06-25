@@ -95,7 +95,7 @@ export default function SessionRoom() {
                  {["chat", "people"].map((tab) => (
                    <button
                     key={tab}
-                    onClick={() => setActiveSideTab(tab as unknown)}
+                    onClick={() => setActiveSideTab(tab as "chat" | "people" | "editor")}
                     className={cn(
                       "text-xs font-bold uppercase tracking-widest transition-all relative pb-2",
                       activeSideTab === tab ? "text-elite-primary-900 dark:text-white" : "text-elite-primary-400 hover:text-elite-primary-900"
