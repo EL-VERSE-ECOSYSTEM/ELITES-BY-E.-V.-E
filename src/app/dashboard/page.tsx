@@ -14,7 +14,7 @@ import {
   MessageSquare,
   Search
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { ProgressBar } from "@/components/ui/ProgressBar";
@@ -72,9 +72,7 @@ export default function LearnerDashboard() {
            </div>
 
            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Left Column */}
               <div className="lg:col-span-2 space-y-8">
-                 {/* Promotions Received Feed */}
                  <div className="space-y-4">
                     <h2 className="text-xl font-bold font-space-grotesk flex items-center gap-2">
                        <Rocket className="text-elite-accent-500" size={20} /> Ecosystem Promotions
@@ -101,7 +99,6 @@ export default function LearnerDashboard() {
                     </div>
                  </div>
 
-                 {/* Learning Path */}
                  <div className="space-y-4">
                     <div className="flex items-center justify-between">
                        <h2 className="text-xl font-bold font-space-grotesk">Continue Learning</h2>
@@ -138,16 +135,14 @@ export default function LearnerDashboard() {
                  </div>
               </div>
 
-              {/* Right Column */}
               <div className="space-y-8">
-                 {/* Wallet Preview */}
                  <Card className="bg-elite-primary-900 text-white border-none shadow-xl overflow-hidden relative group">
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-110 transition-transform">
                        <Rocket size={80} />
                     </div>
                     <CardContent className="p-6 space-y-4 relative">
                        <div className="text-[10px] font-bold uppercase tracking-widest text-elite-primary-400">Wallet Balance</div>
-                       <div className="text-3xl font-bold font-space-grotesk">$1,250.00</div>
+                       <div className="text-3xl font-bold font-space-grotesk">,250.00</div>
                        <div className="flex gap-2">
                           <Button variant="accent" size="sm" className="h-8 text-[10px] font-bold" asChild>
                              <Link href="/wallet">Manage Wallet</Link>
@@ -156,7 +151,6 @@ export default function LearnerDashboard() {
                     </CardContent>
                  </Card>
 
-                 {/* Leaderboard */}
                  <Card className="border-none shadow-sm">
                     <CardHeader className="flex flex-row items-center justify-between">
                        <CardTitle className="text-lg">Top Learners</CardTitle>

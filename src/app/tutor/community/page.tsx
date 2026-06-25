@@ -1,3 +1,4 @@
 "use client";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent } from "@/components/ui/Card";
+export default function TutorCommunityPage() {
+  return <div>Community</div>;
+}

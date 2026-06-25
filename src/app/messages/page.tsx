@@ -8,11 +8,8 @@ import {
   MoreVertical,
   Phone,
   Video,
-  User,
-  Check,
   CheckCheck
 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -42,6 +39,7 @@ export default function MessagesPage() {
            {MOCK_CHATS.map((chat) => (
              <button
                key={chat.id}
+               type="button"
                onClick={() => setActiveChat(chat)}
                className={cn(
                  "w-full p-4 flex items-center gap-3 transition-colors hover:bg-elite-primary-50 dark:hover:bg-elite-primary-900",
@@ -94,18 +92,18 @@ export default function MessagesPage() {
 
         <div className="flex-1 overflow-y-auto p-6 space-y-4">
            <div className="flex justify-center">
-              <span className="px-3 py-1 bg-elite-primary-100 dark:bg-elite-primary-800 rounded-full text-[10px] font-bold text-elite-primary-500 uppercase">Today</span>
+              <span className="px-3 py-1 bg-elite-primary-100 dark:bg-elite-primary-800 rounded-full text-[10px] font-bold text-elite-primary-50 uppercase">Today</span>
            </div>
 
            <div className="flex flex-col gap-4">
               <div className="flex justify-start">
                  <div className="max-w-[70%] p-4 rounded-2xl bg-white dark:bg-elite-primary-900 shadow-sm text-sm">
-                    Hello! I've reviewed your latest submission. Great work on the authentication logic.
+                    Hello! I&apos;ve reviewed your latest submission. Great work on the authentication logic.
                  </div>
               </div>
               <div className="flex justify-end">
                  <div className="max-w-[70%] p-4 rounded-2xl bg-elite-accent-500 text-white shadow-md text-sm relative">
-                    Thank you, Doctor! I'm now working on the dashboard integration.
+                    Thank you, Doctor! I&apos;m now working on the dashboard integration.
                     <div className="absolute -bottom-5 right-0 flex items-center gap-1 text-[10px] text-elite-primary-400 font-bold uppercase">
                        10:42 AM <CheckCheck size={12} className="text-elite-accent-500" />
                     </div>

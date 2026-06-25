@@ -20,11 +20,11 @@ export default function LandingPage() {
               <h1 className="text-5xl md:text-7xl font-bold font-space-grotesk text-white leading-tight">
                 Learn Tech Skills. <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-elite-accent-400 to-elite-accent-600">
-                  Build Africa's Future.
+                  Build Africa&apos;s Future.
                 </span>
               </h1>
               <p className="text-xl text-elite-primary-200 max-w-2xl mx-auto">
-                Africa's premier tech skills learning platform designed to train, certify, and connect African tech talent to jobs.
+                Africa&apos;s premier tech skills learning platform designed to train, certify, and connect African tech talent to jobs.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button variant="accent" size="lg" className="w-full sm:w-auto" asChild>

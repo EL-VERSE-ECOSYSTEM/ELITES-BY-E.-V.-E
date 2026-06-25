@@ -8,6 +8,8 @@
  ✓ Compiled successfully
    Linting and checking validity of types ...
 
+Failed to compile.
+
 ./src/app/achievements/page.tsx
 2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
 3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -81,6 +83,24 @@
 3:120  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 3:133  Warning: 'Users' is defined but never used.  @typescript-eslint/no-unused-vars
 10:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/admin/page.tsx
+55:5  Error: Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+/app/src/app/admin/page.tsx:55:5
+  53 |
+  54 |   useEffect(() => {
+> 55 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  56 |   }, []);
+  57 |
+  58 |   if (!mounted) return null;  react-hooks/set-state-in-effect
 
 ./src/app/admin/support/page.tsx
 7:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -410,7 +430,3 @@
 23:48  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
 
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
-Failed to compile.
-
-src/app/achievements/page.tsx
-Type error: Page "src/app/achievements/page.tsx" does not match the required types of a Next.js Page.

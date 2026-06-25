@@ -60,7 +60,7 @@ export default function QuizPage() {
               </div>
               <div className="space-y-2">
                  <h1 className="text-4xl font-bold font-space-grotesk">Quiz Completed!</h1>
-                 <p className="text-elite-primary-300">Great job! You've successfully completed the Next.js 15 Foundations Quiz.</p>
+                 <p className="text-elite-primary-300">Great job! You&apos;ve successfully completed the Next.js 15 Foundations Quiz.</p>
               </div>
            </div>
            <CardContent className="p-8">

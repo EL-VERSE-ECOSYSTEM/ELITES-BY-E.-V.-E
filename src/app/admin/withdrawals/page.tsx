@@ -3,7 +3,6 @@
 import { useState } from "react";
 import {
   Search,
-  Filter,
   CheckCircle,
   XCircle,
   Eye,
@@ -11,10 +10,9 @@ import {
   CreditCard,
   Bitcoin,
   MoreVertical,
-  Clock,
-  AlertCircle
+  Clock
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent, CardHeader } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
@@ -198,13 +196,10 @@ export default function AdminWithdrawalsPage() {
                           <Button variant="secondary" size="sm" className="h-8 w-8 p-0 bg-elite-error/10 text-elite-error hover:bg-elite-error hover:text-white border-none">
                             <XCircle size={16} />
                           </Button>
-                          <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                            <MoreVertical size={16} />
-                          </Button>
                         </div>
                       ) : (
                         <Button variant="ghost" size="sm" className="h-8 gap-2">
-                          <Eye size={14} /> View Details
+                          <Eye size={14} /> View
                         </Button>
                       )}
                     </td>
@@ -215,17 +210,6 @@ export default function AdminWithdrawalsPage() {
           </div>
         </CardContent>
       </Card>
-
-      {/* System Warning */}
-      <div className="bg-elite-warning/5 border border-elite-warning/20 rounded-2xl p-4 flex items-start gap-4">
-        <div className="p-2 bg-elite-warning/10 rounded-xl text-elite-warning">
-          <AlertCircle size={24} />
-        </div>
-        <div className="space-y-1">
-          <p className="font-bold text-sm text-elite-warning">Security Check Required</p>
-          <p className="text-xs text-elite-primary-600">3 requests flag for unusual volume. Manual review of project earnings is recommended before release.</p>
-        </div>
-      </div>
     </div>
   );
 }

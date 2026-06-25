@@ -9,14 +9,8 @@
    Linting and checking validity of types ...
 
 ./src/app/achievements/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-3:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
-3:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-6:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
+3:18  Warning: 'Award' is defined but never used.  @typescript-eslint/no-unused-vars
+3:36  Warning: 'Target' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/admin/analytics/courses/page.tsx
 3:10  Warning: 'Area' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -186,15 +180,6 @@
 12:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
 13:115  Warning: 'Save' is defined but never used.  @typescript-eslint/no-unused-vars
 
-./src/app/courses/page.tsx
-2:10  Warning: 'Footer' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-5:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-6:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-7:8  Warning: 'Link' is defined but never used.  @typescript-eslint/no-unused-vars
-
 ./src/app/cv-builder/page.tsx
 7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 7:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -211,22 +196,8 @@
 ./src/app/jobs/[jobId]/page.tsx
 10:31  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
 
-./src/app/jobs/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-
 ./src/app/layout.tsx
 1:15  Warning: 'Metadata' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/leaderboard/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/learn/[courseId]/quiz/[quizId]/page.tsx
 9:10  Warning: 'AlertCircle' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -237,19 +208,6 @@
 
 ./src/app/moderator/page.tsx
 4:67  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/moderator/review/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/my-courses/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-6:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/notifications/page.tsx
 7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -270,13 +228,6 @@
 
 ./src/app/paths/page.tsx
 9:80  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/pricing/page.tsx
-2:10  Warning: 'Footer' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-4:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/profile/page.tsx
 9:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -322,11 +273,6 @@
 6:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 6:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
 7:23  Warning: 'Settings' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/tutor/community/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/tutor/courses/create/page.tsx
 11:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -412,5 +358,5 @@
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
 Failed to compile.
 
-src/app/achievements/page.tsx
-Type error: Page "src/app/achievements/page.tsx" does not match the required types of a Next.js Page.
+src/app/layout.tsx
+Type error: Layout "src/app/layout.tsx" does not match the required types of a Next.js Layout.

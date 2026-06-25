@@ -112,7 +112,7 @@ export default function CourseDetail() {
                 {activeTab === "overview" && (
                   <>
                     <div className="space-y-6">
-                      <h2 className="text-2xl font-bold font-space-grotesk">What you'll learn</h2>
+                      <h2 className="text-2xl font-bold font-space-grotesk">What you&apos;ll learn</h2>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
                           "Master the latest features of Next.js 15",

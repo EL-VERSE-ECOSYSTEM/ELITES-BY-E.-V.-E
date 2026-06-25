@@ -14,6 +14,7 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
+import { Badge } from "@/components/ui/Badge";
 import Link from "next/link";
 
 export default function SupportPage() {
@@ -32,7 +33,7 @@ export default function SupportPage() {
             <CheckCircle2 size={40} />
           </div>
           <h1 className="text-2xl font-bold font-space-grotesk">Ticket Created</h1>
-          <p className="text-elite-primary-500">We've received your message. Our support team will get back to you within 24 hours.</p>
+          <p className="text-elite-primary-500">We&apos;ve received your message. Our support team will get back to you within 24 hours.</p>
           <Button variant="accent" className="w-full" onClick={() => setSubmitted(false)}>Create Another Ticket</Button>
           <Button variant="ghost" className="w-full" asChild><Link href="/dashboard">Return to Dashboard</Link></Button>
         </Card>
