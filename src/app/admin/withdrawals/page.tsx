@@ -1,142 +1,230 @@
 "use client";
-import { CheckCircle2, ChevronLeft, ChevronRight, Clock, DollarSign, Landmark, MoreVertical, Smartphone, User, X, XCircle } from "lucide-react";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Sidebar } from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
+import { useState } from "react";
+import {
+  Search,
+  Filter,
+  CheckCircle,
+  XCircle,
+  Eye,
+  Download,
+  CreditCard,
+  Bitcoin,
+  MoreVertical,
+  Clock,
+  AlertCircle
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
+import { Badge } from "@/components/ui/Badge";
+import { cn } from "@/lib/utils";
 
-export default function WithdrawalApprovals() {
-  const withdrawals = Array.from({ length: 6 }).map((_, i) => ({
-    id: `WTH-${1000 + i}`,
-    user: ["David Mensah", "Sarah Kamau", "Kofi Anan", "Amara Okafor"][i % 4],
-    amount: [450, 1200, 85, 2400][i % 4],
-    method: i % 2 === 0 ? "Bank Transfer" : "Mobile Money",
-    account: i % 2 === 0 ? "Zenith Bank •••• 4567" : "MTN Momo •••• 1234",
-    requestedAt: "2 hours ago",
-    status: i === 0 ? "pending" : "processing",
-  }));
+const MOCK_WITHDRAWALS = [
+  {
+    id: "WID-8821",
+    user: "Sarah Kamau",
+    role: "TUTOR",
+    amount: 1250.00,
+    method: "BANK_NGN",
+    details: "Sarah Kamau | KCB Bank | 1234567890",
+    status: "PENDING",
+    date: "2023-10-24 09:15"
+  },
+  {
+    id: "WID-8822",
+    user: "David Mensah",
+    role: "STUDENT",
+    amount: 450.00,
+    method: "CRYPTO_USDT_TRC20",
+    details: "TR7NHqdj61L5sYDE6n3u6Su796EN",
+    status: "PENDING",
+    date: "2023-10-24 10:30"
+  },
+  {
+    id: "WID-8819",
+    user: "Aisha Yusuf",
+    role: "TUTOR",
+    amount: 3200.00,
+    method: "BANK_USD",
+    details: "Aisha Yusuf | Chase | 987654321 | SWIFT: CHASEUS33",
+    status: "APPROVED",
+    date: "2023-10-23 14:20"
+  },
+  {
+    id: "WID-8815",
+    user: "John Doe",
+    role: "STUDENT",
+    amount: 150.00,
+    method: "BANK_NGN",
+    details: "John Doe | GTBank | 0011223344",
+    status: "REJECTED",
+    date: "2023-10-22 11:05"
+  },
+];
+
+export default function AdminWithdrawalsPage() {
+  const [filter, setFilter] = useState("ALL");
+  const [search, setSearch] = useState("");
+
+  const filteredData = MOCK_WITHDRAWALS.filter(w => {
+    if (filter !== "ALL" && w.status !== filter) return false;
+    if (search && !w.user.toLowerCase().includes(search.toLowerCase()) && !w.id.toLowerCase().includes(search.toLowerCase())) return false;
+    return true;
+  });
 
   return (
-    <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">
-      <Sidebar />
-      <div className="flex-1 flex flex-col min-w-0">
-        <header className="px-6 py-8 space-y-6">
-           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div>
-                 <h1 className="text-3xl font-bold font-space-grotesk">Withdrawal Requests</h1>
-                 <p className="text-sm text-elite-primary-500 font-medium">Review and approve tutor payout requests.</p>
-              </div>
-              <div className="flex items-center gap-3">
-                 <div className="text-right">
-                    <div className="text-[10px] font-bold text-elite-primary-400 uppercase tracking-widest">Total Pending</div>
-                    <div className="text-xl font-bold text-elite-error">$14,250.00</div>
-                 </div>
-              </div>
-           </div>
+    <div className="p-6 space-y-8 pb-24">
+      <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <h1 className="text-3xl font-bold font-space-grotesk">Withdrawal Queue</h1>
+          <p className="text-elite-primary-500">Approve or reject financial payout requests</p>
+        </div>
+        <div className="flex gap-2">
+          <Button variant="outline" size="sm" className="gap-2">
+            <Download size={16} /> Export CSV
+          </Button>
+          <Button variant="accent" size="sm" className="gap-2">
+            <CheckCircle size={16} /> Batch Approve
+          </Button>
+        </div>
+      </header>
 
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <Card className="bg-white dark:bg-elite-primary-900 border-none p-4 flex items-center justify-between">
-                 <div>
-                    <div className="text-[10px] font-bold text-elite-primary-400 uppercase tracking-widest">Approved Today</div>
-                    <div className="text-lg font-bold text-elite-success">$4,200.00</div>
-                 </div>
-                 <div className="w-10 h-10 rounded-full bg-elite-success/10 text-elite-success flex items-center justify-center">
-                    <CheckCircle2 size={20} />
-                 </div>
-              </Card>
-              <Card className="bg-white dark:bg-elite-primary-900 border-none p-4 flex items-center justify-between">
-                 <div>
-                    <div className="text-[10px] font-bold text-elite-primary-400 uppercase tracking-widest">Avg. Processing Time</div>
-                    <div className="text-lg font-bold text-elite-primary-600">4.5 Hours</div>
-                 </div>
-                 <div className="w-10 h-10 rounded-full bg-elite-primary-100 text-elite-primary-600 flex items-center justify-center">
-                    <Clock size={20} />
-                 </div>
-              </Card>
-              <Card className="bg-white dark:bg-elite-primary-900 border-none p-4 flex items-center justify-between">
-                 <div>
-                    <div className="text-[10px] font-bold text-elite-primary-400 uppercase tracking-widest">Withdrawal Fees (MTD)</div>
-                    <div className="text-lg font-bold text-elite-accent-500">$840.00</div>
-                 </div>
-                 <div className="w-10 h-10 rounded-full bg-elite-accent-50/50 text-elite-accent-500 flex items-center justify-center">
-                    <DollarSign size={20} />
-                 </div>
-              </Card>
-           </div>
-        </header>
+      {/* Stats Row */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        {[
+          { label: "Pending Requests", value: "24", color: "text-elite-warning", icon: Clock },
+          { label: "Total Amount Pending", value: ",450.00", color: "text-elite-primary-900", icon: CreditCard },
+          { label: "Approved Today", value: "15", color: "text-elite-success", icon: CheckCircle },
+          { label: "Rejected Today", value: "2", color: "text-elite-error", icon: XCircle },
+        ].map((stat, i) => (
+          <Card key={i} className="border-none shadow-sm">
+            <CardContent className="p-4 flex items-center justify-between">
+              <div className="space-y-1">
+                <div className="text-[10px] font-bold uppercase tracking-widest text-elite-primary-400">{stat.label}</div>
+                <div className={cn("text-xl font-bold font-space-grotesk", stat.color)}>{stat.value}</div>
+              </div>
+              <div className="p-2 bg-elite-primary-50 dark:bg-elite-primary-900 rounded-lg text-elite-primary-400">
+                <stat.icon size={20} />
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
 
-        <main className="px-6 pb-24">
-           <Card className="overflow-hidden border-none shadow-xl">
-              <div className="overflow-x-auto">
-                 <table className="w-full text-left">
-                    <thead className="bg-elite-primary-950 text-white text-[10px] font-bold uppercase tracking-widest">
-                       <tr>
-                          <th className="px-6 py-4">Request ID</th>
-                          <th className="px-6 py-4">User</th>
-                          <th className="px-6 py-4">Amount</th>
-                          <th className="px-6 py-4">Payment Method</th>
-                          <th className="px-6 py-4">Status</th>
-                          <th className="px-6 py-4 text-right">Actions</th>
-                       </tr>
-                    </thead>
-                    <tbody className="divide-y divide-elite-primary-100 dark:divide-elite-primary-900">
-                       {withdrawals.map((w) => (
-                         <tr key={w.id} className="hover:bg-elite-primary-50 dark:hover:bg-white/5 transition-colors group">
-                            <td className="px-6 py-4">
-                               <div className="text-xs font-bold text-elite-primary-600 font-mono">{w.id}</div>
-                               <div className="text-[8px] font-bold text-elite-primary-400 uppercase tracking-widest mt-1">{w.requestedAt}</div>
-                            </td>
-                            <td className="px-6 py-4">
-                               <div className="flex items-center gap-3">
-                                  <div className="w-8 h-8 rounded-full bg-elite-primary-100 flex items-center justify-center font-bold text-[10px]">
-                                     {w.user[0]}
-                                  </div>
-                                  <span className="text-sm font-bold">{w.user}</span>
-                               </div>
-                            </td>
-                            <td className="px-6 py-4">
-                               <div className="text-lg font-bold font-space-grotesk">${w.amount.toLocaleString()}</div>
-                            </td>
-                            <td className="px-6 py-4">
-                               <div className="flex items-center gap-3">
-                                  <div className="w-8 h-8 rounded-lg bg-elite-primary-50 dark:bg-elite-primary-900 flex items-center justify-center text-elite-primary-400 shrink-0">
-                                     {w.method === "Bank Transfer" ? <Landmark size={14} /> : <Smartphone size={14} />}
-                                  </div>
-                                  <div className="min-w-0">
-                                     <div className="text-xs font-bold truncate">{w.method}</div>
-                                     <div className="text-[10px] text-elite-primary-400 truncate">{w.account}</div>
-                                  </div>
-                               </div>
-                            </td>
-                            <td className="px-6 py-4">
-                               <Badge variant={w.status === 'pending' ? 'warning' : 'info'} className="text-[8px] uppercase tracking-widest h-5 px-2">
-                                  {w.status}
-                               </Badge>
-                            </td>
-                            <td className="px-6 py-4 text-right">
-                               <div className="flex justify-end gap-2">
-                                  <Button variant="outline" size="sm" className="h-8 w-8 p-0 text-elite-error hover:bg-elite-error/10 border-elite-error/20"><XCircle size={16} /></Button>
-                                  <Button variant="primary" size="sm" className="h-8 px-3 text-[10px] font-bold uppercase tracking-widest bg-elite-success border-none hover:bg-emerald-600">Approve</Button>
-                                  <button className="p-2 text-elite-primary-400 hover:text-elite-primary-900 transition-colors"><MoreVertical size={16} /></button>
-                               </div>
-                            </td>
-                         </tr>
-                       ))}
-                    </tbody>
-                 </table>
-              </div>
-              <div className="p-4 bg-elite-primary-50 dark:bg-elite-primary-900/50 flex items-center justify-between">
-                 <div className="text-xs text-elite-primary-400 font-bold uppercase">Showing 6 requests</div>
-                 <div className="flex gap-2">
-                    <Button variant="outline" size="sm" disabled><ChevronLeft size={16} /></Button>
-                    <Button variant="outline" size="sm"><ChevronRight size={16} /></Button>
-                 </div>
-              </div>
-           </Card>
-        </main>
-        <MobileBottomNav />
+      <Card className="border-none shadow-sm overflow-hidden">
+        <CardHeader className="bg-elite-primary-50 dark:bg-elite-primary-900 border-b border-elite-primary-100 dark:border-elite-primary-800">
+          <div className="flex flex-col md:flex-row justify-between gap-4">
+            <div className="flex gap-2">
+              {["ALL", "PENDING", "APPROVED", "REJECTED"].map((f) => (
+                <button
+                  key={f}
+                  onClick={() => setFilter(f)}
+                  className={cn(
+                    "px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all",
+                    filter === f
+                      ? "bg-elite-primary-900 text-white shadow-md"
+                      : "bg-white dark:bg-elite-primary-800 text-elite-primary-500 hover:bg-elite-primary-100"
+                  )}
+                >
+                  {f}
+                </button>
+              ))}
+            </div>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-elite-primary-400" size={16} />
+              <Input
+                placeholder="Search user or ID..."
+                className="pl-10 h-10 w-full md:w-64"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="p-0">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="bg-elite-primary-50/50 dark:bg-elite-primary-900/50 text-[10px] font-bold uppercase tracking-widest text-elite-primary-400 border-b border-elite-primary-100 dark:border-elite-primary-800">
+                  <th className="px-6 py-4">Request ID</th>
+                  <th className="px-6 py-4">User</th>
+                  <th className="px-6 py-4">Amount</th>
+                  <th className="px-6 py-4">Method</th>
+                  <th className="px-6 py-4">Status</th>
+                  <th className="px-6 py-4 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-elite-primary-100 dark:divide-elite-primary-800">
+                {filteredData.map((withdrawal) => (
+                  <tr key={withdrawal.id} className="group hover:bg-elite-primary-50 dark:hover:bg-elite-primary-900 transition-colors">
+                    <td className="px-6 py-4">
+                      <div className="font-bold text-xs">{withdrawal.id}</div>
+                      <div className="text-[10px] text-elite-primary-400">{withdrawal.date}</div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 rounded-lg bg-elite-primary-100 flex items-center justify-center text-[10px] font-bold">
+                          {withdrawal.user[0]}
+                        </div>
+                        <div>
+                          <div className="text-sm font-bold">{withdrawal.user}</div>
+                          <Badge variant="primary" className="text-[8px] h-4">{withdrawal.role}</Badge>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 font-bold text-sm">${withdrawal.amount.toFixed(2)}</td>
+                    <td className="px-6 py-4">
+                      <div className="flex items-center gap-2">
+                        {withdrawal.method.startsWith('CRYPTO') ? <Bitcoin size={14} className="text-orange-500" /> : <CreditCard size={14} className="text-blue-500" />}
+                        <span className="text-xs font-medium">{withdrawal.method.replace('CRYPTO_', '').replace('BANK_', '')}</span>
+                      </div>
+                      <div className="text-[10px] text-elite-primary-400 truncate max-w-[150px]">{withdrawal.details}</div>
+                    </td>
+                    <td className="px-6 py-4">
+                      <Badge
+                        variant={withdrawal.status === "APPROVED" ? "success" : withdrawal.status === "REJECTED" ? "error" : "warning"}
+                        className="text-[10px]"
+                      >
+                        {withdrawal.status}
+                      </Badge>
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      {withdrawal.status === "PENDING" ? (
+                        <div className="flex justify-end gap-2">
+                          <Button variant="secondary" size="sm" className="h-8 w-8 p-0 bg-elite-success/10 text-elite-success hover:bg-elite-success hover:text-white border-none">
+                            <CheckCircle size={16} />
+                          </Button>
+                          <Button variant="secondary" size="sm" className="h-8 w-8 p-0 bg-elite-error/10 text-elite-error hover:bg-elite-error hover:text-white border-none">
+                            <XCircle size={16} />
+                          </Button>
+                          <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                            <MoreVertical size={16} />
+                          </Button>
+                        </div>
+                      ) : (
+                        <Button variant="ghost" size="sm" className="h-8 gap-2">
+                          <Eye size={14} /> View Details
+                        </Button>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* System Warning */}
+      <div className="bg-elite-warning/5 border border-elite-warning/20 rounded-2xl p-4 flex items-start gap-4">
+        <div className="p-2 bg-elite-warning/10 rounded-xl text-elite-warning">
+          <AlertCircle size={24} />
+        </div>
+        <div className="space-y-1">
+          <p className="font-bold text-sm text-elite-warning">Security Check Required</p>
+          <p className="text-xs text-elite-primary-600">3 requests flag for unusual volume. Manual review of project earnings is recommended before release.</p>
+        </div>
       </div>
     </div>
   );

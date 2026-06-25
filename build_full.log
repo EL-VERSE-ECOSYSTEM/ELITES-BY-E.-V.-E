@@ -68,6 +68,14 @@ Failed to compile.
 10:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 10:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
 
+./src/app/admin/disputes/page.tsx
+7:3  Warning: 'Filter' is defined but never used.  @typescript-eslint/no-unused-vars
+12:3  Warning: 'ArrowRight' is defined but never used.  @typescript-eslint/no-unused-vars
+14:3  Warning: 'History' is defined but never used.  @typescript-eslint/no-unused-vars
+57:58  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+172:26  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+172:248  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
+
 ./src/app/admin/jobs/page.tsx
 7:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
 7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -150,9 +158,26 @@ Failed to compile.
 9:91  Warning: 'UserX' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/admin/withdrawals/page.tsx
-2:106  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
-2:112  Warning: 'X' is defined but never used.  @typescript-eslint/no-unused-vars
-8:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
+6:3  Warning: 'Filter' is defined but never used.  @typescript-eslint/no-unused-vars
+17:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/api/disputes/route.ts
+5:11  Warning: 'body' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+8:12  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+15:11  Warning: 'body' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+18:12  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/api/promotions/route.ts
+5:11  Warning: 'body' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+8:12  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/api/resources/route.ts
+5:11  Warning: 'body' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+8:12  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/api/withdrawals/route.ts
+5:11  Warning: 'body' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+8:12  Warning: 'error' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/blog/[slug]/page.tsx
 9:52  Warning: 'MessageSquare' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -175,7 +200,6 @@ Failed to compile.
 8:112  Warning: 'Terminal' is defined but never used.  @typescript-eslint/no-unused-vars
 95:154  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
 95:160  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
-96:49  Error: Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
 98:51  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
 98:62  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
 99:112  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
@@ -184,8 +208,7 @@ Failed to compile.
 171:92  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
 
 ./src/app/contact/page.tsx
-19:79  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-86:41  Error: 'Send' is not defined.  react/jsx-no-undef
+20:79  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
 
 ./src/app/courses/[courseId]/page.tsx
 4:10  Warning: 'Area' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -220,41 +243,23 @@ Failed to compile.
 10:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/dashboard/page.tsx
-4:60  Warning: 'Sun' is defined but never used.  @typescript-eslint/no-unused-vars
-4:81  Warning: 'X' is defined but never used.  @typescript-eslint/no-unused-vars
-11:10  Warning: 'Navbar' is defined but never used.  @typescript-eslint/no-unused-vars
-13:40  Warning: 'Line' is defined but never used.  @typescript-eslint/no-unused-vars
-13:46  Warning: 'LineChart' is defined but never used.  @typescript-eslint/no-unused-vars
-65:20  Error: 'Coins' is not defined.  react/jsx-no-undef
-135:20  Error: 'CardHeader' is not defined.  react/jsx-no-undef
-137:24  Error: 'CardTitle' is not defined.  react/jsx-no-undef
-138:24  Error: 'CardDescription' is not defined.  react/jsx-no-undef
-188:21  Error: 'CardTitle' is not defined.  react/jsx-no-undef
-199:81  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-205:21  Error: 'CardHeader' is not defined.  react/jsx-no-undef
-206:24  Error: 'CardTitle' is not defined.  react/jsx-no-undef
-227:21  Error: 'CardHeader' is not defined.  react/jsx-no-undef
-228:24  Error: 'CardTitle' is not defined.  react/jsx-no-undef
+17:52  Warning: 'CardDescription' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/forgot-password/page.tsx
-6:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-41:106  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-53:18  Error: 'Button' is not defined.  react/jsx-no-undef
-61:31  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-73:24  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-77:69  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-78:20  Error: 'Button' is not defined.  react/jsx-no-undef
+7:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
+42:106  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+62:31  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+74:24  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+78:69  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
 
 ./src/app/hackathons/page.tsx
 3:52  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 10:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 10:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-80:33  Error: 'Sparkles' is not defined.  react/jsx-no-undef
 
 ./src/app/jobs/[jobId]/page.tsx
-9:31  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-20:52  Error: 'Bookmark' is not defined.  react/jsx-no-undef
-72:75  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+10:31  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
+73:75  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
 
 ./src/app/jobs/page.tsx
 2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -278,14 +283,20 @@ Failed to compile.
 63:70  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
 
 ./src/app/login/page.tsx
-66:38  Error: 'EyeOff' is not defined.  react/jsx-no-undef
-78:17  Error: 'Button' is not defined.  react/jsx-no-undef
-83:16  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-89:42  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+11:3  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+67:48  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+120:16  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./src/app/messages/page.tsx
+11:3  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+12:3  Warning: 'Check' is defined but never used.  @typescript-eslint/no-unused-vars
+15:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
+15:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
+103:29  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+108:41  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
 
 ./src/app/moderator/page.tsx
 4:67  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-120:142  Error: 'Activity' is not defined.  react/jsx-no-undef
 
 ./src/app/moderator/review/page.tsx
 2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -311,11 +322,10 @@ Failed to compile.
 10:111  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/page.tsx
-4:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-4:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-11:8  Error: 'Navbar' is not defined.  react/jsx-no-undef
-22:31  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-26:23  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+5:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
+5:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
+23:31  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+27:23  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
 
 ./src/app/paths/[pathId]/page.tsx
 3:72  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -333,25 +343,23 @@ Failed to compile.
 
 ./src/app/profile/page.tsx
 9:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
-27:88  Error: 'Edit3' is not defined.  react/jsx-no-undef
-39:99  Error: 'Calendar' is not defined.  react/jsx-no-undef
 
 ./src/app/projects/[projectId]/page.tsx
-12:50  Warning: 'ExternalLink' is defined but never used.  @typescript-eslint/no-unused-vars
-12:108  Warning: 'Trash2' is defined but never used.  @typescript-eslint/no-unused-vars
-111:36  Error: 'User' is not defined.  react/jsx-no-undef
-113:33  Error: 'Input' is not defined.  react/jsx-no-undef
-119:33  Error: 'Input' is not defined.  react/jsx-no-undef
+13:50  Warning: 'ExternalLink' is defined but never used.  @typescript-eslint/no-unused-vars
+13:108  Warning: 'Trash2' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/projects/page.tsx
 11:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 11:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/register/page.tsx
-2:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
+7:3  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+8:3  Warning: 'Mail' is defined but never used.  @typescript-eslint/no-unused-vars
+9:3  Warning: 'Lock' is defined but never used.  @typescript-eslint/no-unused-vars
+14:3  Warning: 'CheckCircle2' is defined but never used.  @typescript-eslint/no-unused-vars
+21:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
+238:52  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+238:60  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
 
 ./src/app/reviews/page.tsx
 4:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -375,6 +383,10 @@ Failed to compile.
 
 ./src/app/study-groups/page.tsx
 3:65  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./src/app/support/page.tsx
+35:51  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+47:13  Error: 'Badge' is not defined.  react/jsx-no-undef
 
 ./src/app/tutor/analytics/page.tsx
 3:28  Warning: 'Download' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -400,51 +412,32 @@ Failed to compile.
 12:139  Warning: 'as' is defined but never used.  @typescript-eslint/no-unused-vars
 18:19  Warning: 'setModules' is assigned a value but never used.  @typescript-eslint/no-unused-vars
 122:57  Warning: 'lIdx' is defined but never used.  @typescript-eslint/no-unused-vars
-156:80  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
-156:112  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
 
 ./src/app/tutor/courses/page.tsx
-4:73  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+4:74  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 8:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 10:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 10:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-77:127  Error: 'Edit3' is not defined.  react/jsx-no-undef
-109:73  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
 
 ./src/app/tutor/dashboard/page.tsx
-4:77  Warning: 'X' is defined but never used.  @typescript-eslint/no-unused-vars
+4:78  Warning: 'X' is defined but never used.  @typescript-eslint/no-unused-vars
 8:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 11:42  Warning: 'Line' is defined but never used.  @typescript-eslint/no-unused-vars
 11:48  Warning: 'LineChart' is defined but never used.  @typescript-eslint/no-unused-vars
-103:22  Error: 'Calendar' is not defined.  react/jsx-no-undef
-146:29  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
-146:149  Error: `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`.  react/no-unescaped-entities
 
 ./src/app/tutor/resources/page.tsx
-7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
-7:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-10:10  Warning: 'CheckCircle2' is defined but never used.  @typescript-eslint/no-unused-vars
-10:24  Warning: 'ChevronRight' is defined but never used.  @typescript-eslint/no-unused-vars
-10:48  Warning: 'ExternalLink' is defined but never used.  @typescript-eslint/no-unused-vars
-10:82  Warning: 'Filter' is defined but never used.  @typescript-eslint/no-unused-vars
-10:102  Warning: 'Layout' is defined but never used.  @typescript-eslint/no-unused-vars
-10:110  Warning: 'Link' is defined but never used.  @typescript-eslint/no-unused-vars
-10:116  Warning: 'LinkIcon' is defined but never used.  @typescript-eslint/no-unused-vars
-10:126  Warning: 'MoreVertical' is defined but never used.  @typescript-eslint/no-unused-vars
-10:170  Warning: 'as' is defined but never used.  @typescript-eslint/no-unused-vars
+21:10  Warning: 'cn' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/tutor/schedule/page.tsx
-4:53  Warning: 'Sun' is defined but never used.  @typescript-eslint/no-unused-vars
-4:58  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
-99:39  Error: 'Video' is not defined.  react/jsx-no-undef
-118:57  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+4:54  Warning: 'Sun' is defined but never used.  @typescript-eslint/no-unused-vars
+4:59  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/tutor/students/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
+11:3  Warning: 'MoreVertical' is defined but never used.  @typescript-eslint/no-unused-vars
+12:3  Warning: 'CheckCircle2' is defined but never used.  @typescript-eslint/no-unused-vars
+13:3  Warning: 'XCircle' is defined but never used.  @typescript-eslint/no-unused-vars
+15:3  Warning: 'TrendingUp' is defined but never used.  @typescript-eslint/no-unused-vars
+63:60  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
 
 ./src/app/tutors/[tutorId]/book/page.tsx
 10:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -469,87 +462,37 @@ Failed to compile.
 11:104  Warning: 'Users' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/wallet/deposit/page.tsx
-4:63  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
+4:64  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
 9:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-33:19  Error: 'Wallet' is not defined.  react/jsx-no-undef
-
-./src/app/wallet/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-3:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
-3:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/wallet/transfer/page.tsx
-3:57  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
+3:58  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
 7:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 9:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 9:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
 10:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
 17:10  Warning: 'isVerified' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-39:19  Error: 'Send' is not defined.  react/jsx-no-undef
-59:131  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-67:21  Error: 'Info' is not defined.  react/jsx-no-undef
-131:78  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
 
 ./src/app/wallet/withdraw/page.tsx
-4:10  Warning: 'AlertCircle' is defined but never used.  @typescript-eslint/no-unused-vars
-4:49  Warning: 'CheckCircle2' is defined but never used.  @typescript-eslint/no-unused-vars
-4:63  Warning: 'ChevronRight' is defined but never used.  @typescript-eslint/no-unused-vars
-4:94  Warning: 'Lock' is defined but never used.  @typescript-eslint/no-unused-vars
-4:100  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-8:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-10:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
-10:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-12:24  Warning: 'Wallet' is defined but never used.  @typescript-eslint/no-unused-vars
-137:119  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
-
-./src/components/ThemeProvider.tsx
-5:11  Error: 'NextThemesProvider' is not defined.  react/jsx-no-undef
-
-./src/components/layout/Footer.tsx
-18:21  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+13:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
+13:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
+13:52  Warning: 'CardDescription' is defined but never used.  @typescript-eslint/no-unused-vars
+16:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/components/layout/Navbar.tsx
 4:19  Warning: 'Bell' is defined but never used.  @typescript-eslint/no-unused-vars
 4:25  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 4:31  Warning: 'Search' is defined but never used.  @typescript-eslint/no-unused-vars
-14:19  Error: Error: Calling setState synchronously within an effect can trigger cascading renders
-
-Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
-* Update external systems with the latest state from React.
-* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
-
-Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
-
-/app/src/components/layout/Navbar.tsx:14:19
-  12 |
-  13 |   useEffect(() => {
-> 14 |     if (!mounted) setMounted(true);
-     |                   ^^^^^^^^^^ Avoid calling setState() directly within an effect
-  15 |     const handleScroll = () => setScrolled(window.scrollY > 20);
-  16 |     window.addEventListener("scroll", handleScroll);
-  17 |     return () => window.removeEventListener("scroll", handleScroll);  react-hooks/set-state-in-effect
-18:6  Warning: React Hook useEffect has a missing dependency: 'mounted'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
-
-./src/components/layout/Sidebar.tsx
-14:21  Warning: 'setCollapsed' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-88:12  Error: 'LogOut' is not defined.  react/jsx-no-undef
+19:6  Warning: React Hook useEffect has a missing dependency: 'mounted'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
 
 ./src/components/ui/Button.tsx
 28:11  Warning: 'Comp' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-35:81  Error: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
 
-./src/components/ui/Modal.tsx
-30:6  Error: 'AnimatePresence' is not defined.  react/jsx-no-undef
-
-./src/components/ui/Toast.tsx
-39:10  Error: 'AnimatePresence' is not defined.  react/jsx-no-undef
+./src/utils/korapay.ts
+8:7  Warning: 'KORAPAY_PUBLIC_KEY' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+27:20  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/utils/supabase/middleware.ts
-15:9  Warning: 'supabase' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-24:48  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
+23:48  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
 
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules

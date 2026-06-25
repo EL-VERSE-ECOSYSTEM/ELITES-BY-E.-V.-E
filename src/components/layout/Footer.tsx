@@ -43,23 +43,18 @@ export function Footer() {
               <li><Link href="/about" className="hover:text-elite-accent-500 transition-colors">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-elite-accent-500 transition-colors">Contact</Link></li>
               <li><Link href="/blog" className="hover:text-elite-accent-500 transition-colors">Tech Blog</Link></li>
-              <li><Link href="/careers" className="hover:text-elite-accent-500 transition-colors">Careers</Link></li>
+              <li><Link href="/support" className="hover:text-elite-accent-500 transition-colors">Support Center</Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold font-space-grotesk mb-6">Newsletter</h4>
-            <p className="text-elite-primary-300 mb-4">Stay updated with the latest in African tech.</p>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Enter email"
-                className="bg-elite-primary-900 border border-elite-primary-800 rounded-lg px-4 py-2 flex-1 focus:outline-none focus:border-elite-accent-500"
-              />
-              <button className="bg-elite-accent-500 text-white px-4 py-2 rounded-lg font-bold hover:bg-elite-accent-600 transition-colors">
-                Join
-              </button>
-            </form>
+            <h4 className="text-lg font-bold font-space-grotesk mb-6">Platform</h4>
+            <ul className="space-y-4 text-elite-primary-300">
+               <li><Link href="/admin" className="text-elite-accent-500 font-bold hover:underline">Admin Panel</Link></li>
+               <li><Link href="/tutor/dashboard" className="hover:text-white transition-colors">Tutor Dashboard</Link></li>
+               <li><Link href="/dashboard" className="hover:text-white transition-colors">Learner Dashboard</Link></li>
+               <li><Link href="/wallet" className="hover:text-white transition-colors">Financial Wallet</Link></li>
+            </ul>
           </div>
         </div>
 
