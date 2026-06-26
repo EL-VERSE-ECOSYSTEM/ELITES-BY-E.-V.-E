@@ -1,14 +1,14 @@
 "use client";
-import {cn} from "@/lib/utils";
-import {useState} from "react";
-import {Sidebar} from "@/components/layout/Sidebar";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
-import {Card, CardContent} from "@/components/ui/Card";
-import {Button} from "@/components/ui/Button";
-
-import {Input} from "@/components/ui/Input";
-import {Bell, Camera, ChevronRight, CreditCard, Globe, Lock, Mail, Monitor, Shield, Smartphone, Trash2, User} from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Input } from "@/components/ui/Input";
+import { Bell, Camera, ChevronRight, CreditCard, Eye, Globe, Lock, Mail, Monitor, Save, Settings, Shield, Smartphone, Trash2, User } from "lucide-react";
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<"profile" | "account" | "notifications" | "privacy" | "payments" | "danger">("profile");
@@ -37,7 +37,7 @@ export default function SettingsPage() {
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as "profile" | "account" | "notifications" | "privacy" | "payments" | "danger")}
+                  onClick={() => setActiveTab(tab.id as any)}
                   className={cn(
                     "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-bold text-sm",
                     activeTab === tab.id

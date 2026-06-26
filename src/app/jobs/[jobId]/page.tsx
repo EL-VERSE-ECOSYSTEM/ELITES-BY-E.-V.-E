@@ -1,13 +1,13 @@
 "use client";
-import {Bookmark} from "lucide-react";
+import { Bookmark } from "lucide-react";
 import Link from "next/link";
-import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
-import {Sidebar} from "@/components/layout/Sidebar";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import {Badge} from "@/components/ui/Badge";
-import {Button} from "@/components/ui/Button";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/Card";
-import {ChevronLeft, Share2, ShieldCheck} from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { ChevronLeft, Share2, Shield, ShieldCheck } from "lucide-react";
 
 export default function JobDetailPage() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { Send, Phone, MessageSquare, Mail, MapPin } from "lucide-react";
+import { Send, Phone, MessageSquare, Globe, Mail, MapPin } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";

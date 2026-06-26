@@ -1,13 +1,22 @@
 "use client";
 
-import {useState} from "react";
+import { useState } from "react";
 import Link from "next/link";
-import {useRouter} from "next/navigation";
-import {Eye, EyeOff, ArrowRight, GraduationCap, Briefcase, ShieldCheck} from "lucide-react";
-import {Button} from "@/components/ui/Button";
-import {Input} from "@/components/ui/Input";
-import {Card, CardContent} from "@/components/ui/Card";
-import {cn} from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import {
+  Eye,
+  EyeOff,
+  Lock,
+  Mail,
+  ArrowRight,
+  GraduationCap,
+  Briefcase,
+  ShieldCheck
+} from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Card, CardContent } from "@/components/ui/Card";
+import { cn } from "@/lib/utils";
 
 type Role = "STUDENT" | "TUTOR" | "ADMIN";
 

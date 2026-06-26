@@ -1,13 +1,13 @@
 "use client";
-import {cn} from "@/lib/utils";
-import {Award, Briefcase, Building2, CheckCircle2, Clock, TrendingUp, Users} from "lucide-react";
-import {Footer} from "@/components/layout/Footer";
-import {Navbar} from "@/components/layout/Navbar";
+import { cn } from "@/lib/utils";
+import { Award, Briefcase, Building2, CheckCircle2, Clock, TrendingUp, User, Users } from "lucide-react";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Navbar";
 
-import {Badge} from "@/components/ui/Badge";
-import {Button} from "@/components/ui/Button";
-import {Card, CardContent} from "@/components/ui/Card";
-import {ProgressBar} from "@/components/ui/ProgressBar";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { ProgressBar } from "@/components/ui/ProgressBar";
 
 export default function PathDetail() {
   const steps = [
