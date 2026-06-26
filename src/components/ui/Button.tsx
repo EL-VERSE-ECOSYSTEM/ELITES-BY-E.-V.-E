@@ -1,4 +1,5 @@
 import * as React from "react";
+import { cn } from "@/lib/utils";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -25,13 +26,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       icon: "h-10 w-10 p-2",
     };
 
-    const Comp = asChild ? React.Fragment : "button";
-
-    // Note: React.Fragment doesn't take className.
-    // Usually asChild is implemented with a Slot component from Radix.
-    // For this task, we will handle children if asChild is true.
-
-    if (asChild) {
+    if (asChild && props.children) {
         const child = React.Children.only(props.children) as React.ReactElement<{className?: string, children?: React.ReactNode}>;
         return React.cloneElement(child, {
             className: cn(
@@ -39,10 +34,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 variants[variant],
                 sizes[size],
                 className,
-                (child.props as Record<string, unknown>).className
+                child.props.className
             ),
-            ...props,
-            children: (child.props as Record<string, unknown>).children
         });
     }
 

@@ -153,10 +153,14 @@
 ./src/app/code-lab/page.tsx
 4:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
 
+./src/app/contact/page.tsx
+3:38  Warning: 'Globe' is defined but never used.  @typescript-eslint/no-unused-vars
+
 ./src/app/courses/[courseId]/page.tsx
 4:10  Warning: 'Area' is defined but never used.  @typescript-eslint/no-unused-vars
 4:16  Warning: 'AreaChart' is defined but never used.  @typescript-eslint/no-unused-vars
 4:27  Warning: 'Bar' is defined but never used.  @typescript-eslint/no-unused-vars
+4:32  Warning: 'BarChart' is defined but never used.  @typescript-eslint/no-unused-vars
 4:42  Warning: 'CartesianGrid' is defined but never used.  @typescript-eslint/no-unused-vars
 4:57  Warning: 'Cell' is defined but never used.  @typescript-eslint/no-unused-vars
 4:63  Warning: 'Line' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -168,7 +172,7 @@
 4:125  Warning: 'XAxis' is defined but never used.  @typescript-eslint/no-unused-vars
 4:132  Warning: 'YAxis' is defined but never used.  @typescript-eslint/no-unused-vars
 12:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
-13:115  Warning: 'Save' is defined but never used.  @typescript-eslint/no-unused-vars
+13:127  Warning: 'Save' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/cv-builder/page.tsx
 7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -179,7 +183,7 @@
 7:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/hackathons/page.tsx
-3:52  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+3:58  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 10:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 10:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
 
@@ -214,7 +218,7 @@
 3:72  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/paths/page.tsx
-9:80  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+9:94  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/profile/page.tsx
 9:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -266,9 +270,8 @@
 12:51  Warning: 'Code' is defined but never used.  @typescript-eslint/no-unused-vars
 12:86  Warning: 'Image' is defined but never used.  @typescript-eslint/no-unused-vars
 12:93  Warning: 'ImageIcon' is defined but never used.  @typescript-eslint/no-unused-vars
-12:139  Warning: 'as' is defined but never used.  @typescript-eslint/no-unused-vars
 18:19  Warning: 'setModules' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-122:57  Warning: 'lIdx' is defined but never used.  @typescript-eslint/no-unused-vars
+122:57  Warning: '_lIdx' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/tutor/courses/page.tsx
 4:74  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -320,33 +323,19 @@
 13:52  Warning: 'CardDescription' is defined but never used.  @typescript-eslint/no-unused-vars
 16:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
-./src/components/layout/Navbar.tsx
-4:19  Warning: 'Bell' is defined but never used.  @typescript-eslint/no-unused-vars
-4:25  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
-4:31  Warning: 'Search' is defined but never used.  @typescript-eslint/no-unused-vars
-19:6  Warning: React Hook useEffect has a missing dependency: 'mounted'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
-
 ./src/components/ui/Button.tsx
-28:11  Warning: 'Comp' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-
-./src/utils/korapay.ts
-8:7  Warning: 'KORAPAY_PUBLIC_KEY' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-27:20  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/utils/supabase/middleware.ts
-15:9  Warning: 'supabase' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-24:48  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
+29:11  Warning: 'Comp' is assigned a value but never used.  @typescript-eslint/no-unused-vars
 
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
 Failed to compile.
 
-./src/app/admin/moderation/page.tsx:39:47
-Type error: Argument of type 'unknown' is not assignable to parameter of type 'SetStateAction<"content" | "reported" | "disputes">'.
+./src/components/ui/Button.tsx:43:17
+Type error: Argument of type 'unknown' is not assignable to parameter of type 'ClassValue'.
 
-[0m [90m 37 |[39m                 [33m<[39m[33mbutton[39m[0m
-[0m [90m 38 |[39m                   key[33m=[39m{tab[33m.[39mid}[0m
-[0m[31m[1m>[22m[39m[90m 39 |[39m                   onClick[33m=[39m{() [33m=>[39m setActiveTab(tab[33m.[39mid [36mas[39m unknown)}[0m
-[0m [90m    |[39m                                               [31m[1m^[22m[39m[0m
-[0m [90m 40 |[39m                   className[33m=[39m{cn([0m
-[0m [90m 41 |[39m                     [32m"px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-widest transition-all flex items-center gap-2"[39m[33m,[39m[0m
-[0m [90m 42 |[39m                     activeTab [33m===[39m tab[33m.[39mid [33m?[39m [32m"bg-elite-primary-950 text-white shadow-lg"[39m [33m:[39m [32m"text-elite-primary-400 hover:text-elite-primary-900"[39m[0m
+[0m [90m 41 |[39m                 sizes[size][33m,[39m[0m
+[0m [90m 42 |[39m                 className[33m,[39m[0m
+[0m[31m[1m>[22m[39m[90m 43 |[39m                 (child[33m.[39mprops [36mas[39m [33mRecord[39m[33m<[39m[33mstring[39m[33m,[39m unknown[33m>[39m)[33m.[39mclassName[0m
+[0m [90m    |[39m                 [31m[1m^[22m[39m[0m
+[0m [90m 44 |[39m             )[33m,[39m[0m
+[0m [90m 45 |[39m             [33m...[39mprops[33m,[39m[0m
+[0m [90m 46 |[39m             children[33m:[39m (child[33m.[39mprops [36mas[39m [33mRecord[39m[33m<[39m[33mstring[39m[33m,[39m unknown[33m>[39m)[33m.[39mchildren[0m

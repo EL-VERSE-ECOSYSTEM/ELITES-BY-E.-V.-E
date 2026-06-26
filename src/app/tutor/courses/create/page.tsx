@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Badge } from "@/components/ui/Badge";
-import { CheckCircle2, ChevronLeft, ChevronRight, Code, Eye, FileText, GripVertical, Image, ImageIcon, Plus, Rocket, Save, Trash2, Video, as } from "lucide-react";
+import { CheckCircle2, ChevronLeft, ChevronRight, Code, Eye, FileText, GripVertical, Image, ImageIcon, Plus, Rocket, Save, Trash2, Video } from "lucide-react";
 
 export default function CourseCreator() {
   const [step, setStep] = useState(1);

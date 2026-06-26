@@ -270,9 +270,8 @@
 12:51  Warning: 'Code' is defined but never used.  @typescript-eslint/no-unused-vars
 12:86  Warning: 'Image' is defined but never used.  @typescript-eslint/no-unused-vars
 12:93  Warning: 'ImageIcon' is defined but never used.  @typescript-eslint/no-unused-vars
-12:139  Warning: 'as' is defined but never used.  @typescript-eslint/no-unused-vars
 18:19  Warning: 'setModules' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-122:57  Warning: 'lIdx' is defined but never used.  @typescript-eslint/no-unused-vars
+122:57  Warning: '_lIdx' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/tutor/courses/page.tsx
 4:74  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -328,29 +327,20 @@
 4:19  Warning: 'Bell' is defined but never used.  @typescript-eslint/no-unused-vars
 4:25  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 4:31  Warning: 'Search' is defined but never used.  @typescript-eslint/no-unused-vars
-19:6  Warning: React Hook useEffect has a missing dependency: 'mounted'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
 
 ./src/components/ui/Button.tsx
 28:11  Warning: 'Comp' is assigned a value but never used.  @typescript-eslint/no-unused-vars
 
-./src/utils/korapay.ts
-8:7  Warning: 'KORAPAY_PUBLIC_KEY' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-27:20  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/utils/supabase/middleware.ts
-15:9  Warning: 'supabase' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-24:48  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
-
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
 Failed to compile.
 
-./src/app/projects/[projectId]/page.tsx:54:47
-Type error: Argument of type 'unknown' is not assignable to parameter of type 'SetStateAction<"brief" | "submission" | "feedback">'.
+./src/app/wallet/page.tsx:150:37
+Type error: Cannot find name 'cn'.
 
-[0m [90m 52 |[39m                 [33m<[39m[33mbutton[39m[0m
-[0m [90m 53 |[39m                   key[33m=[39m{tab[33m.[39mid}[0m
-[0m[31m[1m>[22m[39m[90m 54 |[39m                   onClick[33m=[39m{() [33m=>[39m setActiveTab(tab[33m.[39mid [36mas[39m unknown)}[0m
-[0m [90m    |[39m                                               [31m[1m^[22m[39m[0m
-[0m [90m 55 |[39m                   className[33m=[39m{cn([0m
-[0m [90m 56 |[39m                     [32m"pb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wider relative transition-all"[39m[33m,[39m[0m
-[0m [90m 57 |[39m                     activeTab [33m===[39m tab[33m.[39mid [33m?[39m [32m"text-elite-primary-600 dark:text-white"[39m [33m:[39m [32m"text-elite-primary-400 hover:text-elite-primary-600"[39m[0m
+[0m [90m 148 |[39m                 [33m<[39m[33mdiv[39m key[33m=[39m{i} className[33m=[39m[32m"flex items-center justify-between p-3 rounded-xl hover:bg-elite-primary-50 dark:hover:bg-elite-primary-900 transition-colors"[39m[33m>[39m[0m
+[0m [90m 149 |[39m                   [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex items-center gap-3"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 150 |[39m                     [33m<[39m[33mdiv[39m className[33m=[39m{cn([0m
+[0m [90m     |[39m                                     [31m[1m^[22m[39m[0m
+[0m [90m 151 |[39m                       [32m"p-2 rounded-lg"[39m[33m,[39m[0m
+[0m [90m 152 |[39m                       tx[33m.[39mtype [33m===[39m [32m"deposit"[39m [33m||[39m tx[33m.[39mtype [33m===[39m [32m"earning"[39m [33m?[39m [32m"bg-elite-success/10 text-elite-success"[39m [33m:[39m [32m"bg-elite-error/10 text-elite-error"[39m[0m
+[0m [90m 153 |[39m                     )}[33m>[39m[0m
