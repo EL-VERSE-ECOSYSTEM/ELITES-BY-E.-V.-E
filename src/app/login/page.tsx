@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation";
 import {
   Eye,
   EyeOff,
-  Lock,
-  Mail,
+
+
   ArrowRight,
   GraduationCap,
   Briefcase,

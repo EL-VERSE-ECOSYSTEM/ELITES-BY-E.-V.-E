@@ -1,0 +1,140 @@
+
+> temp-app@0.1.0 build
+> next build
+
+   ▲ Next.js 15.1.7
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (102kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (250kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/70) ...
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+   Generating static pages (17/70)
+   Generating static pages (34/70)
+   Generating static pages (52/70)
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ ✓ Generating static pages (70/70)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    3.44 kB         122 kB
+├ ○ /_not-found                          990 B           107 kB
+├ ○ /about                               2.76 kB         126 kB
+├ ○ /achievements                        2.94 kB         122 kB
+├ ○ /admin                               2.19 kB         121 kB
+├ ○ /admin/analytics/courses             4.65 kB         232 kB
+├ ○ /admin/analytics/revenue             4.46 kB         227 kB
+├ ○ /admin/analytics/users               9.39 kB         236 kB
+├ ○ /admin/audit-logs                    5.26 kB         124 kB
+├ ○ /admin/courses/approvals             4.26 kB         123 kB
+├ ○ /admin/courses/manage                5.65 kB         124 kB
+├ ○ /admin/deposits                      262 B           106 kB
+├ ○ /admin/disputes                      4.28 kB         119 kB
+├ ○ /admin/jobs                          5.74 kB         124 kB
+├ ○ /admin/marketing                     5.39 kB         124 kB
+├ ○ /admin/moderation                    6.08 kB         125 kB
+├ ○ /admin/support                       5.39 kB         124 kB
+├ ○ /admin/tutors                        5.69 kB         124 kB
+├ ○ /admin/users                         4.65 kB         123 kB
+├ ƒ /admin/users/[userId]                4.58 kB         123 kB
+├ ○ /admin/withdrawals                   3.96 kB         119 kB
+├ ƒ /api/disputes                        152 B           106 kB
+├ ƒ /api/promotions                      152 B           106 kB
+├ ƒ /api/resources                       152 B           106 kB
+├ ƒ /api/withdrawals                     152 B           106 kB
+├ ○ /blog                                3.06 kB         126 kB
+├ ƒ /blog/[slug]                         1.36 kB         124 kB
+├ ƒ /certificates/[certId]               6.08 kB         125 kB
+├ ○ /code-lab                            1.85 kB         125 kB
+├ ○ /contact                             2.56 kB         125 kB
+├ ○ /courses                             384 B           123 kB
+├ ƒ /courses/[courseId]                  4.91 kB         128 kB
+├ ○ /cv-builder                          6.83 kB         126 kB
+├ ○ /dashboard                           4.88 kB         124 kB
+├ ○ /forgot-password                     2.69 kB         121 kB
+├ ○ /hackathons                          5.78 kB         124 kB
+├ ○ /jobs                                3.5 kB          122 kB
+├ ƒ /jobs/[jobId]                        5.5 kB          124 kB
+├ ○ /leaderboard                         3.5 kB          122 kB
+├ ƒ /learn/[courseId]                    4.71 kB         123 kB
+├ ƒ /learn/[courseId]/quiz/[quizId]      4.01 kB         123 kB
+├ ○ /login                               3.18 kB         122 kB
+├ ○ /messages                            3.12 kB         118 kB
+├ ○ /moderator                           5.71 kB         124 kB
+├ ○ /moderator/review                    260 B           106 kB
+├ ○ /my-courses                          3.5 kB          122 kB
+├ ○ /notifications                       5.25 kB         124 kB
+├ ○ /paths                               3.03 kB         126 kB
+├ ƒ /paths/[pathId]                      3.46 kB         126 kB
+├ ○ /pricing                             3.5 kB          122 kB
+├ ○ /profile                             1.71 kB         124 kB
+├ ○ /projects                            5.67 kB         124 kB
+├ ƒ /projects/[projectId]                6.84 kB         126 kB
+├ ○ /referrals                           3.23 kB         122 kB
+├ ○ /register                            4.06 kB         123 kB
+├ ○ /reviews                             3.87 kB         123 kB
+├ ƒ /sessions/[sessionId]                3.61 kB         122 kB
+├ ○ /settings                            3.02 kB         126 kB
+├ ○ /study-groups                        5.45 kB         124 kB
+├ ○ /support                             3.43 kB         122 kB
+├ ○ /tutor/analytics                     4.45 kB         238 kB
+├ ○ /tutor/availability                  4.32 kB         123 kB
+├ ○ /tutor/community                     264 B           106 kB
+├ ○ /tutor/courses                       2.27 kB         125 kB
+├ ƒ /tutor/courses/[courseId]/edit       4.82 kB         123 kB
+├ ○ /tutor/courses/create                6.71 kB         125 kB
+├ ○ /tutor/dashboard                     3.51 kB         226 kB
+├ ○ /tutor/earnings                      262 B           106 kB
+├ ○ /tutor/resources                     3.7 kB          119 kB
+├ ○ /tutor/reviews                       3.89 kB         123 kB
+├ ○ /tutor/schedule                      5.47 kB         124 kB
+├ ○ /tutor/settings                      263 B           106 kB
+├ ○ /tutor/students                      4.12 kB         119 kB
+├ ○ /tutors                              2.68 kB         125 kB
+├ ƒ /tutors/[tutorId]                    2.83 kB         126 kB
+├ ƒ /tutors/[tutorId]/book               5.68 kB         124 kB
+├ ○ /wallet                              3.99 kB         123 kB
+├ ○ /wallet/deposit                      2.69 kB         125 kB
+├ ○ /wallet/transfer                     5.6 kB          124 kB
+└ ○ /wallet/withdraw                     3.83 kB         123 kB
++ First Load JS shared by all            106 kB
+  ├ chunks/1517-3829692b9ed8c62e.js      50.7 kB
+  ├ chunks/4bd1b696-0720bfa1fae33615.js  53 kB
+  └ other shared chunks (total)          1.93 kB
+
+
+ƒ Middleware                             88.2 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

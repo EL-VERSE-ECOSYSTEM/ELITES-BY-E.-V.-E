@@ -4,10 +4,10 @@ import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { Briefcase, Building2, CheckCircle2, Clock, DollarSign, ExternalLink, FileText, Filter, Layout, MapPin, MoreVertical, Plus, Search, TrendingUp, Users } from "lucide-react";
+import { Briefcase, Building2, CheckCircle2, ExternalLink, FileText, MapPin, MoreVertical, Plus, Search, Users } from "lucide-react";
 
 export default function AdminJobManagement() {
   const [activeTab, setActiveTab] = useState<"all" | "active" | "applications">("all");

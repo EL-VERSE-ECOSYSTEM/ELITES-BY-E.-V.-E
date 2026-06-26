@@ -1,12 +1,11 @@
 "use client";
-import { Building2, CreditCard, DollarSign, Download, TrendingUp, X } from "lucide-react";
+import { Building2, CreditCard, DollarSign, Download, TrendingUp } from "lucide-react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Area, AreaChart, Bar, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 
 export default function AdminRevenue() {
   const data = [

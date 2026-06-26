@@ -1,11 +1,8 @@
 "use client";
-import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { ArrowRight, Bookmark, Clock, Share2 } from "lucide-react";
+import { Clock } from "lucide-react";
 
 export default function BlogPost() {
   return (
