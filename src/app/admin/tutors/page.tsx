@@ -1,13 +1,13 @@
 "use client";
-import {cn} from "@/lib/utils";
-import {Clock, Eye, Filter, MoreVertical, ShieldCheck, Star, Users, XCircle} from "lucide-react";
-import {useState} from "react";
-import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
-import {Sidebar} from "@/components/layout/Sidebar";
+import { cn } from "@/lib/utils";
+import { Clock, Eye, Filter, MoreVertical, Shield, ShieldCheck, Star, User, Users, X, XCircle } from "lucide-react";
+import { useState } from "react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import {Badge} from "@/components/ui/Badge";
-import {Button} from "@/components/ui/Button";
-import {Card} from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
 export default function TutorManagement() {
   const [activeTab, setActiveTab] = useState<"all" | "pending" | "verified">("all");

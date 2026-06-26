@@ -1,14 +1,15 @@
 "use client";
 import Link from "next/link";
-import {cn} from "@/lib/utils";
-import {ArrowLeft, ChevronRight, CreditCard, Landmark, Lock, ShieldCheck, Smartphone, Wallet} from "lucide-react";
-import {useState} from "react";
-import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
-import {Sidebar} from "@/components/layout/Sidebar";
+import { cn } from "@/lib/utils";
+import {  ArrowLeft, ChevronRight, CreditCard, Landmark, Lock, Shield, ShieldCheck, Smartphone , Wallet } from "lucide-react";
+import { useState } from "react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import {Button} from "@/components/ui/Button";
-import {Card, CardContent} from "@/components/ui/Card";
-import {Input} from "@/components/ui/Input";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
 
 export default function DepositPage() {
   const [amount, setAmount] = useState("");
@@ -75,7 +76,7 @@ export default function DepositPage() {
                       ].map((item) => (
                         <button
                           key={item.id}
-                          onClick={() => setMethod(item.id as "card" | "momo" | "bank")}
+                          onClick={() => setMethod(item.id as unknown)}
                           className={cn(
                             "p-6 rounded-2xl border-2 text-center space-y-3 transition-all",
                             method === item.id ? "border-elite-primary-600 bg-elite-primary-50 dark:bg-elite-primary-900/50" : "border-elite-primary-100 hover:border-elite-primary-300 bg-white dark:bg-elite-primary-950"

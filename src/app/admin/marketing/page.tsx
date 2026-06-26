@@ -1,17 +1,22 @@
 "use client";
-import {cn} from "@/lib/utils";
-import {useState} from "react";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
 
-import {Sidebar} from "@/components/layout/Sidebar";
-import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
-import {Card, CardContent} from "@/components/ui/Card";
-import {Button} from "@/components/ui/Button";
-
-import {Plus, Zap} from "lucide-react";
+import { Sidebar } from "@/components/layout/Sidebar";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Input } from "@/components/ui/Input";
+import { Mail, Plus, Smartphone, Zap } from "lucide-react";
 
 export default function AdminMarketing() {
   const [activeTab, setActiveTab] = useState<"coupons" | "campaigns" | "notifications">("coupons");
 
+  const coupons = [
+    { id: 1, code: "ELITE2024", discount: "20% OFF", usage: "450/1000", expires: "Mar 15, 2024", status: "Active" },
+    { id: 2, code: "AFRICATECH", discount: "$10.00", usage: "124/500", expires: "Dec 31, 2024", status: "Active" },
+  ];
 
   return (
     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">

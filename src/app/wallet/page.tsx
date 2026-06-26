@@ -17,7 +17,6 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
 export default function WalletPage() {
   const [userRole] = useState<"STUDENT" | "TUTOR">("STUDENT"); // Mocked role

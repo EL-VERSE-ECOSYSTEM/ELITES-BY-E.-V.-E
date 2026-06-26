@@ -61,7 +61,7 @@ export default function SupportPage() {
                  <ChevronRight size={16} className="text-elite-primary-300 ml-auto" />
               </CardContent>
            </Card>
-           <Card className="hover:border-elite-accent-500 transition-all cursor-pointer group">
+           <Card className="hover:border-elite-accent-500 transition-all cursor-pointer group" asChild>
               <Link href="/admin/disputes">
                 <CardContent className="p-6 space-y-3">
                    <div className="w-10 h-10 rounded-xl bg-elite-primary-100 flex items-center justify-center text-elite-primary-600 group-hover:bg-elite-accent-500 group-hover:text-white transition-all">

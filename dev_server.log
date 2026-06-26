@@ -1,0 +1,63 @@
+
+> temp-app@0.1.0 dev
+> next dev
+
+   ▲ Next.js 15.1.0
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.0.2:3000
+   - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 3s
+ ○ Compiling /src/middleware ...
+ ✓ Compiled /src/middleware in 1574ms (153 modules)
+ ○ Compiling / ...
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (102kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (250kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+ ✓ Compiled / in 7s (696 modules)
+ ⨯ ReferenceError: cn is not defined
+    at cn (src/components/ui/Button.tsx:37:23)
+  35 |         const child = React.Children.only(props.children) as React.ReactElement<{className?: string, children?: React.ReactNode}>;
+  36 |         return React.cloneElement(child, {
+> 37 |             className: cn(
+     |                       ^
+  38 |                 "inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elite-primary-500 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+  39 |                 variants[variant],
+  40 |                 sizes[size], {
+  digest: '1734995675'
+}
+ ⨯ ReferenceError: cn is not defined
+    at cn (src/components/ui/Button.tsx:37:23)
+  35 |         const child = React.Children.only(props.children) as React.ReactElement<{className?: string, children?: React.ReactNode}>;
+  36 |         return React.cloneElement(child, {
+> 37 |             className: cn(
+     |                       ^
+  38 |                 "inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elite-primary-500 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+  39 |                 variants[variant],
+  40 |                 sizes[size], {
+  digest: '1734995675'
+}
+ ⨯ ReferenceError: cn is not defined
+    at cn (src/components/ui/Button.tsx:37:23)
+  35 |         const child = React.Children.only(props.children) as React.ReactElement<{className?: string, children?: React.ReactNode}>;
+  36 |         return React.cloneElement(child, {
+> 37 |             className: cn(
+     |                       ^
+  38 |                 "inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elite-primary-500 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+  39 |                 variants[variant],
+  40 |                 sizes[size], {
+  digest: '1734995675'
+}
+ ⨯ ReferenceError: useState is not defined
+    at useState (src/components/layout/Navbar.tsx:7:30)
+   5 |
+   6 | export function Navbar() {
+>  7 |   const [isOpen, setIsOpen] = useState(false);
+     |                              ^
+   8 |   const [scrolled, setScrolled] = useState(false);
+   9 |   const pathname = usePathname();
+  10 |   const { theme, setTheme } = useTheme(); {
+  digest: '3352562789'
+}
+ GET / 500 in 7835ms
+ ✓ Compiled in 246ms (319 modules)

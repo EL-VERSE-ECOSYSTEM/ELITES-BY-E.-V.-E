@@ -1,13 +1,14 @@
 "use client";
 import Link from "next/link";
-import {cn} from "@/lib/utils";
-import {BookOpen, ChevronRight, Eye, MoreVertical, Plus, Search, Star, Users, Edit3} from "lucide-react";
-import {useState} from "react";
-import {Sidebar} from "@/components/layout/Sidebar";
+import { cn } from "@/lib/utils";
+import {  BookOpen, ChevronRight, Eye, MoreVertical, Plus, Search, Star, User, Users , Edit3 } from "lucide-react";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import {Button} from "@/components/ui/Button";
-import {Card, CardContent} from "@/components/ui/Card";
-import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 
 export default function TutorMyCourses() {
   const [activeTab, setActiveTab] = useState<"published" | "draft" | "review">("published");

@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Home, BookOpen, Search, Wallet, User } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export function MobileBottomNav() {
   const pathname = usePathname();

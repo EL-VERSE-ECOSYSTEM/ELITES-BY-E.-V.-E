@@ -1,0 +1,86 @@
+
+> temp-app@0.1.0 build
+> next build
+
+   ▲ Next.js 15.1.0
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./src/app/admin/deposits/page.tsx
+Module parse failed: Duplicate export 'default' (19:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+|     });
+| }
+> export default function Page() {
+|     return null;
+| }
+
+Import trace for requested module:
+./src/app/admin/deposits/page.tsx
+
+./src/app/courses/page.tsx
+Module parse failed: Duplicate export 'default' (20:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+|     });
+| }
+> export default function Page() {
+|     return null;
+| }
+
+Import trace for requested module:
+./src/app/courses/page.tsx
+
+./src/app/jobs/page.tsx
+Module parse failed: Duplicate export 'default' (15:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+|     });
+| }
+> export default function Page() {
+|     return null;
+| }
+
+Import trace for requested module:
+./src/app/jobs/page.tsx
+
+./src/app/leaderboard/page.tsx
+Module parse failed: Duplicate export 'default' (15:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+|     });
+| }
+> export default function Page() {
+|     return null;
+| }
+
+Import trace for requested module:
+./src/app/leaderboard/page.tsx
+
+./src/app/my-courses/page.tsx
+Module parse failed: Duplicate export 'default' (15:7)
+File was processed with these loaders:
+ * ./node_modules/next/dist/build/webpack/loaders/next-flight-client-module-loader.js
+ * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js
+You may need an additional loader to handle the result of these loaders.
+|     });
+| }
+> export default function Page() {
+|     return null;
+| }
+
+Import trace for requested module:
+./src/app/my-courses/page.tsx
+
+
+> Build failed because of webpack errors

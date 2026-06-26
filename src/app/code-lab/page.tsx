@@ -1,9 +1,9 @@
 "use client";
-import {Navbar} from "@/components/layout/Navbar";
-import {Footer} from "@/components/layout/Footer";
-import {Card} from "@/components/ui/Card";
-import {Button} from "@/components/ui/Button";
-import {Play, Code, Save, Share2} from "lucide-react";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Play, Code, Save, Share2 } from "lucide-react";
 
 export default function CodeLabPage() {
   return (

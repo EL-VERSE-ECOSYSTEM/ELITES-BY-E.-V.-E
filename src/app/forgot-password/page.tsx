@@ -1,11 +1,12 @@
 "use client";
-import {Button} from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 import Link from "next/link";
-import {AlertCircle, ArrowLeft, CheckCircle2, Mail} from "lucide-react";
-import {useState} from "react";
+import { AlertCircle, ArrowLeft, CheckCircle2, Mail } from "lucide-react";
+import { useState } from "react";
 
-import {Card, CardContent} from "@/components/ui/Card";
-import {Input} from "@/components/ui/Input";
+import { Badge } from "@/components/ui/Badge";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Input } from "@/components/ui/Input";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");

@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
-import {cn} from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { useState } from "react";
+import { Navbar } from "@/components/layout/Navbar";
 
-import {useState} from "react";
-import {Navbar} from "@/components/layout/Navbar";
-
-import {Footer} from "@/components/layout/Footer";
-import {Button} from "@/components/ui/Button";
-import {Card, CardContent} from "@/components/ui/Card";
-import {Badge} from "@/components/ui/Badge";
-
-import {Award, TrendingUp, Bookmark, Calendar, CheckCircle2, ChevronDown, Clock, Download, Globe, Lock, MessageCircle, Play, Share2, Star} from "lucide-react";
+import { Footer } from "@/components/layout/Footer";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
+import { ProgressBar } from "@/components/ui/ProgressBar";
+import { Award, TrendingUp, Bookmark, Calendar, CheckCircle2, ChevronDown, Clock, Download, Globe, Lock, MessageCircle, Play, Save, Share2, Star } from "lucide-react";
 
 export default function CourseDetail() {
   const [activeTab, setActiveTab] = useState<"overview" | "curriculum" | "reviews" | "faq">("overview");

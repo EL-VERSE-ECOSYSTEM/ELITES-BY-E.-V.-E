@@ -1,11 +1,7 @@
 "use client";
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/Button";
-import { Menu, X, Moon, Sun } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Menu, X, Bell, User, Search, Moon, Sun } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +11,7 @@ export function Navbar() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (!mounted) // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
@@ -120,3 +116,6 @@ export function Navbar() {
     </nav>
   );
 }
+
+// Add asChild support to Button if needed, or just use Link directly inside.
+// For simplicity, let's just use Link directly or modify Button to accept asChild.

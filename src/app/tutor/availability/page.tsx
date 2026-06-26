@@ -1,10 +1,10 @@
 "use client";
-import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
-import {Sidebar} from "@/components/layout/Sidebar";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import {Button} from "@/components/ui/Button";
-import {Card, CardContent} from "@/components/ui/Card";
-import {Globe, Save} from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Globe, Save, Settings } from "lucide-react";
 
 export default function AvailabilitySettings() {
   const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];

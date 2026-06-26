@@ -1,13 +1,13 @@
 "use client";
-import {cn} from "@/lib/utils";
-import {useState} from "react";
-import {Sidebar} from "@/components/layout/Sidebar";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Sidebar } from "@/components/layout/Sidebar";
 
-import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
-import {Card, CardContent} from "@/components/ui/Card";
-import {Button} from "@/components/ui/Button";
-
-import {BookOpen, CheckCircle2, DollarSign, Filter, MessageSquare, Trash2, Zap} from "lucide-react";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Award, Bell, BookOpen, CheckCircle2, ChevronRight, Clock, DollarSign, Filter, MessageSquare, Trash2, User, Zap } from "lucide-react";
 
 export default function NotificationsPage() {
   const [activeTab, setActiveTab] = useState<"all" | "unread" | "achievements">("all");

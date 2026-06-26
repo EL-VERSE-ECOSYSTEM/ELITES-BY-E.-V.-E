@@ -2,10 +2,10 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
-    await request.json();
+    const body = await request.json();
     // Logic to save resource metadata and link to Prisma
     return NextResponse.json({ success: true, message: "Resource uploaded" });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ success: false, error: "Upload failed" }, { status: 500 });
   }
 }
