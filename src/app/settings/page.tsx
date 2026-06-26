@@ -37,7 +37,7 @@ export default function SettingsPage() {
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as any)}
+                  onClick={() => setActiveTab(tab.id as "profile" | "account" | "notifications" | "privacy" | "payments" | "danger")}
                   className={cn(
                     "w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all font-bold text-sm",
                     activeTab === tab.id

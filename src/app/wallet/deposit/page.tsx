@@ -76,7 +76,7 @@ export default function DepositPage() {
                       ].map((item) => (
                         <button
                           key={item.id}
-                          onClick={() => setMethod(item.id as unknown)}
+                          onClick={() => setMethod(item.id as "card" | "momo" | "bank")}
                           className={cn(
                             "p-6 rounded-2xl border-2 text-center space-y-3 transition-all",
                             method === item.id ? "border-elite-primary-600 bg-elite-primary-50 dark:bg-elite-primary-900/50" : "border-elite-primary-100 hover:border-elite-primary-300 bg-white dark:bg-elite-primary-950"

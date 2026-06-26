@@ -46,7 +46,7 @@ export default function SessionSchedule() {
                     {["day", "week", "month"].map((v) => (
                       <button
                         key={v}
-                        onClick={() => setView(v as unknown)}
+                        onClick={() => setView(v as "day" | "week" | "month")}
                         className={cn(
                           "px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                           view === v ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"

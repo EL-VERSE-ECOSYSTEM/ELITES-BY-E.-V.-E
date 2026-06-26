@@ -3,22 +3,15 @@
 > next build
 
    ▲ Next.js 15.1.0
+   - Environments: .env.local
 
    Creating an optimized production build ...
  ✓ Compiled successfully
    Linting and checking validity of types ...
 
-Failed to compile.
-
 ./src/app/achievements/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-3:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
-3:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-6:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
+3:18  Warning: 'Award' is defined but never used.  @typescript-eslint/no-unused-vars
+3:36  Warning: 'Target' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/admin/analytics/courses/page.tsx
 3:10  Warning: 'Area' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -84,24 +77,6 @@ Failed to compile.
 3:133  Warning: 'Users' is defined but never used.  @typescript-eslint/no-unused-vars
 10:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
 
-./src/app/admin/page.tsx
-55:5  Error: Error: Calling setState synchronously within an effect can trigger cascading renders
-
-Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
-* Update external systems with the latest state from React.
-* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
-
-Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
-
-/app/src/app/admin/page.tsx:55:5
-  53 |
-  54 |   useEffect(() => {
-> 55 |     setMounted(true);
-     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
-  56 |   }, []);
-  57 |
-  58 |   if (!mounted) return null;  react-hooks/set-state-in-effect
-
 ./src/app/admin/support/page.tsx
 7:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
 7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -139,18 +114,7 @@ Calling setState synchronously within an effect body causes cascading renders th
 12:18  Warning: 'setStatus' is assigned a value but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/admin/users/page.tsx
-5:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-5:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
-5:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-7:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
-9:25  Warning: 'Filter' is defined but never used.  @typescript-eslint/no-unused-vars
-9:33  Warning: 'Mail' is defined but never used.  @typescript-eslint/no-unused-vars
-9:39  Warning: 'MoreHorizontal' is defined but never used.  @typescript-eslint/no-unused-vars
-9:55  Warning: 'MoreVertical' is defined but never used.  @typescript-eslint/no-unused-vars
-9:69  Warning: 'Search' is defined but never used.  @typescript-eslint/no-unused-vars
-9:77  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-9:85  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
-9:91  Warning: 'UserX' is defined but never used.  @typescript-eslint/no-unused-vars
+4:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/admin/withdrawals/page.tsx
 12:3  Warning: 'MoreVertical' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -189,10 +153,14 @@ Calling setState synchronously within an effect body causes cascading renders th
 ./src/app/code-lab/page.tsx
 4:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
 
+./src/app/contact/page.tsx
+3:38  Warning: 'Globe' is defined but never used.  @typescript-eslint/no-unused-vars
+
 ./src/app/courses/[courseId]/page.tsx
 4:10  Warning: 'Area' is defined but never used.  @typescript-eslint/no-unused-vars
 4:16  Warning: 'AreaChart' is defined but never used.  @typescript-eslint/no-unused-vars
 4:27  Warning: 'Bar' is defined but never used.  @typescript-eslint/no-unused-vars
+4:32  Warning: 'BarChart' is defined but never used.  @typescript-eslint/no-unused-vars
 4:42  Warning: 'CartesianGrid' is defined but never used.  @typescript-eslint/no-unused-vars
 4:57  Warning: 'Cell' is defined but never used.  @typescript-eslint/no-unused-vars
 4:63  Warning: 'Line' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -204,16 +172,7 @@ Calling setState synchronously within an effect body causes cascading renders th
 4:125  Warning: 'XAxis' is defined but never used.  @typescript-eslint/no-unused-vars
 4:132  Warning: 'YAxis' is defined but never used.  @typescript-eslint/no-unused-vars
 12:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
-13:115  Warning: 'Save' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/courses/page.tsx
-2:10  Warning: 'Footer' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-5:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-6:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-7:8  Warning: 'Link' is defined but never used.  @typescript-eslint/no-unused-vars
+13:127  Warning: 'Save' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/cv-builder/page.tsx
 7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -224,29 +183,12 @@ Calling setState synchronously within an effect body causes cascading renders th
 7:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/hackathons/page.tsx
-3:52  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+3:58  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 10:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 10:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/jobs/[jobId]/page.tsx
 10:31  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/jobs/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/layout.tsx
-1:15  Warning: 'Metadata' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/leaderboard/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/learn/[courseId]/quiz/[quizId]/page.tsx
 9:10  Warning: 'AlertCircle' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -257,19 +199,6 @@ Calling setState synchronously within an effect body causes cascading renders th
 
 ./src/app/moderator/page.tsx
 4:67  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/moderator/review/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/my-courses/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-6:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/notifications/page.tsx
 7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -289,14 +218,7 @@ Calling setState synchronously within an effect body causes cascading renders th
 3:72  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/paths/page.tsx
-9:80  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/pricing/page.tsx
-2:10  Warning: 'Footer' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-4:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
+9:94  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/profile/page.tsx
 9:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -343,31 +265,19 @@ Calling setState synchronously within an effect body causes cascading renders th
 6:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
 7:23  Warning: 'Settings' is defined but never used.  @typescript-eslint/no-unused-vars
 
-./src/app/tutor/community/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-
 ./src/app/tutor/courses/create/page.tsx
 11:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 12:51  Warning: 'Code' is defined but never used.  @typescript-eslint/no-unused-vars
 12:86  Warning: 'Image' is defined but never used.  @typescript-eslint/no-unused-vars
 12:93  Warning: 'ImageIcon' is defined but never used.  @typescript-eslint/no-unused-vars
-12:139  Warning: 'as' is defined but never used.  @typescript-eslint/no-unused-vars
 18:19  Warning: 'setModules' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-122:57  Warning: 'lIdx' is defined but never used.  @typescript-eslint/no-unused-vars
+122:57  Warning: '_lIdx' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/tutor/courses/page.tsx
 4:74  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 8:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 10:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 10:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/tutor/dashboard/page.tsx
-4:78  Warning: 'X' is defined but never used.  @typescript-eslint/no-unused-vars
-8:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-11:42  Warning: 'Line' is defined but never used.  @typescript-eslint/no-unused-vars
-11:48  Warning: 'LineChart' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/tutor/schedule/page.tsx
 4:54  Warning: 'Sun' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -417,16 +327,20 @@ Calling setState synchronously within an effect body causes cascading renders th
 4:19  Warning: 'Bell' is defined but never used.  @typescript-eslint/no-unused-vars
 4:25  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 4:31  Warning: 'Search' is defined but never used.  @typescript-eslint/no-unused-vars
-19:6  Warning: React Hook useEffect has a missing dependency: 'mounted'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
 
 ./src/components/ui/Button.tsx
 28:11  Warning: 'Comp' is assigned a value but never used.  @typescript-eslint/no-unused-vars
 
-./src/utils/korapay.ts
-8:7  Warning: 'KORAPAY_PUBLIC_KEY' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-27:20  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/utils/supabase/middleware.ts
-23:48  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
-
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+Failed to compile.
+
+./src/components/layout/MobileBottomNav.tsx:6:20
+Type error: Cannot find name 'usePathname'.
+
+[0m [90m 4 |[39m[0m
+[0m [90m 5 |[39m [36mexport[39m [36mfunction[39m [33mMobileBottomNav[39m() {[0m
+[0m[31m[1m>[22m[39m[90m 6 |[39m   [36mconst[39m pathname [33m=[39m usePathname()[33m;[39m[0m
+[0m [90m   |[39m                    [31m[1m^[22m[39m[0m
+[0m [90m 7 |[39m[0m
+[0m [90m 8 |[39m   [36mconst[39m tabs [33m=[39m [[0m
+[0m [90m 9 |[39m     { name[33m:[39m [32m"Home"[39m[33m,[39m href[33m:[39m [32m"/dashboard"[39m[33m,[39m icon[33m:[39m [33mHome[39m }[33m,[39m[0m

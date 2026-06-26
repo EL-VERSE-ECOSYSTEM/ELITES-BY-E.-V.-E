@@ -3,20 +3,15 @@
 > next build
 
    ▲ Next.js 15.1.0
+   - Environments: .env.local
 
    Creating an optimized production build ...
  ✓ Compiled successfully
    Linting and checking validity of types ...
 
 ./src/app/achievements/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-3:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
-3:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-6:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
+3:18  Warning: 'Award' is defined but never used.  @typescript-eslint/no-unused-vars
+3:36  Warning: 'Target' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/admin/analytics/courses/page.tsx
 3:10  Warning: 'Area' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -119,18 +114,7 @@
 12:18  Warning: 'setStatus' is assigned a value but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/admin/users/page.tsx
-5:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-5:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
-5:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-7:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
-9:25  Warning: 'Filter' is defined but never used.  @typescript-eslint/no-unused-vars
-9:33  Warning: 'Mail' is defined but never used.  @typescript-eslint/no-unused-vars
-9:39  Warning: 'MoreHorizontal' is defined but never used.  @typescript-eslint/no-unused-vars
-9:55  Warning: 'MoreVertical' is defined but never used.  @typescript-eslint/no-unused-vars
-9:69  Warning: 'Search' is defined but never used.  @typescript-eslint/no-unused-vars
-9:77  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-9:85  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
-9:91  Warning: 'UserX' is defined but never used.  @typescript-eslint/no-unused-vars
+4:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/admin/withdrawals/page.tsx
 12:3  Warning: 'MoreVertical' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -169,10 +153,14 @@
 ./src/app/code-lab/page.tsx
 4:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
 
+./src/app/contact/page.tsx
+3:38  Warning: 'Globe' is defined but never used.  @typescript-eslint/no-unused-vars
+
 ./src/app/courses/[courseId]/page.tsx
 4:10  Warning: 'Area' is defined but never used.  @typescript-eslint/no-unused-vars
 4:16  Warning: 'AreaChart' is defined but never used.  @typescript-eslint/no-unused-vars
 4:27  Warning: 'Bar' is defined but never used.  @typescript-eslint/no-unused-vars
+4:32  Warning: 'BarChart' is defined but never used.  @typescript-eslint/no-unused-vars
 4:42  Warning: 'CartesianGrid' is defined but never used.  @typescript-eslint/no-unused-vars
 4:57  Warning: 'Cell' is defined but never used.  @typescript-eslint/no-unused-vars
 4:63  Warning: 'Line' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -184,16 +172,7 @@
 4:125  Warning: 'XAxis' is defined but never used.  @typescript-eslint/no-unused-vars
 4:132  Warning: 'YAxis' is defined but never used.  @typescript-eslint/no-unused-vars
 12:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
-13:115  Warning: 'Save' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/courses/page.tsx
-2:10  Warning: 'Footer' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Input' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-5:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-6:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-7:8  Warning: 'Link' is defined but never used.  @typescript-eslint/no-unused-vars
+13:127  Warning: 'Save' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/cv-builder/page.tsx
 7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -204,29 +183,12 @@
 7:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/hackathons/page.tsx
-3:52  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
+3:58  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 10:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 10:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/jobs/[jobId]/page.tsx
 10:31  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/jobs/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/layout.tsx
-1:15  Warning: 'Metadata' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/leaderboard/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/learn/[courseId]/quiz/[quizId]/page.tsx
 9:10  Warning: 'AlertCircle' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -237,19 +199,6 @@
 
 ./src/app/moderator/page.tsx
 4:67  Warning: 'Shield' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/moderator/review/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/my-courses/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-6:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/notifications/page.tsx
 7:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -269,14 +218,7 @@
 3:72  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/paths/page.tsx
-9:80  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/pricing/page.tsx
-2:10  Warning: 'Footer' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Button' is defined but never used.  @typescript-eslint/no-unused-vars
-4:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-4:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-5:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
+9:94  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/profile/page.tsx
 9:10  Warning: 'ProgressBar' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -323,31 +265,19 @@
 6:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
 7:23  Warning: 'Settings' is defined but never used.  @typescript-eslint/no-unused-vars
 
-./src/app/tutor/community/page.tsx
-2:10  Warning: 'MobileBottomNav' is defined but never used.  @typescript-eslint/no-unused-vars
-3:10  Warning: 'Card' is defined but never used.  @typescript-eslint/no-unused-vars
-3:16  Warning: 'CardContent' is defined but never used.  @typescript-eslint/no-unused-vars
-
 ./src/app/tutor/courses/create/page.tsx
 11:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 12:51  Warning: 'Code' is defined but never used.  @typescript-eslint/no-unused-vars
 12:86  Warning: 'Image' is defined but never used.  @typescript-eslint/no-unused-vars
 12:93  Warning: 'ImageIcon' is defined but never used.  @typescript-eslint/no-unused-vars
-12:139  Warning: 'as' is defined but never used.  @typescript-eslint/no-unused-vars
 18:19  Warning: 'setModules' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-122:57  Warning: 'lIdx' is defined but never used.  @typescript-eslint/no-unused-vars
+122:57  Warning: '_lIdx' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/tutor/courses/page.tsx
 4:74  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
 8:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 10:29  Warning: 'CardHeader' is defined but never used.  @typescript-eslint/no-unused-vars
 10:41  Warning: 'CardTitle' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/app/tutor/dashboard/page.tsx
-4:78  Warning: 'X' is defined but never used.  @typescript-eslint/no-unused-vars
-8:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
-11:42  Warning: 'Line' is defined but never used.  @typescript-eslint/no-unused-vars
-11:48  Warning: 'LineChart' is defined but never used.  @typescript-eslint/no-unused-vars
 
 ./src/app/tutor/schedule/page.tsx
 4:54  Warning: 'Sun' is defined but never used.  @typescript-eslint/no-unused-vars
@@ -393,24 +323,132 @@
 13:52  Warning: 'CardDescription' is defined but never used.  @typescript-eslint/no-unused-vars
 16:10  Warning: 'Badge' is defined but never used.  @typescript-eslint/no-unused-vars
 
-./src/components/layout/Navbar.tsx
-4:19  Warning: 'Bell' is defined but never used.  @typescript-eslint/no-unused-vars
-4:25  Warning: 'User' is defined but never used.  @typescript-eslint/no-unused-vars
-4:31  Warning: 'Search' is defined but never used.  @typescript-eslint/no-unused-vars
-19:6  Warning: React Hook useEffect has a missing dependency: 'mounted'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
-
-./src/components/ui/Button.tsx
-28:11  Warning: 'Comp' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-
-./src/utils/korapay.ts
-8:7  Warning: 'KORAPAY_PUBLIC_KEY' is assigned a value but never used.  @typescript-eslint/no-unused-vars
-27:20  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
-
-./src/utils/supabase/middleware.ts
-23:48  Warning: 'options' is defined but never used.  @typescript-eslint/no-unused-vars
-
 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
-Failed to compile.
+   Collecting page data ...
+   Generating static pages (0/70) ...
+   Generating static pages (17/70)
+   Generating static pages (34/70)
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+   Generating static pages (52/70)
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ ✓ Generating static pages (70/70)
+   Finalizing page optimization ...
+   Collecting build traces ...
 
-src/app/achievements/page.tsx
-Type error: Page "src/app/achievements/page.tsx" does not match the required types of a Next.js Page.
+Route (app)                              Size     First Load JS
+┌ ○ /                                    3.44 kB         122 kB
+├ ○ /_not-found                          990 B           107 kB
+├ ○ /about                               2.76 kB         126 kB
+├ ○ /achievements                        2.94 kB         122 kB
+├ ○ /admin                               2.19 kB         121 kB
+├ ○ /admin/analytics/courses             4.65 kB         232 kB
+├ ○ /admin/analytics/revenue             4.46 kB         227 kB
+├ ○ /admin/analytics/users               9.39 kB         236 kB
+├ ○ /admin/audit-logs                    5.26 kB         124 kB
+├ ○ /admin/courses/approvals             4.26 kB         123 kB
+├ ○ /admin/courses/manage                5.65 kB         124 kB
+├ ○ /admin/deposits                      262 B           106 kB
+├ ○ /admin/disputes                      4.28 kB         119 kB
+├ ○ /admin/jobs                          5.74 kB         124 kB
+├ ○ /admin/marketing                     4.24 kB         123 kB
+├ ○ /admin/moderation                    6.08 kB         125 kB
+├ ○ /admin/support                       5.39 kB         124 kB
+├ ○ /admin/tutors                        5.69 kB         124 kB
+├ ○ /admin/users                         4.65 kB         123 kB
+├ ƒ /admin/users/[userId]                4.64 kB         123 kB
+├ ○ /admin/withdrawals                   3.96 kB         119 kB
+├ ƒ /api/disputes                        152 B           106 kB
+├ ƒ /api/promotions                      152 B           106 kB
+├ ƒ /api/resources                       152 B           106 kB
+├ ƒ /api/withdrawals                     152 B           106 kB
+├ ○ /blog                                3.06 kB         126 kB
+├ ƒ /blog/[slug]                         1.36 kB         124 kB
+├ ƒ /certificates/[certId]               6.08 kB         125 kB
+├ ○ /code-lab                            1.85 kB         125 kB
+├ ○ /contact                             2.56 kB         125 kB
+├ ○ /courses                             384 B           123 kB
+├ ƒ /courses/[courseId]                  4.91 kB         128 kB
+├ ○ /cv-builder                          6.83 kB         125 kB
+├ ○ /dashboard                           4.88 kB         124 kB
+├ ○ /forgot-password                     2.69 kB         121 kB
+├ ○ /hackathons                          5.78 kB         124 kB
+├ ○ /jobs                                3.5 kB          122 kB
+├ ƒ /jobs/[jobId]                        5.5 kB          124 kB
+├ ○ /leaderboard                         3.5 kB          122 kB
+├ ƒ /learn/[courseId]                    4.71 kB         123 kB
+├ ƒ /learn/[courseId]/quiz/[quizId]      4.01 kB         123 kB
+├ ○ /login                               3.18 kB         122 kB
+├ ○ /messages                            3.12 kB         118 kB
+├ ○ /moderator                           5.71 kB         124 kB
+├ ○ /moderator/review                    260 B           106 kB
+├ ○ /my-courses                          3.5 kB          122 kB
+├ ○ /notifications                       5.25 kB         124 kB
+├ ○ /paths                               3.03 kB         126 kB
+├ ƒ /paths/[pathId]                      3.46 kB         126 kB
+├ ○ /pricing                             3.5 kB          122 kB
+├ ○ /profile                             1.71 kB         124 kB
+├ ○ /projects                            5.67 kB         124 kB
+├ ƒ /projects/[projectId]                6.84 kB         126 kB
+├ ○ /referrals                           3.23 kB         122 kB
+├ ○ /register                            4.06 kB         123 kB
+├ ○ /reviews                             3.87 kB         123 kB
+├ ƒ /sessions/[sessionId]                3.61 kB         122 kB
+├ ○ /settings                            3.02 kB         126 kB
+├ ○ /study-groups                        5.45 kB         124 kB
+├ ○ /support                             3.43 kB         122 kB
+├ ○ /tutor/analytics                     4.46 kB         238 kB
+├ ○ /tutor/availability                  4.32 kB         123 kB
+├ ○ /tutor/community                     264 B           106 kB
+├ ○ /tutor/courses                       2.27 kB         125 kB
+├ ƒ /tutor/courses/[courseId]/edit       4.82 kB         123 kB
+├ ○ /tutor/courses/create                6.71 kB         125 kB
+├ ○ /tutor/dashboard                     3.51 kB         226 kB
+├ ○ /tutor/earnings                      262 B           106 kB
+├ ○ /tutor/resources                     3.7 kB          119 kB
+├ ○ /tutor/reviews                       3.89 kB         123 kB
+├ ○ /tutor/schedule                      5.47 kB         124 kB
+├ ○ /tutor/settings                      263 B           106 kB
+├ ○ /tutor/students                      4.12 kB         119 kB
+├ ○ /tutors                              2.68 kB         125 kB
+├ ƒ /tutors/[tutorId]                    2.83 kB         126 kB
+├ ƒ /tutors/[tutorId]/book               6.25 kB         125 kB
+├ ○ /wallet                              3.99 kB         123 kB
+├ ○ /wallet/deposit                      2.69 kB         125 kB
+├ ○ /wallet/transfer                     5.6 kB          124 kB
+└ ○ /wallet/withdraw                     3.83 kB         123 kB
++ First Load JS shared by all            106 kB
+  ├ chunks/1517-a60aef04d1c4e0b8.js      50.7 kB
+  ├ chunks/4bd1b696-eb91caafb9391449.js  53 kB
+  └ other shared chunks (total)          1.93 kB
+
+
+ƒ Middleware                             88.2 kB
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
