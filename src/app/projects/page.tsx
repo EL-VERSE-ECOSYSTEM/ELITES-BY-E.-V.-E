@@ -1,15 +1,15 @@
 "use client";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { Award, Briefcase, CheckCircle2, ChevronRight, Filter, Layout, MessageSquare, Plus } from "lucide-react";
-import { useState } from "react";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Sidebar } from "@/components/layout/Sidebar";
+import {cn} from "@/lib/utils";
+import {Award, Briefcase, CheckCircle2, ChevronRight, Filter, Layout, MessageSquare, Plus} from "lucide-react";
+import {useState} from "react";
+import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
+import {Sidebar} from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { ProgressBar } from "@/components/ui/ProgressBar";
+import {Badge} from "@/components/ui/Badge";
+import {Button} from "@/components/ui/Button";
+import {Card, CardContent} from "@/components/ui/Card";
+import {ProgressBar} from "@/components/ui/ProgressBar";
 
 export default function ProjectsPage() {
   const [activeTab, setActiveTab] = useState<"active" | "completed">("active");

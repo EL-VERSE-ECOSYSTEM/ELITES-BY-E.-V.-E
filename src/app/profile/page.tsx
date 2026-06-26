@@ -1,12 +1,12 @@
 "use client";
-import { MapPin, Edit3, Calendar } from "lucide-react";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Sidebar } from "@/components/layout/Sidebar";
+import {MapPin, Edit3, Calendar} from "lucide-react";
+import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
+import {Sidebar} from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { ProgressBar } from "@/components/ui/ProgressBar";
+import {Badge} from "@/components/ui/Badge";
+import {Button} from "@/components/ui/Button";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/Card";
+
 import Link from "next/link";
 
 export default function ProfilePage() {

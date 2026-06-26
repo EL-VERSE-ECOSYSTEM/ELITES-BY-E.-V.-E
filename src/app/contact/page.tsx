@@ -1,8 +1,7 @@
 "use client";
-import { Send } from "lucide-react";
-import { Globe, Mail, MapPin } from "lucide-react";
-import { Navbar } from "@/components/layout/Navbar";
 
+import { Send, Phone, MessageSquare, Mail, MapPin } from "lucide-react";
+import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
@@ -21,7 +20,6 @@ export default function ContactPage() {
            </div>
 
            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-              {/* Contact Info */}
               <div className="space-y-8">
                  <div className="space-y-6">
                     <h2 className="text-2xl font-bold font-space-grotesk">Contact Information</h2>
@@ -33,7 +31,7 @@ export default function ContactPage() {
                       { icon: Mail, label: "Email", value: "support@elites.africa", href: "mailto:support@elites.africa" },
                       { icon: Phone, label: "Phone", value: "+234 800 ELITE AF", href: "tel:+234800123456" },
                       { icon: MapPin, label: "Office", value: "Lagos, Nigeria | Nairobi, Kenya", href: "#" },
-                      { icon: MessageCircle, label: "Live Chat", value: "Available 9 AM - 6 PM GMT", href: "#" },
+                      { icon: MessageSquare, label: "Live Chat", value: "Available 9 AM - 6 PM GMT", href: "#" },
                     ].map((item, i) => (
                       <a key={i} href={item.href} className="flex gap-4 p-4 rounded-2xl bg-white dark:bg-elite-primary-900 border border-elite-primary-100 dark:border-elite-primary-800 hover:border-elite-primary-400 transition-all group">
                          <div className="w-12 h-12 bg-elite-primary-50 dark:bg-elite-primary-950 rounded-xl flex items-center justify-center text-elite-primary-600 group-hover:bg-elite-primary-600 group-hover:text-white transition-all">
@@ -46,20 +44,8 @@ export default function ContactPage() {
                       </a>
                     ))}
                  </div>
-
-                 <div className="pt-8 space-y-4">
-                    <h3 className="font-bold">Follow Our Journey</h3>
-                    <div className="flex gap-3">
-                       {[Linkedin, Globe].map((Icon, i) => (
-                         <button key={i} className="w-10 h-10 rounded-full bg-elite-primary-950 text-white flex items-center justify-center hover:bg-elite-accent-500 transition-colors">
-                            <Icon size={18} />
-                         </button>
-                       ))}
-                    </div>
-                 </div>
               </div>
 
-              {/* Contact Form */}
               <div className="lg:col-span-2">
                  <Card className="border-none shadow-2xl overflow-hidden">
                     <CardContent className="p-8 md:p-12 space-y-8">

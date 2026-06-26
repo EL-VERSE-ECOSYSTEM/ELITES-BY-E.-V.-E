@@ -1,16 +1,16 @@
 "use client";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { useState } from "react";
-import { Navbar } from "@/components/layout/Navbar";
+import {cn} from "@/lib/utils";
 
-import { Footer } from "@/components/layout/Footer";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { ProgressBar } from "@/components/ui/ProgressBar";
-import { Award, Bookmark, Calendar, CheckCircle2, ChevronDown, Clock, Download, Globe, Lock, MessageCircle, Play, Save, Share2, Star } from "lucide-react";
+import {useState} from "react";
+import {Navbar} from "@/components/layout/Navbar";
+
+import {Footer} from "@/components/layout/Footer";
+import {Button} from "@/components/ui/Button";
+import {Card, CardContent} from "@/components/ui/Card";
+import {Badge} from "@/components/ui/Badge";
+
+import {Award, TrendingUp, Bookmark, Calendar, CheckCircle2, ChevronDown, Clock, Download, Globe, Lock, MessageCircle, Play, Share2, Star} from "lucide-react";
 
 export default function CourseDetail() {
   const [activeTab, setActiveTab] = useState<"overview" | "curriculum" | "reviews" | "faq">("overview");
@@ -210,7 +210,7 @@ export default function CourseDetail() {
                         <div className="flex items-center gap-3"><Play size={16} /> 15.5 hours on-demand video</div>
                         <div className="flex items-center gap-3"><Download size={16} /> 24 downloadable resources</div>
                         <div className="flex items-center gap-3"><Award size={16} /> Certificate of completion</div>
-                        <div className="flex items-center gap-3"><BarChart size={16} /> Full lifetime access</div>
+                        <div className="flex items-center gap-3"><TrendingUp size={16} /> Full lifetime access</div>
                         <div className="flex items-center gap-3"><Calendar size={16} /> Regular updates</div>
                       </div>
                     </div>

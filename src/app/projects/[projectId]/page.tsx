@@ -1,16 +1,16 @@
 "use client";
-import { Input } from "@/components/ui/Input";
+import {Input} from "@/components/ui/Input";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import { useState } from "react";
-import { Sidebar } from "@/components/layout/Sidebar";
+import {cn} from "@/lib/utils";
+import {useState} from "react";
+import {Sidebar} from "@/components/layout/Sidebar";
 
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
-import { ProgressBar } from "@/components/ui/ProgressBar";
-import { AlertCircle, CheckCircle2, ChevronLeft, ExternalLink, FileText, Globe, MessageSquare, Save, Send, Trash2, Upload, User } from "lucide-react";
+import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/Card";
+import {Button} from "@/components/ui/Button";
+import {Badge} from "@/components/ui/Badge";
+import {ProgressBar} from "@/components/ui/ProgressBar";
+import {AlertCircle, CheckCircle2, ChevronLeft, FileText, Globe, MessageSquare, Save, Send, Upload, User} from "lucide-react";
 
 export default function ProjectSubmission() {
   const [activeTab, setActiveTab] = useState<"brief" | "submission" | "feedback">("brief");
@@ -51,7 +51,7 @@ export default function ProjectSubmission() {
               ].map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as unknown)}
+                  onClick={() => setActiveTab(tab.id as "brief" | "submission" | "feedback")}
                   className={cn(
                     "pb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-wider relative transition-all",
                     activeTab === tab.id ? "text-elite-primary-600 dark:text-white" : "text-elite-primary-400 hover:text-elite-primary-600"

@@ -1,13 +1,13 @@
 "use client";
-import { cn } from "@/lib/utils";
-import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Sidebar } from "@/components/layout/Sidebar";
+import {cn} from "@/lib/utils";
+import {Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
+import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
+import {Sidebar} from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Award, Clock, Download, Filter, Flame, Star, TrendingDown, TrendingUp, User, Users, X } from "lucide-react";
+import {Badge} from "@/components/ui/Badge";
+import {Button} from "@/components/ui/Button";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/Card";
+import {Award, Clock, Download, Filter, Flame, Star, TrendingDown, TrendingUp, Users} from "lucide-react";
 
 export default function CourseAnalytics() {
   const topCourses = [

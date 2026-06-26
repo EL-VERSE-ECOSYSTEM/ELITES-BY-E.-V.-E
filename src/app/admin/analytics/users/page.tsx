@@ -1,13 +1,12 @@
 "use client";
-import { CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { cn } from "@/lib/utils";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Sidebar } from "@/components/layout/Sidebar";
+import {CartesianGrid, Cell, Line, LineChart, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from "recharts";
+import {cn} from "@/lib/utils";
+import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
+import {Sidebar} from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Download, Filter, Target, TrendingDown, TrendingUp, User, UserMinus, UserPlus, Users, X } from "lucide-react";
+import {Button} from "@/components/ui/Button";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/Card";
+import {Download, Filter, Target, TrendingDown, TrendingUp, UserMinus, UserPlus, Users} from "lucide-react";
 
 export default function UserAnalytics() {
   const growthData = [

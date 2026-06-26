@@ -1,13 +1,13 @@
 "use client";
-import { cn } from "@/lib/utils";
-import { AlertCircle, AlertTriangle, CheckCircle, Eye, Filter, Flag, MessageSquare, MoreVertical, Shield, ShieldAlert, User, UserX, Users } from "lucide-react";
-import { useState } from "react";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Sidebar } from "@/components/layout/Sidebar";
+import {cn} from "@/lib/utils";
+import {AlertCircle, AlertTriangle, CheckCircle, Eye, Filter, Flag, MessageSquare, MoreVertical, ShieldAlert, UserX} from "lucide-react";
+import {useState} from "react";
+import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
+import {Sidebar} from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import {Badge} from "@/components/ui/Badge";
+import {Button} from "@/components/ui/Button";
+import {Card, CardHeader, CardTitle} from "@/components/ui/Card";
 
 export default function ModerationPage() {
   const [activeTab, setActiveTab] = useState<"reported" | "content" | "disputes">("reported");
@@ -36,7 +36,7 @@ export default function ModerationPage() {
               ].map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as unknown)}
+                  onClick={() => setActiveTab(tab.id as "reported" | "content" | "disputes")}
                   className={cn(
                     "px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-widest transition-all flex items-center gap-2",
                     activeTab === tab.id ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"

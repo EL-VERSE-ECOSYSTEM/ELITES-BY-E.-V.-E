@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
 import {
   ArrowLeft,
   Banknote,
@@ -10,12 +10,12 @@ import {
   ChevronRight,
   CheckCircle2
 } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Badge } from "@/components/ui/Badge";
+import {Card, CardContent} from "@/components/ui/Card";
+import {Button} from "@/components/ui/Button";
+import {Input} from "@/components/ui/Input";
+
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import {cn} from "@/lib/utils";
 
 type Method = "BANK_NGN" | "BANK_USD" | "BANK_GBP" | "BANK_EUR" | "CRYPTO_USDT_TRC20" | "CRYPTO_BEP20" | "CRYPTO_TRON";
 

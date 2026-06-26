@@ -1,4 +1,6 @@
+"use client";
 import * as React from "react";
+import { cn } from "@/lib/utils";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -25,25 +27,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       icon: "h-10 w-10 p-2",
     };
 
-    const Comp = asChild ? React.Fragment : "button";
-
-    // Note: React.Fragment doesn't take className.
-    // Usually asChild is implemented with a Slot component from Radix.
-    // For this task, we will handle children if asChild is true.
-
-    if (asChild) {
-        const child = React.Children.only(props.children) as React.ReactElement<{className?: string, children?: React.ReactNode}>;
-        return React.cloneElement(child, {
-            className: cn(
-                "inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elite-primary-500 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
-                variants[variant],
-                sizes[size],
-                className,
-                (child.props as Record<string, unknown>).className
-            ),
-            ...props,
-            children: (child.props as Record<string, unknown>).children
-        });
+    if (asChild && React.isValidElement(props.children)) {
+      return React.cloneElement(props.children as React.ReactElement<{ className?: string }>, {
+        className: cn(
+          "inline-flex items-center justify-center rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-elite-primary-500 disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+          variants[variant],
+          sizes[size],
+          className,
+          (props.children.props as { className?: string }).className
+        ),
+      });
     }
 
     return (

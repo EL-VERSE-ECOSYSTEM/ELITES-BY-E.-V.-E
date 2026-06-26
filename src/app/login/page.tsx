@@ -1,22 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import {
-  Eye,
-  EyeOff,
-  Lock,
-  Mail,
-  ArrowRight,
-  GraduationCap,
-  Briefcase,
-  ShieldCheck
-} from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-import { Card, CardContent } from "@/components/ui/Card";
-import { cn } from "@/lib/utils";
+import {useRouter} from "next/navigation";
+import {Eye, EyeOff, ArrowRight, GraduationCap, Briefcase, ShieldCheck} from "lucide-react";
+import {Button} from "@/components/ui/Button";
+import {Input} from "@/components/ui/Input";
+import {Card, CardContent} from "@/components/ui/Card";
+import {cn} from "@/lib/utils";
 
 type Role = "STUDENT" | "TUTOR" | "ADMIN";
 
@@ -108,7 +99,7 @@ export default function LoginPage() {
                 <input type="checkbox" className="w-4 h-4 rounded border-elite-primary-200 text-elite-primary-600 focus:ring-elite-primary-500" />
                 <span className="text-xs text-elite-primary-600 dark:text-elite-primary-400">Remember me</span>
               </label>
-              <Link href="/forgot-password" size="xs" className="text-xs font-bold text-elite-primary-600 hover:underline">Forgot Password?</Link>
+              <Link href="/forgot-password"  className="text-xs font-bold text-elite-primary-600 hover:underline">Forgot Password?</Link>
             </div>
 
             <Button variant="accent" size="lg" className="w-full font-bold" disabled={loading}>

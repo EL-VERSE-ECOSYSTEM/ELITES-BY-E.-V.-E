@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-import {  ChevronLeft, ChevronRight, Plus, Settings, Sun, User, Users , Video } from "lucide-react";
-import { useState } from "react";
-import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Sidebar } from "@/components/layout/Sidebar";
+import {cn} from "@/lib/utils";
+import {ChevronLeft, ChevronRight, Plus, Settings, Users, Video} from "lucide-react";
+import {useState} from "react";
+import {MobileBottomNav} from "@/components/layout/MobileBottomNav";
+import {Sidebar} from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import {Badge} from "@/components/ui/Badge";
+import {Button} from "@/components/ui/Button";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/Card";
 
 export default function SessionSchedule() {
   const [view, setView] = useState<"week" | "month" | "day">("week");
@@ -46,7 +46,7 @@ export default function SessionSchedule() {
                     {["day", "week", "month"].map((v) => (
                       <button
                         key={v}
-                        onClick={() => setView(v as unknown)}
+                        onClick={() => setView(v as "week" | "month" | "day")}
                         className={cn(
                           "px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-widest transition-all",
                           view === v ? "bg-elite-primary-950 text-white shadow-lg" : "text-elite-primary-400 hover:text-elite-primary-900"

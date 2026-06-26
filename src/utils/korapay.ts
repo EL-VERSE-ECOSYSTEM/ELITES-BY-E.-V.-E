@@ -1,11 +1,3 @@
-/**
- * Korapay Payment Integration Utility
- *
- * This utility handles interaction with the Korapay API and
- * provides methods for generating payment links.
- */
-
-const KORAPAY_PUBLIC_KEY = process.env.NEXT_PUBLIC_KORAPAY_PUBLIC_KEY;
 const KORAPAY_SECRET_KEY = process.env.KORAPAY_SECRET_KEY;
 const KORAPAY_CHECKOUT_URL = "https://checkout.korapay.com/pay/jz9dTrCxCRGCyRv";
 
@@ -19,14 +11,7 @@ interface KorapayCheckoutOptions {
 }
 
 export const korapay = {
-  /**
-   * For simplicity in this demo, we use the provided static checkout link.
-   * In a production app, we would use the Korapay API to initialize a transaction
-   * and get a dynamic checkout URL.
-   */
-  getCheckoutUrl: (options: KorapayCheckoutOptions) => {
-    // In a real scenario, we would POST to Korapay API and return the dynamic link
-    // Here we return the static link provided in the requirements
+  getCheckoutUrl: () => {
     return KORAPAY_CHECKOUT_URL;
   },
 
@@ -40,8 +25,7 @@ export const korapay = {
         },
       });
       return await response.json();
-    } catch (error) {
-      console.error("Korapay verification error:", error);
+    } catch {
       return null;
     }
   }
