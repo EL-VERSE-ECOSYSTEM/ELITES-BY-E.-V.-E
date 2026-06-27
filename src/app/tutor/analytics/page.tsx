@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { BarChart3, Clock, Globe, MapPin, MousePointer2, Share2, TrendingDown, TrendingUp } from "lucide-react";
+import {BarChart3, Clock, Globe, MapPin, MousePointer2, Share2, TrendingDown, TrendingUp} from "lucide-react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
@@ -16,7 +16,7 @@ export default function TutorAnalytics() {
     { name: 'Thu', active: 610, total: 700 },
     { name: 'Fri', active: 590, total: 680 },
     { name: 'Sat', active: 750, total: 800 },
-    { name: 'Sun', active: 680, total: 750 },
+    {name: '', active: 680, total: 750},
   ];
 
   const countryData = [

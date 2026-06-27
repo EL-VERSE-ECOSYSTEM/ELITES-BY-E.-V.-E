@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { Award, Briefcase, Building2, CheckCircle2, Clock, TrendingUp, Users } from "lucide-react";
+import {Award, Briefcase, Building2, CheckCircle2, Clock, TrendingUp, Users} from "lucide-react";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/Button";
 import { ProgressBar } from "@/components/ui/ProgressBar";
 import { Card, CardContent } from "@/components/ui/Card";
-import { ArrowRight, Award, CheckCircle2, ChevronLeft, ChevronRight, Coins, Flag, RotateCcw, Timer, X, Zap } from "lucide-react";
+import {ArrowRight, Award, CheckCircle2, ChevronLeft, ChevronRight, Coins, Flag, RotateCcw, Timer, X, Zap} from "lucide-react";
 
 export default function QuizPage() {
   const [currentQuestion, setCurrentQuestion] = useState(0);

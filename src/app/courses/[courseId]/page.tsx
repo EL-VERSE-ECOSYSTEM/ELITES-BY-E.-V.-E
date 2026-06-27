@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+
 import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 
@@ -8,7 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { Award, TrendingUp, Bookmark, Calendar, CheckCircle2, ChevronDown, Clock, Download, Globe, Lock, MessageCircle, Play, Share2, Star } from "lucide-react";
+import {Award, TrendingUp, Bookmark, Calendar, CheckCircle2, ChevronDown, Clock, Download, Globe, Lock, MessageCircle, Play, Share2, Star} from "lucide-react";
 
 export default function CourseDetail() {
   const [activeTab, setActiveTab] = useState<"overview" | "curriculum" | "reviews" | "faq">("overview");
@@ -64,7 +65,7 @@ export default function CourseDetail() {
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-            {/* Main Content Area */}
+            {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
 
               {/* Trailer Video Player Placeholder */}

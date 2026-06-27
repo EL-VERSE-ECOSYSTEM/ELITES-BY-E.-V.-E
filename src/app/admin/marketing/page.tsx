@@ -5,10 +5,15 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { BarChart3, Megaphone, Send } from "lucide-react";
+import { BarChart3, Megaphone, Send, Plus } from "lucide-react";
 
 export default function AdminMarketing() {
   const [activeTab, setActiveTab] = useState<"coupons" | "campaigns" | "notifications">("coupons");
+
+  const coupons = [
+    { id: 1, code: "ELITE2024", discount: "20% OFF", usage: "450/1000", expires: "Mar 15, 2024", status: "Active" },
+    { id: 2, code: "AFRICATECH", discount: "$10.00", usage: "124/500", expires: "Dec 31, 2024", status: "Active" }
+  ];
 
   return (
     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">
@@ -38,10 +43,7 @@ export default function AdminMarketing() {
 
            {activeTab === 'coupons' && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                 {[
-                   { id: 1, code: "ELITE2024", discount: "20% OFF", usage: "450/1000", expires: "Mar 15, 2024", status: "Active" },
-                   { id: 2, code: "AFRICATECH", discount: "$10.00", usage: "124/500", expires: "Dec 31, 2024", status: "Active" }
-                 ].map((c) => (
+                 {coupons.map((c) => (
                    <Card key={c.id} className="border-none shadow-xl group">
                       <CardContent className="p-8 space-y-6">
                          <div className="flex justify-between items-start">
@@ -126,23 +128,5 @@ export default function AdminMarketing() {
         <MobileBottomNav />
       </div>
     </div>
-  );
-}
-
-function Plus({ size }: { size: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <line x1="12" y1="5" x2="12" y2="19"></line>
-      <line x1="5" y1="12" x2="19" y2="12"></line>
-    </svg>
   );
 }

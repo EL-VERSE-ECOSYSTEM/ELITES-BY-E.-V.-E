@@ -3,17 +3,16 @@ import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Globe, Save } from "lucide-react";
+import {Card, CardContent} from "@/components/ui/Card";
+import {Globe, Save} from "lucide-react";
 
-export default function AvailabilitySettings() {
-  const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+export default function AvailabilitySettings() {const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   return (
     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">
       <Sidebar />
       <div className="flex-1 flex flex-col min-w-0 p-8">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold font-space-grotesk">Availability Settings</h1>
+          <h1 className="text-3xl font-bold font-space-grotesk">Availability </h1>
           <Button variant="accent"><Save size={18} className="mr-2" /> Save Schedule</Button>
         </div>
         <Card className="max-w-4xl">

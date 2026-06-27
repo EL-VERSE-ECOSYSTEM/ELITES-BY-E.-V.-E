@@ -10,7 +10,7 @@ import {
   ChevronRight,
   CheckCircle2
 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/Card";
+import {Card, CardContent} from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import Link from "next/link";

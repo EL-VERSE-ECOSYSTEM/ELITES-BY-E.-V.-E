@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent } from "@/components/ui/Card";
+import {Card, CardContent} from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Award, Briefcase, CheckCircle2, Code, Download, Eye, FileText, GraduationCap, GripVertical, Plus, Save, Share2, Trash2, User } from "lucide-react";

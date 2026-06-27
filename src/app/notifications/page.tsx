@@ -4,9 +4,9 @@ import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent } from "@/components/ui/Card";
+import {Card, CardContent} from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { BookOpen, CheckCircle2, DollarSign, Filter, MessageSquare, Trash2, Zap } from "lucide-react";
+import {BookOpen, CheckCircle2, DollarSign, Filter, MessageSquare, Trash2, Zap} from "lucide-react";
 
 export default function NotificationsPage() {
   const [activeTab, setActiveTab] = useState<"all" | "unread" | "achievements">("all");

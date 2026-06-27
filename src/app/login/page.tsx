@@ -3,16 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import {
-  Eye,
+import {Eye,
   EyeOff,
-
-
   ArrowRight,
   GraduationCap,
   Briefcase,
-  ShieldCheck
-} from "lucide-react";
+  ShieldCheck} from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Card, CardContent } from "@/components/ui/Card";

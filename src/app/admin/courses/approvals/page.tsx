@@ -4,7 +4,7 @@ import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
-import { CheckCircle2, Eye, XCircle } from "lucide-react";
+import {CheckCircle2, Eye, XCircle} from "lucide-react";
 
 export default function CourseApprovals() {
   return (

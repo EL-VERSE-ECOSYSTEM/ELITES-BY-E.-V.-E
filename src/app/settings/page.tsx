@@ -4,10 +4,10 @@ import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent } from "@/components/ui/Card";
+import {Card, CardContent} from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { Bell, Camera, ChevronRight, CreditCard, Globe, Lock, Mail, Monitor, Shield, Smartphone, Trash2, User } from "lucide-react";
+import {Bell, Camera, ChevronRight, CreditCard, Globe, Lock, Mail, Monitor, Shield, Smartphone, Trash2, User} from "lucide-react";
 
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<"profile" | "account" | "notifications" | "privacy" | "payments" | "danger">("profile");
@@ -31,7 +31,7 @@ export default function SettingsPage() {
         </header>
 
         <main className="p-6 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl">
-           {/* Settings Navigation */}
+           {/* Navigation */}
            <div className="lg:col-span-3 space-y-1">
               {tabs.map((tab) => (
                 <button
