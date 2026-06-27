@@ -16,15 +16,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       outline: "border-2 border-elite-primary-600 text-elite-primary-600 hover:bg-elite-primary-50",
       ghost: "text-elite-primary-600 hover:bg-elite-primary-50",
       danger: "bg-elite-error text-white hover:bg-red-600",
-      accent: "bg-elite-accent-500 text-white hover:bg-elite-accent-600 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all",
-    };
+      accent: "bg-elite-accent-500 text-white hover:bg-elite-accent-600 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all" };
 
     const sizes = {
       sm: "h-8 px-3 text-xs",
       md: "h-10 px-4 py-2",
       lg: "h-12 px-8 text-lg font-bold",
-      icon: "h-10 w-10 p-2",
-    };
+      icon: "h-10 w-10 p-2" };
 
     if (asChild && props.children) {
         const child = React.Children.only(props.children) as React.ReactElement<{className?: string, children?: React.ReactNode}>;
@@ -35,8 +33,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 sizes[size],
                 className,
                 child.props.className
-            ),
-        });
+            ) });
     }
 
     return (

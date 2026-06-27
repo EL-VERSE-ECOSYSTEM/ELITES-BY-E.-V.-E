@@ -1,11 +1,10 @@
 import { NextResponse } from "next/server";
 
-export async function POST() {
+export async function POST(request: Request) {
   try {
-    // Logic to create a promotion record and send notifications
+    await request.json();
     return NextResponse.json({ success: true, message: "Learner promoted successfully" });
-  } // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  catch (error) {
-    return NextResponse.json({ success: false, error: "Failed to promote learner" }, { status: 500 });
+  } catch {
+    return NextResponse.json({ success: false, error: "Failed to promote learner" }, { status: 400 });
   }
 }

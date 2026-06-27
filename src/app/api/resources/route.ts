@@ -1,16 +1,10 @@
 import { NextResponse } from "next/server";
 
-export async function POST() {
+export async function POST(request: Request) {
   try {
-    // Logic to save resource metadata and link to Prisma
+    await request.json();
     return NextResponse.json({ success: true, message: "Resource uploaded" });
-  } // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  catch (error) {
+  } catch {
     return NextResponse.json({ success: false, error: "Upload failed" }, { status: 500 });
   }
-}
-
-export async function GET() {
-  // Logic to fetch resources filtered by stack/level
-  return NextResponse.json({ resources: [] });
 }

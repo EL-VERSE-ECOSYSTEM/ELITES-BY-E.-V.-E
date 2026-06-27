@@ -1,7 +1,7 @@
 "use client";
 import { Sidebar } from "@/components/layout/Sidebar";
 
-import { Card, CardContent } from "@/components/ui/Card";
+import {Card, CardContent} from "@/components/ui/Card";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Star } from "lucide-react";
 

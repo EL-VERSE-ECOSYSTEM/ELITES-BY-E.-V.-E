@@ -1,13 +1,13 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { ArrowRight, Clock, Globe, Target, Trophy, Code, Users, Zap, Sparkles } from "lucide-react";
+import {ArrowRight, Clock, Globe, Target, Trophy, Code, Users, Zap, Sparkles} from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card, CardContent } from "@/components/ui/Card";
+import {Card, CardContent} from "@/components/ui/Card";
 
 export default function HackathonsPage() {
   const [activeTab, setActiveTab] = useState<"upcoming" | "active" | "past">("active");

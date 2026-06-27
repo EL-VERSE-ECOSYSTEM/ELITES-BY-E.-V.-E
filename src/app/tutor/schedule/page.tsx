@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import {  ChevronLeft, ChevronRight, Plus, Settings, Users , Video } from "lucide-react";
+import {ChevronLeft, ChevronRight, Plus, Settings, Users , Video} from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
@@ -10,11 +10,10 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
-export default function SessionSchedule() {
-  const [view, setView] = useState<"week" | "month" | "day">("week");
+export default function SessionSchedule() {const [view, setView] = useState<"week" | "month" | "day">("week");
 
-  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  const hours = Array.from({ length: 12 }).map((_, i) => `${i + 8}:00`);
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", ""];
+  const hours = Array.from({ length: 12}).map((_, i) => `${i + 8}:00`);
 
   const sessions = [
     { day: "Mon", time: "10:00", name: "John Doe", topic: "Next.js Help", type: "mentorship" },

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { AlertTriangle, CheckCircle2, Clock, Flag, MessageSquare, ShieldCheck, Activity } from "lucide-react";
+import {AlertTriangle, CheckCircle2, Clock, Flag, MessageSquare, ShieldCheck, Activity} from "lucide-react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
