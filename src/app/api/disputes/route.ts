@@ -1,19 +1,21 @@
 import { NextResponse } from "next/server";
 
-export async function POST(request: Request) {
+export async function POST(_request: Request) {
   try {
-    await request.json();
+    const body = await _request.json();
+    // Logic to save dispute to Prisma
     return NextResponse.json({ success: true, message: "Dispute raised successfully" });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ success: false, error: "Failed to raise dispute" }, { status: 400 });
   }
 }
 
-export async function PATCH(request: Request) {
+export async function PATCH(_request: Request) {
   try {
-    await request.json();
+    const body = await _request.json();
+    // Logic for admin to resolve dispute (update status, resolution)
     return NextResponse.json({ success: true, message: "Dispute resolved" });
-  } catch {
+  } catch (error) {
     return NextResponse.json({ success: false, error: "Failed to resolve dispute" }, { status: 500 });
   }
 }

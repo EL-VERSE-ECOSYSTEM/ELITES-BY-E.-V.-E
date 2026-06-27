@@ -1,0 +1,24 @@
+
+> temp-app@0.1.0 build
+> next build
+
+▲ Next.js 16.2.9 (Turbopack)
+- Environments: .env.local
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+✓ Compiled successfully in 14.8s
+  Running TypeScript ...
+Failed to type check.
+
+./src/app/admin/marketing/page.tsx:11:129
+Type error: Argument of type '""' is not assignable to parameter of type '"coupons" | "campaigns" | "notifications" | (() => "coupons" | "campaigns" | "notifications")'.
+
+  [90m 9 |[0m ...
+  [90m10 |[0m ...
+[31m[1m>[0m [90m11 |[0m ...[32m"coupons"[0m | [32m"campaigns"[0m | [32m"notifications"[0m>([32m""[0m);
+  [90m   |[0m                                               [31m[1m^[0m
+  [90m12 |[0m ...
+  [90m13 |[0m ...
+  [90m14 |[0m ...[32m 15, 2024"[0m, status: [32m"Active"[0m},
+Next.js build worker exited with code: 1 and signal: null

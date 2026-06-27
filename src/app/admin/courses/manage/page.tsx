@@ -1,13 +1,13 @@
 "use client";
 import { cn } from "@/lib/utils";
-import {AlertCircle, BookOpen, Eye, MoreVertical, Search, Star, TrendingUp, XCircle} from "lucide-react";
+import { AlertCircle, BookOpen, Eye, MoreVertical, Search, Star, TrendingUp, X, XCircle } from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import {Card} from "@/components/ui/Card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
 export default function CourseManagement() {
   const [activeTab, setActiveTab] = useState<"all" | "pending" | "published">("all");

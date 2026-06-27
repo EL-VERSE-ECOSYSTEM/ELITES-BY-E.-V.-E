@@ -1,13 +1,13 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { Clock, Eye, Filter, MoreVertical, ShieldCheck, Star, Users, XCircle } from "lucide-react";
+import {Clock, Eye, Filter, MoreVertical, ShieldCheck, Star, Users, XCircle} from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
+import {Card} from "@/components/ui/Card";
 
 export default function TutorManagement() {
   const [activeTab, setActiveTab] = useState<"all" | "pending" | "verified">("all");
@@ -19,8 +19,7 @@ export default function TutorManagement() {
     status: i === 0 ? "Pending" : "Verified",
     students: [1200, 850, 420, 2400][i % 4],
     rating: 4.9,
-    joined: "Jan 2024",
-  }));
+    joined: "Jan 2024" }));
 
   return (
     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">

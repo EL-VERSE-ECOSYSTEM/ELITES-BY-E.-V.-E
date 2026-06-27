@@ -1,11 +1,11 @@
 "use client";
-import { Clock, Download, Eye, Filter, Search, ShieldCheck } from "lucide-react";
+import { Clock, Download, Eye, Filter, Search, Shield, ShieldCheck, Target, User } from "lucide-react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 
 export default function AdminAuditLogs() {
   const logs = Array.from({ length: 8 }).map((_, i) => ({

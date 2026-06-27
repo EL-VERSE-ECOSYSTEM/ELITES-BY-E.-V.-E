@@ -1,52 +1,49 @@
 @import "tailwindcss";
 
 @theme {
-  --color-elite-primary-50: #F5F3FF;
-  --color-elite-primary-100: #EDE9FE;
-  --color-elite-primary-200: #DDD6FE;
-  --color-elite-primary-300: #C4B5FD;
-  --color-elite-primary-400: #A78BFA;
-  --color-elite-primary-500: #8B5CF6;
-  --color-elite-primary-600: #7C3AED;
-  --color-elite-primary-700: #6D28D9;
-  --color-elite-primary-800: #5B21B6;
-  --color-elite-primary-900: #4C1D95;
-  --color-elite-primary-950: #2D1B69;
+  /* PRIMARY COLORS */
+  --color-elite-purple: #6C2BD9;      /* Vibrant Purple */
+  --color-elite-blue-deep: #1E3A8A;  /* Deep Blue */
+  --color-elite-violet-soft: #8B5CF6; /* Soft Violet */
 
-  --color-elite-accent-50: #FFFBEB;
-  --color-elite-accent-100: #FEF3C7;
-  --color-elite-accent-200: #FDE68A;
-  --color-elite-accent-300: #FCD34D;
-  --color-elite-accent-400: #FBBF24;
-  --color-elite-accent-500: #F59E0B;
-  --color-elite-accent-600: #D97706;
-  --color-elite-accent-700: #B45309;
-  --color-elite-accent-800: #92400E;
-  --color-elite-accent-900: #78350F;
+  /* NEUTRAL COLORS */
+  --color-elite-off-white: #F8FAFC;
+  --color-elite-white: #FFFFFF;
+  --color-elite-dark-blue: #0F172A;
+  --color-elite-slate-gray: #475569;
+  --color-elite-light-gray: #94A3B8;
+  --color-elite-border-gray: #E2E8F0;
 
+  /* FUNCTIONAL COLORS */
   --color-elite-success: #10B981;
   --color-elite-error: #EF4444;
-  --color-elite-warning: #F97316;
-  --color-elite-info: #06B6D4;
+  --color-elite-warning: #F59E0B;
+  --color-elite-info: #3B82F6;
 
-  --color-elite-xp: #8B5CF6;
-  --color-elite-coin: #F59E0B;
-  --color-elite-streak: #F97316;
-  --color-elite-levelUp: #10B981;
+  /* ROLE-BASED COLORS */
+  --color-elite-learner: #1E3A8A;
+  --color-elite-tutor: #6C2BD9;
+  --color-elite-admin: #DC2626;
 
+  /* DARK MODE COLORS */
+  --color-elite-dark-bg: #0F172A;
+  --color-elite-dark-surface: #1E293B;
+  --color-elite-dark-card: #1E293B;
+  --color-elite-dark-border: #334155;
+
+  /* FONTS */
   --font-space-grotesk: var(--font-space-grotesk);
   --font-inter: var(--font-inter);
-  --font-jetbrains-mono: var(--font-jetbrains-mono);
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #2D1B69;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
 }
 
 .dark {
-  --background: #2D1B69;
-  --foreground: #F5F3FF;
+  --background: #0F172A;
+  --foreground: #F8FAFC;
 }
 
 body {
@@ -59,6 +56,27 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-space-grotesk), sans-serif;
 }
 
-code, pre {
-  font-family: var(--font-jetbrains-mono), monospace;
+/* GRADIENTS */
+.gradient-hero {
+  background: linear-gradient(to right, #6C2BD9, #8B5CF6);
+}
+
+.gradient-button {
+  background: linear-gradient(to right, #6C2BD9, #1E3A8A);
+}
+
+.gradient-header {
+  background: linear-gradient(to right, #1E3A8A, #0F172A);
+}
+
+.gradient-card {
+  background: linear-gradient(to bottom right, #FFFFFF, #F8FAFC);
+}
+
+.gradient-success {
+  background: linear-gradient(to right, #10B981, #059669);
+}
+
+.gradient-warning {
+  background: linear-gradient(to right, #F59E0B, #D97706);
 }

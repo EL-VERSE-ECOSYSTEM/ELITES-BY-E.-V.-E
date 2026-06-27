@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, ScrollView, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, TouchableOpacity, ScrollView, TextInput, Dimensions } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 const { width } = Dimensions.get('window');
@@ -16,7 +16,7 @@ const COLORS = {
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('Home');
-  const [userRole] = useState('Learner'); // Learner, Tutor, Admin
+  const [userRole, setUserRole] = useState('Learner'); // Learner, Tutor, Admin
 
   return (
     <SafeAreaView style={styles.container}>

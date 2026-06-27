@@ -1,0 +1,26 @@
+
+> temp-app@0.1.0 build
+> next build
+
+▲ Next.js 16.2.9 (Turbopack)
+- Environments: .env.local
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./src/app/admin/marketing/page.tsx:13:9
+Unexpected token `=`. Expected yield, an identifier, [ or {
+  [90m11 |[0m [36mexport[0m [36mdefault[0m [36mfunction[0m [33mAdminMarketing[0m() {[36mconst[0m [activeTab, setActiveTab] = useState<[32m"coup...[0m
+  [90m12 |[0m
+[31m[1m>[0m [90m13 |[0m   [36mconst[0m = [
+  [90m   |[0m         [31m[1m^[0m
+  [90m14 |[0m     { id: [35m1[0m, code: [32m"ELITE2024"[0m, discount: [32m"20% OFF"[0m, usage: [32m"450/1000"[0m, expires: [32m"Mar 15, ...[0m
+  [90m15 |[0m     { id: [35m2[0m, code: [32m"AFRICATECH"[0m, discount: [32m"$10.00"[0m, usage: [32m"124/500"[0m, expires: [32m"Dec 31, 2...[0m
+  [90m16 |[0m   ];
+
+Parsing ecmascript source code failed
+
+
+    at <unknown> (./src/app/admin/marketing/page.tsx:13:9)
