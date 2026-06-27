@@ -3,9 +3,9 @@ import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import {Card} from "@/components/ui/Card";
+import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import {Ban, Calendar, Mail, MapPin, Phone} from "lucide-react";
+import { Ban, Calendar, Mail, MapPin, Phone } from "lucide-react";
 
 export default function UserDetailPage() {const [] = useState("Active");
 
@@ -18,7 +18,7 @@ export default function UserDetailPage() {const [] = useState("Active");
               <div className="w-16 h-16 rounded-full bg-elite-primary-200 flex items-center justify-center text-elite-primary-600 font-bold text-2xl">DM</div>
               <div>
                  <h1 className="text-2xl font-bold font-space-grotesk">David Mensah</h1>
-                 <p className="text-sm text-elite-primary-500">ID: ELITES-9923485</p>
+                 <p className="text-sm text-elite-primary-500">User ID: ELITES-9923485</p>
               </div>
            </div>
            <div className="flex gap-2">

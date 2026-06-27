@@ -1,19 +1,21 @@
 "use client";
-import {Clock, Download, Eye, Filter, Search, ShieldCheck} from "lucide-react";
+import { Clock, Download, Eye, Filter, Search, ShieldCheck } from "lucide-react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import {Card} from "@/components/ui/Card";
+import { Card } from "@/components/ui/Card";
 
 export default function AdminAuditLogs() {
-  const logs = Array.from({ length: 8 }).map((_, i) => ({id: i + 1,
+  const logs = Array.from({ length: 8 }).map((_, i) => ({
+    id: i + 1,
     admin: ["Alice Mod", "Bob Super", "System", "Alice Mod"][i % 4],
     action: ["Deleted Comment", "Updated Course", "Auto-suspended User", "Approved Withdrawal"][i % 4],
-    entity: ["Discussion", "Course #12", "#450", "Transaction #99"][i % 4],
+    entity: ["Discussion", "Course #12", "User #450", "Transaction #99"][i % 4],
     time: "2m ago",
-    status: "Success"}));
+    status: "Success",
+  }));
 
   return (
     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">
