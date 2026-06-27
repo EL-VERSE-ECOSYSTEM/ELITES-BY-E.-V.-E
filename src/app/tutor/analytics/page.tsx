@@ -1,10 +1,9 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { BarChart3, Clock, Download, Globe, MapPin, MousePointer2, Share2, Sun, TrendingDown, TrendingUp, X } from "lucide-react";
+import { BarChart3, Clock, Globe, MapPin, MousePointer2, Share2, TrendingDown, TrendingUp } from "lucide-react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Bar, BarChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";

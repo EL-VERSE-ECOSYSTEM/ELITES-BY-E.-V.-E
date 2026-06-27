@@ -6,7 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
-import { ArrowRight, Code, Layers, Briefcase, CheckCircle2, ChevronRight, Clock, TrendingUp, User, Users } from "lucide-react";
+import { ArrowRight, Code, Layers, Briefcase, CheckCircle2, ChevronRight, Clock, TrendingUp, Users } from "lucide-react";
 
 export default function PathsPage() {
   const paths = [

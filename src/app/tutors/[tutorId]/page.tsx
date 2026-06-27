@@ -5,10 +5,10 @@ import { useState } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 
 import { Footer } from "@/components/layout/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { BookOpen, Briefcase, Calendar, CheckCircle2, Clock, Globe, MapPin, MessageSquare, Play, Star, Users } from "lucide-react";
+import { Briefcase, Clock, Globe, MapPin } from "lucide-react";
 
 export default function TutorProfilePage() {
   const [activeTab, setActiveTab] = useState<"courses" | "reviews" | "availability">("courses");

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import {  ChevronLeft, ChevronRight, Plus, Settings, Sun, User, Users , Video } from "lucide-react";
+import {  ChevronLeft, ChevronRight, Plus, Settings, Users , Video } from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";

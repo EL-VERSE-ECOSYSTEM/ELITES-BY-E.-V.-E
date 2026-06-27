@@ -4,7 +4,6 @@ import Link from "next/link";
 import { AlertCircle, ArrowLeft, CheckCircle2, Mail } from "lucide-react";
 import { useState } from "react";
 
-import { Badge } from "@/components/ui/Badge";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 

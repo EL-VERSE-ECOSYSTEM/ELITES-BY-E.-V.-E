@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
 
-export async function POST(request: Request) {
+export async function POST() {
   try {
-    const body = await request.json();
     // Logic to save withdrawal request to Prisma
     return NextResponse.json({ success: true, message: "Withdrawal request submitted" });
-  } catch (error) {
+  } // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  catch (error) {
     return NextResponse.json({ success: false, error: "Invalid request" }, { status: 400 });
   }
 }

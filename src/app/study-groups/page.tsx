@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { ChevronRight, MessageSquare, Plus, Search, TrendingUp, User, Users } from "lucide-react";
+import { ChevronRight, MessageSquare, Plus, Search, TrendingUp, Users } from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";

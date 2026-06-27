@@ -5,7 +5,7 @@ import { useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { ChevronRight, Clock, Code, Hand, Layout, Maximize2, MessageSquare, Mic, Monitor, MoreVertical, PhoneOff, Settings, Shield, Users, Video, X } from "lucide-react";
+import { ChevronRight, Clock, Hand, Maximize2, MessageSquare, Mic, Monitor, PhoneOff, Settings, Video, X } from "lucide-react";
 
 export default function SessionRoom() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
