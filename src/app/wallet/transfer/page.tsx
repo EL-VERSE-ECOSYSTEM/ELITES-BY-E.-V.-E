@@ -8,7 +8,6 @@ import { Card, CardContent } from "@/components/ui/Card";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Input } from "@/components/ui/Input";
 
-
 export default function InternalTransferPage() {
   const [recipient, setRecipient] = useState("");
   const [amount, setAmount] = useState("");
@@ -36,16 +35,16 @@ export default function InternalTransferPage() {
              <Card className="border-none shadow-xl">
                 <CardContent className="p-8 space-y-6">
                    <div className="space-y-2">
-                      <h2 className="text-lg font-bold">Who are you sending to?</h2>
-                      <p className="text-sm text-elite-primary-500">Enter ELITE ID or Email address</p>
+                      <h2 className="text-lg font-bold">Transfer to ELITE Member</h2>
+                      <p className="text-sm text-elite-primary-500">Enter recipient&apos;s email or ELITE ID.</p>
                    </div>
                    <Input
-                      placeholder="e.g. ELT-8824 or user@example.com"
+                      placeholder="e.g. user@example.com or ELT-8824"
                       value={recipient}
                       onChange={(e) => setRecipient(e.target.value)}
                    />
-                   <Button className="w-full h-12" onClick={handleVerify} disabled={!recipient}>
-                      Continue <ChevronRight className="ml-2" size={18} />
+                   <Button className="w-full" onClick={handleVerify} disabled={!recipient}>
+                      Verify Recipient <ChevronRight className="ml-2" size={18} />
                    </Button>
                 </CardContent>
              </Card>
@@ -53,21 +52,21 @@ export default function InternalTransferPage() {
 
            {step === 2 && (
              <Card className="border-none shadow-xl">
-                <CardContent className="p-8 space-y-6">
-                   <div className="flex items-center gap-4 p-4 bg-elite-primary-50 rounded-2xl">
-                      <div className="w-12 h-12 rounded-full bg-elite-primary-900 text-white flex items-center justify-center font-bold">
+                <CardContent className="p-8 space-y-8">
+                   <div className="flex items-center gap-4 p-4 bg-elite-primary-50 rounded-2xl border border-elite-primary-100">
+                      <div className="w-12 h-12 rounded-full bg-elite-primary-900 text-white flex items-center justify-center font-bold text-lg">
                          {recipient.charAt(0).toUpperCase()}
                       </div>
                       <div>
                          <div className="font-bold flex items-center gap-2">
                             {recipient} <ShieldCheck size={14} className="text-elite-success" />
                          </div>
-                         <div className="text-xs text-elite-primary-400">Verified ELITE Member</div>
+                         <div className="text-xs text-elite-primary-400 font-bold uppercase tracking-widest">Verified Learner</div>
                       </div>
                    </div>
 
                    <div className="space-y-4">
-                      <label className="text-sm font-bold uppercase tracking-widest text-elite-primary-400">Amount to send ($)</label>
+                      <label className="text-xs font-bold uppercase tracking-widest text-elite-primary-400">Amount to send ($)</label>
                       <input
                          type="number"
                          className="w-full text-5xl font-black font-space-grotesk text-center outline-none bg-transparent"
@@ -80,13 +79,13 @@ export default function InternalTransferPage() {
 
                    <div className="p-4 bg-amber-50 text-amber-800 rounded-xl text-xs flex gap-3">
                       <Info size={16} className="shrink-0" />
-                      <p>Transfers are instant and non-reversible. Please double check the amount and recipient.</p>
+                      <p>Transfers are processed instantly and cannot be reversed. Please ensure the amount and recipient are correct.</p>
                    </div>
 
                    <div className="flex gap-4">
                       <Button variant="outline" className="flex-1" onClick={() => setStep(1)}>Back</Button>
-                      <Button className="flex-1" onClick={() => setStep(3)} disabled={!amount || parseFloat(amount) <= 0}>
-                         Send Now <Send className="ml-2" size={18} />
+                      <Button className="flex-2 h-12" disabled={!amount || parseFloat(amount) <= 0} onClick={() => setStep(3)}>
+                         Send Funds <Send className="ml-2" size={18} />
                       </Button>
                    </div>
                 </CardContent>
@@ -94,15 +93,19 @@ export default function InternalTransferPage() {
            )}
 
            {step === 3 && (
-              <div className="text-center space-y-6 animate-in zoom-in-95 duration-500">
-                 <div className="w-24 h-24 bg-elite-success/10 text-elite-success rounded-full flex items-center justify-center mx-auto">
+              <div className="text-center space-y-8 animate-in zoom-in-95 duration-500">
+                 <div className="w-24 h-24 bg-elite-success/10 text-elite-success rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-xl">
                     <CheckCircle2 size={48} />
                  </div>
                  <div className="space-y-2">
-                    <h2 className="text-3xl font-black font-space-grotesk tracking-tight">Transfer Successful!</h2>
-                    <p className="text-elite-primary-500">You have successfully sent <b>${amount}</b> to <b>{recipient}</b>.</p>
+                    <h2 className="text-3xl font-black font-space-grotesk">Transfer Sent!</h2>
+                    <p className="text-elite-primary-500 text-lg">
+                       You successfully sent <b>${amount}</b> to <b>{recipient}</b>.
+                    </p>
                  </div>
-                 <Button size="lg" className="w-full" asChild><Link href="/wallet">Back to Wallet</Link></Button>
+                 <Button size="lg" className="w-full shadow-xl shadow-elite-primary-900/10" asChild>
+                    <Link href="/wallet">Back to Wallet</Link>
+                 </Button>
               </div>
            )}
         </main>

@@ -6,7 +6,7 @@ import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import {Download, Filter, Target, TrendingDown, TrendingUp, UserMinus, UserPlus, Users} from "lucide-react";
+import { Download, Filter, Target, TrendingDown, TrendingUp, UserMinus, UserPlus, Users } from "lucide-react";
 
 export default function UserAnalytics() {
   const growthData = [

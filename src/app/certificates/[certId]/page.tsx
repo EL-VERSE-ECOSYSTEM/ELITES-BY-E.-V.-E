@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
 import {Award, Download, ExternalLink, QrCode, Share2, ShieldCheck} from "lucide-react";
 
-
 export default function CertificateDetail() {
   return (
     <div className="flex min-h-screen bg-elite-primary-50 dark:bg-elite-primary-950">

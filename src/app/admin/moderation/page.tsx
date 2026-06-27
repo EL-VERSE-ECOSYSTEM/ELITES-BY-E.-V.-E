@@ -1,20 +1,20 @@
 "use client";
 import { cn } from "@/lib/utils";
-import {AlertCircle, AlertTriangle, CheckCircle, Eye, Filter, Flag, MessageSquare, MoreVertical, ShieldAlert, UserX} from "lucide-react";
+import { AlertCircle, AlertTriangle, CheckCircle, Eye, Filter, Flag, MessageSquare, MoreVertical, ShieldAlert, UserX } from "lucide-react";
 import { useState } from "react";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import {Card, CardHeader, CardTitle} from "@/components/ui/Card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/Card";
 
 export default function ModerationPage() {
   const [activeTab, setActiveTab] = useState<"reported" | "content" | "disputes">("reported");
 
   const reports = [
     { id: 1, type: "Comment", user: "John Doe", reason: "Hate Speech", item: "Next.js Course Discussion", time: "5m ago" },
-    {id: 2, type: "Profile", user: "Sarah K.", reason: "Inappropriate Avatar", item: "Profile", time: "1h ago"},
+    { id: 2, type: "Profile", user: "Sarah K.", reason: "Inappropriate Avatar", item: "User Profile", time: "1h ago" },
     { id: 3, type: "Review", user: "Anonymous", reason: "Spam", item: "Python Course Review", time: "3h ago" },
   ];
 
@@ -30,7 +30,7 @@ export default function ModerationPage() {
 
            <div className="flex gap-4 p-1 bg-white dark:bg-elite-primary-900 rounded-2xl w-fit border border-elite-primary-100 dark:border-elite-primary-800">
               {[
-                { id: "reported", label: "Reported ", icon: ShieldAlert},
+                { id: "reported", label: "Reported Users", icon: ShieldAlert },
                 { id: "content", label: "Content Queue", icon: MessageSquare },
                 { id: "disputes", label: "Active Disputes", icon: AlertTriangle },
               ].map((tab) => (

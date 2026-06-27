@@ -2,7 +2,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-
 import { Footer } from "@/components/layout/Footer";
 import Link from "next/link";
 

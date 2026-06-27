@@ -32,7 +32,7 @@ export default function BookTutorSession() {
               <Link href="/tutors/1"><ChevronLeft size={20} /></Link>
            </Button>
            <div>
-              <h1 className="text-2xl font-bold font-space-grotesk">Book a Session</h1>
+              <h1 className="text-2xl font-bold font-space-grotesk text-elite-primary-950">Book a Session</h1>
               <p className="text-xs text-elite-primary-500 font-medium">Schedule your next learning milestone.</p>
            </div>
         </header>
@@ -46,7 +46,7 @@ export default function BookTutorSession() {
                      <Card
                         key={t.id}
                         className={cn(
-                          "cursor-pointer transition-all",
+                          "cursor-pointer transition-all hover:border-elite-accent-500",
                           selectedType === t.id ? "border-elite-accent-500 ring-2 ring-elite-accent-500/20" : ""
                         )}
                         onClick={() => setSelectedType(t.id)}
@@ -60,7 +60,7 @@ export default function BookTutorSession() {
                      </Card>
                    ))}
                 </div>
-                <Button className="w-full" disabled={!selectedType} onClick={() => setStep(2)}>
+                <Button className="w-full h-12" disabled={!selectedType} onClick={() => setStep(2)}>
                    Continue <ArrowRight className="ml-2" size={18} />
                 </Button>
              </div>
@@ -69,12 +69,12 @@ export default function BookTutorSession() {
            {step === 2 && (
              <div className="space-y-6">
                 <h2 className="text-lg font-bold">Choose Date & Time</h2>
-                <div className="grid grid-cols-7 gap-2">
+                <div className="grid grid-cols-7 gap-2 bg-white p-4 rounded-xl shadow-sm">
                    {Array.from({length: 30}).map((_, i) => (
                      <button
                         key={i}
                         className={cn(
-                          "h-10 rounded-lg text-sm font-bold",
+                          "h-10 rounded-lg text-sm font-bold transition-colors",
                           selectedDate === `Mar ${i+1}` ? "bg-elite-primary-900 text-white" : "bg-white hover:bg-elite-primary-50"
                         )}
                         onClick={() => setSelectedDate(`Mar ${i+1}`)}
@@ -103,23 +103,23 @@ export default function BookTutorSession() {
 
            {step === 3 && (
              <Card className="border-none shadow-xl bg-elite-primary-950 text-white p-8 space-y-6">
-                <h2 className="text-2xl font-bold">Booking Summary</h2>
+                <h2 className="text-2xl font-bold font-space-grotesk">Booking Summary</h2>
                 <div className="space-y-4">
                    <div className="flex justify-between border-b border-white/10 pb-4">
-                      <span>Session Type</span>
+                      <span className="text-elite-primary-400">Session Type</span>
                       <span className="font-bold">{types.find(t => t.id === selectedType)?.label}</span>
                    </div>
                    <div className="flex justify-between border-b border-white/10 pb-4">
-                      <span>Date & Time</span>
+                      <span className="text-elite-primary-400">Date & Time</span>
                       <span className="font-bold">{selectedDate} at {selectedTime}</span>
                    </div>
                    <div className="flex justify-between text-xl font-bold text-elite-accent-500 pt-4">
-                      <span>Total</span>
+                      <span>Total Price</span>
                       <span>${types.find(t => t.id === selectedType)?.price}</span>
                    </div>
                 </div>
-                <Button variant="accent" className="w-full h-14 font-bold text-lg">
-                   Pay with Wallet <Wallet className="ml-2" size={20} />
+                <Button variant="accent" className="w-full h-14 font-bold text-lg shadow-xl shadow-elite-accent-500/20">
+                   Pay & Complete Booking <Wallet className="ml-2" size={20} />
                 </Button>
              </Card>
            )}

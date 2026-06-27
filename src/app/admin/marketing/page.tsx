@@ -1,11 +1,10 @@
 "use client";
-
 import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card, CardContent } from "@/components/ui/Card";
+import {Card, CardContent} from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { BarChart3, Megaphone, Send, Plus } from "lucide-react";
+import { Plus, Zap, Megaphone, BarChart3, Send } from "lucide-react";
 
 export default function AdminMarketing() {
   const [activeTab, setActiveTab] = useState<"coupons" | "campaigns" | "notifications">("coupons");
@@ -20,8 +19,16 @@ export default function AdminMarketing() {
       <Sidebar />
       <div className="flex-1 flex flex-col min-w-0">
         <header className="px-6 py-8 border-b border-elite-primary-100 dark:border-elite-primary-900 bg-white">
-           <h1 className="text-3xl font-bold font-space-grotesk">Marketing & Growth</h1>
-           <p className="text-sm text-elite-primary-500 font-medium">Manage promotions, coupon codes, and engagement campaigns.</p>
+           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                 <h1 className="text-3xl font-bold font-space-grotesk text-elite-primary-950">Marketing & Growth</h1>
+                 <p className="text-sm text-elite-primary-500 font-medium">Manage promotions, coupon codes, and engagement campaigns.</p>
+              </div>
+              <div className="flex gap-2">
+                 <Button variant="outline" size="sm"><Zap size={18} className="mr-2" /> Quick Broadcast</Button>
+                 <Button variant="accent" size="sm"><Plus size={18} className="mr-2" /> New Promo</Button>
+              </div>
+           </div>
         </header>
 
         <main className="p-6 pb-24 space-y-8">
@@ -69,7 +76,7 @@ export default function AdminMarketing() {
                       </CardContent>
                    </Card>
                  ))}
-                 <button className="border-2 border-dashed border-elite-primary-200 rounded-xl p-8 flex flex-col items-center justify-center gap-4 hover:border-elite-primary-400 transition-all group">
+                 <button className="border-2 border-dashed border-elite-primary-200 rounded-xl p-8 flex flex-col items-center justify-center gap-4 hover:border-elite-primary-400 transition-all group min-h-[250px]">
                     <div className="w-12 h-12 rounded-full bg-elite-primary-50 flex items-center justify-center text-elite-primary-400 group-hover:bg-elite-primary-950 group-hover:text-white transition-all">
                        <Plus size={24} />
                     </div>
