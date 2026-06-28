@@ -4,10 +4,10 @@ import { useState } from "react";
 import { Sidebar } from "@/components/layout/Sidebar";
 
 import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
-import { Card } from "@/components/ui/Card";
+import {Card} from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { AlertTriangle, ArrowRight, CheckCircle2, MessageSquare, Search, User, Zap } from "lucide-react";
+import {AlertTriangle, ArrowRight, CheckCircle2, MessageSquare, Search, User, Zap} from "lucide-react";
 
 export default function AdminSupportTickets() {
   const [activeTab, setActiveTab] = useState<"open" | "assigned" | "closed">("open");

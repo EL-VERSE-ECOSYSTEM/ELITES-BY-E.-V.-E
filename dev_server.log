@@ -1,0 +1,31 @@
+
+> temp-app@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by an unknown process, using available port 3001 instead.
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.0.2:3001
+- Environments: .env.local
+✓ Ready in 633ms
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+○ Compiling / ...
+ GET / 200 in 5.9s (next.js: 5.3s, proxy.ts: 170ms, application-code: 475ms)
+ GET /dashboard 200 in 1045ms (next.js: 852ms, proxy.ts: 11ms, application-code: 182ms)
+○ Compiling /tutor/dashboard ...
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ GET /tutor/dashboard 200 in 3.7s (next.js: 3.4s, proxy.ts: 9ms, application-code: 316ms)
+[browser] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[browser] The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ GET /admin/login 200 in 885ms (next.js: 761ms, proxy.ts: 40ms, application-code: 83ms)
+ GET /wallet 200 in 1105ms (next.js: 847ms, proxy.ts: 9ms, application-code: 249ms)

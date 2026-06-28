@@ -8,7 +8,7 @@ import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
-import { CheckCircle2, ChevronLeft, ChevronRight, Eye, FileText, GripVertical, Plus, Rocket, Save, Trash2, Video } from "lucide-react";
+import {CheckCircle2, ChevronLeft, ChevronRight, Eye, FileText, GripVertical, Plus, Rocket, Save, Trash2, Video} from "lucide-react";
 
 export default function CourseCreator() {const [step, setStep] = useState(1);
   const totalSteps = 5;
